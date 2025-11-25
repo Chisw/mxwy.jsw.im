@@ -1,2 +1,3 @@
-# mxwy.jsw.im
-蒙学文吟
+# 蒙学文吟
+
+https://mxwy.jsw.im

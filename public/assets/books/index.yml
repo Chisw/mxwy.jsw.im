@@ -1,0 +1,17 @@
+books:
+  - key: qian-zi-wen
+    title: 千字文
+    author: 【南梁】周兴嗣
+    audioMd5: e17f8333dea407536427f8711a86fc4c
+    audioSha256: 6bb47a1ce83a354ae8398db2d0d14ada79e71cdcdd601d228e63a53ddf443cd3
+    sections:
+      - 第一部分@1,48
+      - 第二部分@49,72
+  - key: san-zi-jing
+    title: 三字经
+    author: 【宋】王应麟
+    audioMd5: e17f8333dea407536427f8711a86fc4c
+    audioSha256: 6bb47a1ce83a354ae8398db2d0d14ada79e71cdcdd601d228e63a53ddf443cd3
+    sections:
+      - 第一部分@1,48
+      - 第二部分@49,72
