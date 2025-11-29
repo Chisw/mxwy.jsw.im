@@ -2,7 +2,556 @@ key: san-zi-jing
 sentences:
   - time: 00:01.00
     text: 三字经
-    pinyin: san zi jing
-  - time: 00:03.50
+    pinyin: sān zì jīng
+  - time: 00:03.29
     text: 人之初，性本善。
-    pinyin: ren zhi chu xing ben shan
+    pinyin: rén zhī chū xìng běn shàn
+  - time: 00:06.98
+    text: 性相近，习相远。
+    pinyin: xìng xiāng jìn xí xiāng yuǎn
+  - time: 00:10.57
+    text: 苟不教，性乃迁。
+    pinyin: gǒu bú jiào xìng nǎi qiān
+  - time: 00:13.94
+    text: 教之道，贵以专。
+    pinyin: jiào zhī dào guì yǐ zhuān
+  - time: 00:17.60
+    text: 昔孟母，择邻处。
+    pinyin: xī mèng mǔ zé lín chǔ
+  - time: 00:20.96
+    text: 子不学，断机杼。
+    pinyin: zǐ bù xué duàn jī zhù
+  - time: 00:24.13
+    text: 窦燕山，有义方。
+    pinyin: dòu yān shān yǒu yì fāng
+  - time: 00:27.66
+    text: 教五子，名俱扬。
+    pinyin: jiāo wǔ zǐ míng jù yáng
+  - time: 00:31.19
+    text: 养不教，父之过。
+    pinyin: yǎng bú jiào fù zhī guò
+  - time: 00:34.55
+    text: 教不严，师之惰。
+    pinyin: jiào bù yán shī zhī duò
+  - time: 00:37.83
+    text: 子不学，非所宜。
+    pinyin: zǐ bù xué fēi suǒ yí
+  - time: 00:41.60
+    text: 幼不学，老何为。
+    pinyin: yòu bù xué lǎo hé wéi
+  - time: 00:44.99
+    text: 玉不琢，不成器。
+    pinyin: yù bù zhuó bù chéng qì
+  - time: 00:48.32
+    text: 人不学，不知义。
+    pinyin: rén bù xué bù zhī yì
+  - time: 00:51.46
+    text: 为人子，方少时。
+    pinyin: wéi rén zǐ fāng shào shí
+  - time: 00:55.14
+    text: 亲师友，习礼仪。
+    pinyin: qīn shī yǒu xí lǐ yí
+  - time: 00:58.57
+    text: 香九龄，能温席。
+    pinyin: xiāng jiǔ líng néng wēn xí
+  - time: 01:02.34
+    text: 孝于亲，所当执。
+    pinyin: xiào yú qīn suǒ dāng zhí
+  - time: 01:05.55
+    text: 融四岁，能让梨。
+    pinyin: róng sì suì néng ràng lí
+  - time: 01:09.28
+    text: 弟于长，宜先知。
+    pinyin: dì yú zhǎng yí xiān zhī
+  - time: 01:12.75
+    text: 首孝悌，次见闻。
+    pinyin: shǒu xiào tì cì jiàn wén
+  - time: 01:16.30
+    text: 知某数，识某文。
+    pinyin: zhī mǒu shù shí mǒu wén
+  - time: 01:19.75
+    text: 一而十，十而百。
+    pinyin: yī ér shí shí ér bǎi
+  - time: 01:23.16
+    text: 百而千，千而万。
+    pinyin: bǎi ér qiān qiān ér wàn
+  - time: 01:26.00
+    text: 三才者，天地人。
+    pinyin: sān cái zhě tiān dì rén
+  - time: 01:30.03
+    text: 三光者，日月星。
+    pinyin: sān guāng zhě rì yuè xīng
+  - time: 01:33.40
+    text: 三纲者，君臣义。
+    pinyin: sān gāng zhě jūn chén yì
+  - time: 01:36.95
+    text: 父子亲，夫妇顺。
+    pinyin: fù zǐ qīn fū fù shùn
+  - time: 01:39.99
+    text: 曰春夏，曰秋冬。
+    pinyin: yuē chūn xià yuē qiū dōng
+  - time: 01:43.92
+    text: 此四时，运不穷。
+    pinyin: cǐ sì shí yùn bù qióng
+  - time: 01:47.75
+    text: 曰南北，曰西东。
+    pinyin: yuē nán běi yuē xī dōng
+  - time: 01:51.72
+    text: 此四方，应乎中。
+    pinyin: cǐ sì fāng yìng hū zhōng
+  - time: 01:54.91
+    text: 曰水火，木金土。
+    pinyin: yuē shuǐ huǒ mù jīn tǔ
+  - time: 01:58.70
+    text: 此五行，本乎数。
+    pinyin: cǐ wǔ xíng běn hū shù
+  - time: 02:02.35
+    text: 曰仁义，礼智信。
+    pinyin: yuē rén yì lǐ zhì xìn
+  - time: 02:06.23
+    text: 此五常，不容紊。
+    pinyin: cǐ wǔ cháng bù róng wěn
+  - time: 02:09.30
+    text: 稻粱菽，麦黍稷。
+    pinyin: dào liáng shū mài shǔ jì
+  - time: 02:12.59
+    text: 此六谷，人所食。
+    pinyin: cǐ liù gǔ rén suǒ shí
+  - time: 02:16.37
+    text: 马牛羊，鸡犬豕。
+    pinyin: mǎ niú yáng jī quǎn shǐ
+  - time: 02:19.93
+    text: 此六畜，人所饲。
+    pinyin: cǐ liù chù rén suǒ sì
+  - time: 02:23.48
+    text: 曰喜怒，曰哀惧。
+    pinyin: yuē xǐ nù yuē āi jù
+  - time: 02:27.22
+    text: 爱恶欲，七情具。
+    pinyin: ài wù yù qī qíng jù
+  - time: 02:30.74
+    text: 匏土革，木石金。
+    pinyin: páo tǔ gé mù shí jīn
+  - time: 02:34.32
+    text: 丝与竹，乃八音。
+    pinyin: sī yǔ zhú nǎi bā yīn
+  - time: 02:37.83
+    text: 高曾祖，父而身。
+    pinyin: gāo zēng zǔ fù ér shēn
+  - time: 02:41.45
+    text: 身而子，子而孙。
+    pinyin: shēn ér zǐ zǐ ér sūn
+  - time: 02:44.64
+    text: 自子孙，至玄曾。
+    pinyin: zì zǐ sūn zhì xuán zēng
+  - time: 02:48.33
+    text: 乃九族，人之伦。
+    pinyin: nǎi jiǔ zú rén zhī lún
+  - time: 02:51.72
+    text: 父子恩，夫妇从。
+    pinyin: fù zǐ ēn fū fù cóng
+  - time: 02:55.51
+    text: 兄则友，弟则恭。
+    pinyin: xiōng zé yǒu dì zé gōng
+  - time: 02:58.83
+    text: 长幼序，友与朋。
+    pinyin: zhǎng yòu xù yǒu yǔ péng
+  - time: 03:02.36
+    text: 君则敬，臣则忠。
+    pinyin: jūn zé jìng chén zé zhōng
+  - time: 03:05.95
+    text: 此十义，人所同。
+    pinyin: cǐ shí yì rén suǒ tóng
+  - time: 03:09.44
+    text: 凡训蒙，须讲究。
+    pinyin: fán xùn méng xū jiǎng jiū
+  - time: 03:13.41
+    text: 详训诂，明句读。
+    pinyin: xiáng xùn gǔ míng jù dòu
+  - time: 03:16.60
+    text: 为学者，必有初。
+    pinyin: wéi xué zhě bì yǒu chū
+  - time: 03:19.92
+    text: 小学终，至四书。
+    pinyin: xiǎo xué zhōng zhì sì shū
+  - time: 03:23.57
+    text: 论语者，二十篇。
+    pinyin: lún yǔ zhě èr shí piān
+  - time: 03:26.66
+    text: 群弟子，记善言。
+    pinyin: qún dì zǐ jì shàn yán
+  - time: 03:30.29
+    text: 孟子者，七篇止。
+    pinyin: mèng zǐ zhě qī piān zhǐ
+  - time: 03:34.12
+    text: 讲道德，说仁义。
+    pinyin: jiǎng dào dé shuō rén yì
+  - time: 03:37.55
+    text: 作中庸，子思笔。
+    pinyin: zuò zhōng yōng zǐ sī bǐ
+  - time: 03:41.28
+    text: 中不偏，庸不易。
+    pinyin: zhōng bù piān yōng bù yì
+  - time: 03:44.50
+    text: 作大学，乃曾子。
+    pinyin: zuò dà xué nǎi zēng zǐ
+  - time: 03:48.01
+    text: 自修齐，至平治。
+    pinyin: zì xiū qí zhì píng zhì
+  - time: 03:51.66
+    text: 孝经通，四书熟。
+    pinyin: xiào jīng tōng sì shū shú
+  - time: 03:55.46
+    text: 如六经，始可读。
+    pinyin: rú liù jīng shǐ kě dú
+  - time: 03:59.00
+    text: 诗书易，礼春秋。
+    pinyin: shī shū yì lǐ chūn qiū
+  - time: 04:02.89
+    text: 号六经，当讲求。
+    pinyin: hào liù jīng dāng jiǎng qiú
+  - time: 04:06.26
+    text: 有连山，有归藏。
+    pinyin: yǒu lián shān yǒu guī cáng
+  - time: 04:09.62
+    text: 有周易，三易详。
+    pinyin: yǒu zhōu yì sān yì xiáng
+  - time: 04:13.55
+    text: 有典谟，有训诰。
+    pinyin: yǒu diǎn mó yǒu xùn gào
+  - time: 04:16.85
+    text: 有誓命，书之奥。
+    pinyin: yǒu shì mìng shū zhī ào
+  - time: 04:20.25
+    text: 我周公，作周礼。
+    pinyin: wǒ zhōu gōng zuò zhōu lǐ
+  - time: 04:24.19
+    text: 著六官，存治体。
+    pinyin: zhù liù guān cún zhì tǐ
+  - time: 04:27.65
+    text: 大小戴，注礼记。
+    pinyin: dà xiǎo dài zhù lǐ jì
+  - time: 04:31.07
+    text: 述圣言，礼乐备。
+    pinyin: shù shèng yán lǐ yuè bèi
+  - time: 04:34.42
+    text: 曰国风，曰雅颂。
+    pinyin: yuē guó fēng yuē yǎ sòng
+  - time: 04:37.93
+    text: 号四诗，当讽咏。
+    pinyin: hào sì shī dāng fěng yǒng
+  - time: 04:42.06
+    text: 诗既亡，春秋作。
+    pinyin: shī jì wáng chūn qiū zuò
+  - time: 04:45.28
+    text: 寓褒贬，别善恶。
+    pinyin: yù bāo biǎn bié shàn è
+  - time: 04:49.05
+    text: 三传者，有公羊。
+    pinyin: sān zhuàn zhě yǒu gōng yáng
+  - time: 04:52.78
+    text: 有左氏，有谷梁。
+    pinyin: yǒu zuǒ shì yǒu gǔ liáng
+  - time: 04:56.04
+    text: 经既明，方读子。
+    pinyin: jīng jì míng fāng dú zǐ
+  - time: 04:59.99
+    text: 撮其要，记其事。
+    pinyin: cuō qí yào jì qí shì
+  - time: 05:03.17
+    text: 五子者，有荀扬。
+    pinyin: wǔ zǐ zhě yǒu xún yáng
+  - time: 05:06.77
+    text: 文中子，及老庄。
+    pinyin: wén zhōng zǐ jí lǎo zhuāng
+  - time: 05:09.96
+    text: 经子通，读诸史。
+    pinyin: jīng zǐ tōng dú zhū shǐ
+  - time: 05:13.90
+    text: 考世系，知终始。
+    pinyin: kǎo shì xì zhī zhōng shǐ
+  - time: 05:17.55
+    text: 自羲农，至黄帝。
+    pinyin: zì xī nóng zhì huáng dì
+  - time: 05:21.32
+    text: 号三皇，居上世。
+    pinyin: hào sān huáng jū shàng shì
+  - time: 05:24.88
+    text: 唐有虞，号二帝。
+    pinyin: táng yǒu yú hào èr dì
+  - time: 05:28.28
+    text: 相揖逊，称盛世。
+    pinyin: xiāng yī xùn chēng shèng shì
+  - time: 05:31.89
+    text: 夏有禹，商有汤。
+    pinyin: xià yǒu yǔ shāng yǒu tāng
+  - time: 05:35.71
+    text: 周文武，称三王。
+    pinyin: zhōu wén wǔ chēng sān wáng
+  - time: 05:39.21
+    text: 夏传子，家天下。
+    pinyin: xià chuán zǐ jiā tiān xià
+  - time: 05:42.86
+    text: 四百载，迁夏社。
+    pinyin: sì bǎi zǎi qiān xià shè
+  - time: 05:46.64
+    text: 汤伐夏，国号商。
+    pinyin: tāng fá xià guó hào shāng
+  - time: 05:50.16
+    text: 六百载，至纣亡。
+    pinyin: liù bǎi zǎi zhì zhòu wáng
+  - time: 05:54.06
+    text: 周武王，始诛纣。
+    pinyin: zhōu wǔ wáng shǐ zhū zhòu
+  - time: 05:57.06
+    text: 八百载，最长久。
+    pinyin: bā bǎi zǎi zuì cháng jiǔ
+  - time: 06:00.70
+    text: 周辙东，王纲坠。
+    pinyin: zhōu zhé dōng wáng gāng zhuì
+  - time: 06:03.96
+    text: 逞干戈，尚游说。
+    pinyin: chěng gān gē shàng yóu shuì
+  - time: 06:07.45
+    text: 始春秋，终战国。
+    pinyin: shǐ chūn qiū zhōng zhàn guó
+  - time: 06:11.28
+    text: 五霸强，七雄出。
+    pinyin: wǔ bà qiáng qī xióng chū
+  - time: 06:15.25
+    text: 嬴秦氏，始兼并。
+    pinyin: yíng qín shì shǐ jiān bìng
+  - time: 06:19.13
+    text: 传二世，楚汉争。
+    pinyin: chuán èr shì chǔ hàn zhēng
+  - time: 06:22.56
+    text: 高祖兴，汉业建。
+    pinyin: gāo zǔ xīng hàn yè jiàn
+  - time: 06:26.24
+    text: 至孝平，王莽篡。
+    pinyin: zhì xiào píng wáng mǎng cuàn
+  - time: 06:30.17
+    text: 光武兴，为东汉。
+    pinyin: guāng wǔ xīng wéi dōng hàn
+  - time: 06:33.20
+    text: 四百年，终于献。
+    pinyin: sì bǎi nián zhōng yú xiàn
+  - time: 06:37.01
+    text: 魏蜀吴，争汉鼎。
+    pinyin: wèi shǔ wú zhēng hàn dǐng
+  - time: 06:40.43
+    text: 号三国，迄两晋。
+    pinyin: hào sān guó qì liǎng jìn
+  - time: 06:44.03
+    text: 宋齐继，梁陈承。
+    pinyin: sòng qí jì liáng chén chéng
+  - time: 06:47.72
+    text: 为南朝，都金陵。
+    pinyin: wéi nán cháo dū jīn líng
+  - time: 06:51.33
+    text: 北元魏，分东西。
+    pinyin: běi yuán wèi fēn dōng xī
+  - time: 06:55.01
+    text: 宇文周，与高齐。
+    pinyin: yǔ wén zhōu yǔ gāo qí
+  - time: 06:58.52
+    text: 迨至隋，一土宇。
+    pinyin: dài zhì suí yī tǔ yǔ
+  - time: 07:01.99
+    text: 不再传，失统绪。
+    pinyin: bù zài chuán shī tǒng xù
+  - time: 07:05.46
+    text: 唐高祖，起义师。
+    pinyin: táng gāo zǔ qǐ yì shī
+  - time: 07:08.72
+    text: 除隋乱，创国基。
+    pinyin: chú suí luàn chuàng guó jī
+  - time: 07:12.22
+    text: 二十传，三百载。
+    pinyin: èr shí chuán sān bǎi zǎi
+  - time: 07:16.07
+    text: 梁灭之，国乃改。
+    pinyin: liáng miè zhī guó nǎi gǎi
+  - time: 07:19.82
+    text: 梁唐晋，及汉周。
+    pinyin: liáng táng jìn jí hàn zhōu
+  - time: 07:23.45
+    text: 称五代，皆有由。
+    pinyin: chēng wǔ dài jiē yǒu yóu
+  - time: 07:26.92
+    text: 炎宋兴，受周禅。
+    pinyin: yán sòng xīng shòu zhōu shàn
+  - time: 07:30.57
+    text: 十八传，南北混。
+    pinyin: shí bā chuán nán běi hùn
+  - time: 07:34.32
+    text: 辽与金，帝号纷。
+    pinyin: liáo yǔ jīn dì hào fēn
+  - time: 07:38.20
+    text: 元灭金，绝宋世。
+    pinyin: yuán miè jīn jué sòng shì
+  - time: 07:50.54
+    text: 莅中国，兼戎狄。
+    pinyin: lì zhōng guó jiān róng dí
+  - time: 07:53.07
+    text: 九十年，国祚废。
+    pinyin: jiǔ shí nián guó zuò fèi
+  - time: 07:56.37
+    text: 太祖兴，国大明。
+    pinyin: tài zǔ xīng guó dà míng
+  - time: 08:12.21
+    text: 清太祖，膺景命。
+    pinyin: qīng tài zǔ yīng jǐng mìng
+  - time: 08:15.42
+    text: 靖四方，克大定。
+    pinyin: jìng sì fāng kè dà dìng
+  - time: 08:18.82
+    text: 古今史，全在兹。
+    pinyin: gǔ jīn shǐ quán zài zī
+  - time: 08:26.28
+    text: 读史者，考实录。
+    pinyin: dú shǐ zhě kǎo shí lù
+  - time: 08:29.86
+    text: 通古今，若亲目。
+    pinyin: tōng gǔ jīn ruò qīn mù
+  - time: 08:33.06
+    text: 口而诵，心而惟。
+    pinyin: kǒu ér sòng xīn ér wéi
+  - time: 08:36.57
+    text: 朝于斯，夕于斯。
+    pinyin: zhāo yú sī xī yú sī
+  - time: 08:40.00
+    text: 昔仲尼，师项橐。
+    pinyin: xī zhòng ní shī xiàng tuó
+  - time: 08:43.69
+    text: 古圣贤，尚勤学。
+    pinyin: gǔ shèng xián shàng qín xué
+  - time: 08:47.26
+    text: 赵中令，读鲁论。
+    pinyin: zhào zhōng lìng dú lǔ lùn
+  - time: 08:50.70
+    text: 彼既仕，学且勤。
+    pinyin: bǐ jì shì xué qiě qín
+  - time: 08:54.61
+    text: 披蒲编，削竹简。
+    pinyin: pī pú biān xuē zhú jiǎn
+  - time: 08:58.02
+    text: 彼无书，且知勉。
+    pinyin: bǐ wú shū qiě zhī miǎn
+  - time: 09:01.43
+    text: 头悬梁，锥刺股。
+    pinyin: tóu xuán liáng zhuī cì gǔ
+  - time: 09:05.14
+    text: 彼不教，自勤苦。
+    pinyin: bǐ bù jiào zì qín kǔ
+  - time: 09:08.43
+    text: 如囊萤，如映雪。
+    pinyin: rú náng yíng rú yìng xuě
+  - time: 09:12.09
+    text: 家虽贫，学不辍。
+    pinyin: jiā suī pín xué bù chuò
+  - time: 09:15.44
+    text: 如负薪，如挂角。
+    pinyin: rú fù xīn rú guà jiǎo
+  - time: 09:19.17
+    text: 身虽劳，犹苦卓。
+    pinyin: shēn suī láo yóu kǔ zhuó
+  - time: 09:22.94
+    text: 苏老泉，二十七。
+    pinyin: sū lǎo quán èr shí qī
+  - time: 09:26.68
+    text: 始发愤，读书籍。
+    pinyin: shǐ fā fèn dú shū jí
+  - time: 09:30.33
+    text: 彼既老，犹悔迟。
+    pinyin: bǐ jì lǎo yóu huǐ chí
+  - time: 09:33.95
+    text: 尔小生，宜早思。
+    pinyin: ěr xiǎo shēng yí zǎo sī
+  - time: 09:37.79
+    text: 若梁灏，八十二。
+    pinyin: ruò liáng hào bā shí èr
+  - time: 09:40.92
+    text: 对大廷，魁多士。
+    pinyin: duì dà tíng kuí duō shì
+  - time: 09:44.31
+    text: 彼既成，众称异。
+    pinyin: bǐ jì chéng zhòng chēng yì
+  - time: 09:47.88
+    text: 尔小生，宜立志。
+    pinyin: ěr xiǎo shēng yí lì zhì
+  - time: 09:51.44
+    text: 莹八岁，能咏诗。
+    pinyin: yíng bā suì néng yǒng shī
+  - time: 09:55.04
+    text: 泌七岁，能赋棋。
+    pinyin: mì qī suì néng fù qí
+  - time: 09:58.66
+    text: 彼颖悟，人称奇。
+    pinyin: bǐ yǐng wù rén chēng qí
+  - time: 10:02.40
+    text: 尔幼学，当效之。
+    pinyin: ěr yòu xué dāng xiào zhī
+  - time: 10:05.81
+    text: 蔡文姬，能辨琴。
+    pinyin: cài wén jī néng biàn qín
+  - time: 10:09.44
+    text: 谢道韫，能咏吟。
+    pinyin: xiè dào yùn néng yǒng yín
+  - time: 10:12.88
+    text: 彼女子，且聪敏。
+    pinyin: bǐ nǚ zǐ qiě cōng mǐn
+  - time: 10:16.58
+    text: 尔男子，当自警。
+    pinyin: ěr nán zǐ dāng zì jǐng
+  - time: 10:20.06
+    text: 唐刘晏，方七岁。
+    pinyin: táng liú yàn fāng qī suì
+  - time: 10:23.43
+    text: 举神童，作正字。
+    pinyin: jǔ shén tóng zuò zhèng zì
+  - time: 10:26.74
+    text: 彼虽幼，身已仕。
+    pinyin: bǐ suī yòu shēn yǐ shì
+  - time: 10:30.32
+    text: 尔幼学，勉而致。
+    pinyin: ěr yòu xué miǎn ér zhì
+  - time: 10:34.10
+    text: 有为者，亦若是。
+    pinyin: yǒu wéi zhě yì ruò shì
+  - time: 10:37.68
+    text: 犬守夜，鸡司晨。
+    pinyin: quǎn shǒu yè jī sī chén
+  - time: 10:41.32
+    text: 苟不学，曷为人。
+    pinyin: gǒu bù xué hé wéi rén
+  - time: 10:44.76
+    text: 蚕吐丝，蜂酿蜜。
+    pinyin: cán tǔ sī fēng niàng mì
+  - time: 10:48.41
+    text: 人不学，不如物。
+    pinyin: rén bù xué bù rú wù
+  - time: 10:51.91
+    text: 幼而学，壮而行。
+    pinyin: yòu ér xué zhuàng ér xíng
+  - time: 10:55.33
+    text: 上致君，下泽民。
+    pinyin: shàng zhì jūn xià zé mín
+  - time: 10:58.74
+    text: 扬名声，显父母。
+    pinyin: yáng míng shēng xiǎn fù mǔ
+  - time: 11:02.32
+    text: 光于前，裕于后。
+    pinyin: guāng yú qián yù yú hòu
+  - time: 11:05.65
+    text: 人遗子，金满籝。
+    pinyin: rén yí zǐ jīn mǎn yíng
+  - time: 11:09.27
+    text: 我教子，惟一经。
+    pinyin: wǒ jiào zǐ wéi yī jīng
+  - time: 11:12.70
+    text: 勤有功，戏无益。
+    pinyin: qín yǒu gōng xì wú yì
+  - time: 11:16.42
+    text: 戒之哉，宜勉力。
+    pinyin: jiè zhī zāi yí miǎn lì

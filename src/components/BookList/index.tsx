@@ -25,20 +25,22 @@ export function BookList(props: BookListProps) {
     <>
       <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3">
         {bookList.map((entry) => {
-          const { key, title, author } = entry
+          const { key, title, author, background } = entry
           return (
             <div
               key={key}
-              className="w-36 h-48 bg-blue-900 cursor-pointer shadow-lg"
+              className="relative z-0 w-32 h-44 cursor-pointer shadow-lg bg-cover bg-center"
+              style={{ backgroundImage: 'url("/assets/cover-bg.jpg")' }}
               onClick={() => onChange(entry)}
             >
-              <div className="bg-white my-auto mt-4 px-4 py-4 [writing-mode:vertical-rl] [text-orientation:upright] outline-2 -outline-offset-4 outline-blue-900">
-                <div className="text-3xl">
-                  <span className="font-kai">{title}</span>
-                </div>
+              <div
+                className="absolute z-0 inset-0 mix-blend-multiply"
+                style={{ background }}
+              />
+              <div className="flex flex-col justify-around items-center absolute z-10 top-6 bottom-6 left-10 right-10 py-3 bg-white outline-2 -outline-offset-4 outline-black text-2xl font-song">
+                {title.split('').map((c, i) => (<div key={i}>{c}</div>))}
               </div>
-              <div className="mt-2 text-sm text-center text-white">{author}</div>
-              </div>
+            </div>
           )
         })}
       </div>

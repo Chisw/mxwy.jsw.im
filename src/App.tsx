@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { BookList, BookPlayer } from './components'
-import './css/index.css'
 import type { IBookEntry } from './type'
+import './css/index.css'
 
 function App() {
 
@@ -14,8 +14,8 @@ function App() {
         <div className="mx-auto max-w-6xl">
 
           <div className="flex items-center py-4">
-            <img src="/logo.png" className="w-12 h-12" />
-            <p className="ml-2 text-2xl font-bold">蒙学文吟</p>
+            <img src="/assets/logo.png" className="w-12 h-12" />
+            <p className="ml-2 text-2xl font-bold font-song">蒙学文吟</p>
           </div>
 
           <div className="mt-8">

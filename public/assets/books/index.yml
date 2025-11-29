@@ -1,15 +1,23 @@
 books:
-  - key: qian-zi-wen
-    title: 千字文
-    author: （南梁）周兴嗣
-    sha256sum: 6bb47a1ce83a354ae8398db2d0d14ada79e71cdcdd601d228e63a53ddf443cd3
-    sections:
-      - 第一部分@1,48
-      - 第二部分@49,72
   - key: san-zi-jing
     title: 三字经
     author: （宋）王应麟
-    sha256sum: 6bb47a1ce83a354ae8398db2d0d14ada79e71cdcdd601d228e63a53ddf443cd3
+    sentences: 185
+    seconds: 681
+    sha256sum: bbfd37c206e3ef3eefe26c3b22ffc25d91bba282555d55b38d6c5ee7e2e36980
+    background: '#193cb8'
+    intro: 《三字经》是中国的传统启蒙教材，是最浅显易懂的读本之一。《三字经》取材典范，包括中国传统文化的文学、历史、哲学、天文地理、人伦义理、忠孝节义等等，而核心思想又包括了“仁，义，诚，敬，孝。”背诵《三字经》的同时，就了解了常识、传统国学及历史故事，以及故事内涵中的做人做事道理。
     sections:
-      - 第一部分@1,48
-      - 第二部分@49,72
+      - 第一部分@1,2
+      - 第二部分@3,4
+  - key: qian-zi-wen
+    title: 千字文
+    author: （南梁）周兴嗣
+    sentences: 126
+    seconds: 659
+    sha256sum: 6bb47a1ce83a354ae8398db2d0d14ada79e71cdcdd601d228e63a53ddf443cd3
+    background: '#005f78'
+    intro: 《千字文》原名《次韵王羲之书千字》，是中国古代三大蒙学经典教材之一。南北朝时期梁朝，梁武帝萧衍为了教育皇室子女学习汉字和书法，命人从王羲之书法作品中选出 1000 个不重复的字，由散骑侍郎、给事中周兴嗣所编纂，周兴嗣耗费整夜时间，最终编成这篇《千字文》。内容涵盖天文史地、飞禽走兽、农业知识、道德规范、成语谚语等，被称为“千古奇文”。隋唐时，继续在社会上广泛流传。唐宋以后，一直在全国范围内被用作儿童启蒙的识字教材。
+    sections:
+      - 第一部分@1,2
+      - 第二部分@3,4

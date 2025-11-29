@@ -14,10 +14,10 @@ export interface IBookEntry {
   key: string
   title: string
   author: string
+  sentences: number
+  seconds: number
+  sha256sum: string
+  background: string
+  intro: string
   sections: string[]
-  sentenceCount: number
-  audioMd5: string
-  audioSha256: string
-  audioCount: number
-  audioDuration: number
 }
