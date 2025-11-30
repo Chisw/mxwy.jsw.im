@@ -148,7 +148,7 @@ export function BookPlayer (props: BookPlayerProps) {
       <div className="fixed z-0 right-0 bottom-0 left-0 px-4 md:px-0 h-16 bg-white">
         <div className="flex items-center mx-auto max-w-6xl h-full">
           <div
-            className="flex-center-center w-8 h-8 text-white bg-green-500 rounded-full cursor-pointer"
+            className="shrink-0 flex-center-center w-8 h-8 text-white bg-green-500 rounded-full cursor-pointer"
             onClick={audio.toggle}
           >
             {isPlaying ? <SvgIcon.Pause size={20} /> : <SvgIcon.Play size={20} />}
@@ -177,7 +177,7 @@ export function BookPlayer (props: BookPlayerProps) {
             </div>
           </div>
 
-          <div className="relative z-0 ml-4">
+          <div className="shrink-0 relative z-0 ml-4">
             <div
               className="cursor-pointer hover:text-green-500"
               onClick={() => setVolumeSliderShow(true)}
@@ -196,7 +196,7 @@ export function BookPlayer (props: BookPlayerProps) {
           </div>
 
           <div
-            className="ml-4 cursor-pointer hover:text-green-500"
+            className="shrink-0 ml-4 cursor-pointer hover:text-green-500"
             onClick={() => {}}
           >
             <SvgIcon.Settings size={20} />
