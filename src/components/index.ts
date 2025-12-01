@@ -1,4 +1,7 @@
 export * from './BookList'
 export * from './BookPlayer'
+export * from './layout/Container'
 export * from './layout/Footer'
+export * from './layout/Header'
+export * from './Reciter'
 export * from './SvgIcon'

@@ -13,7 +13,7 @@ export function useAudio() {
 
   const playInfo = useMemo(() => {
     return {
-      percent: currentTime / duration * 100,
+      percent: duration ? currentTime / duration * 100 : 0,
       durationLabel: getFormatTime(duration),
       currentTimeLabel: getFormatTime(currentTime),
     }

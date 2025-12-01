@@ -12,6 +12,7 @@ export interface IBookDetail {
 
 export interface IBookEntry {
   key: string
+  group: number
   title: string
   author: string
   sentences: number

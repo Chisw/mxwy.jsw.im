@@ -1,3 +1,26 @@
+/* customized-scrollbar */
+[data-customized-scrollbar]::-webkit-scrollbar,
+[data-customized-scrollbar]::-webkit-scrollbar-button,
+[data-customized-scrollbar]::-webkit-scrollbar-track-piece,
+[data-customized-scrollbar]::-webkit-scrollbar-corner,
+[data-customized-scrollbar]::-webkit-resizer {
+  background: none;
+}
+
+[data-customized-scrollbar]::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+[data-customized-scrollbar]::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, .1);
+}
+
+[data-customized-scrollbar]::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background-color: rgba(0, 0, 0, .2);
+}
+
 /* volume-slider */
 .volume-slider {
   appearance: none;

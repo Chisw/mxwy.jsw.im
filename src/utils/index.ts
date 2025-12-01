@@ -1,4 +1,4 @@
-import { Duration } from 'luxon'
+import { DateTime, Duration } from 'luxon'
 
 export const getInjectedPinyinList = (pinyin: string, text: string) => {
   const pinyinList = pinyin.split(' ')
@@ -25,6 +25,10 @@ export const getSecondsByTime = (time: string) => {
 
 export const getFormatTime = (seconds: number) => {
   return Duration.fromMillis(seconds * 1000).toFormat('hh:mm:ss')
+}
+
+export const getFormatDateTime = (date: Date) => {
+  return DateTime.fromJSDate(date).toFormat('yyyy-MM-dd hh:mm:ss')
 }
 
 export const line = (str: string) => str
