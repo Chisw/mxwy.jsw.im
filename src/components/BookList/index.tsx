@@ -7,12 +7,13 @@ import { Container } from '../layout/Container'
 import { useRecoilState } from 'recoil'
 import { activeBookEntryState } from '../../states'
 import { groupBy } from 'lodash-es'
+import { Skeleton } from 'react-vant'
 
 export function BookList() {
 
   const [, setActiveBookEntry] = useRecoilState(activeBookEntryState)
 
-  const { request: queryBookList, response } = useRequest(BookApi.queryBookList)
+  const { request: queryBookList, response, loading } = useRequest(BookApi.queryBookList)
 
   const bookGroupList = useMemo(() => {
     const list = response?.books || []
@@ -26,6 +27,8 @@ export function BookList() {
   return (
     <>
       <Container className="pt-3 md:pt-6 pb-16 select-none">
+        {loading && <Skeleton row={4} />}
+
         {Object.entries(bookGroupList).map(([group, bookList]) => {
           return (
             <div key={group}>

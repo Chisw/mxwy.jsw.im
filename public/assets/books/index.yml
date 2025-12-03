@@ -8,19 +8,15 @@ books:
     sha256sum: bbfd37c206e3ef3eefe26c3b22ffc25d91bba282555d55b38d6c5ee7e2e36980
     background: '#193cb8'
     intro: 《三字经》是中国的传统启蒙教材，是最浅显易懂的读本之一。《三字经》取材典范，包括中国传统文化的文学、历史、哲学、天文地理、人伦义理、忠孝节义等等，而核心思想又包括了“仁，义，诚，敬，孝。”背诵《三字经》的同时，就了解了常识、传统国学及历史故事，以及故事内涵中的做人做事道理。
-    sections:
-      - 第一部分@1,2
-      - 第二部分@3,4
   - key: bai-jia-xing
     group: 1
     title: 百家姓
     author: （北宋）无名氏
-    sentences: 0
-    seconds: 0
+    sentences: 143
+    seconds: 363
     sha256sum: sha256sum
     background: '#005f78'
     intro: 《百家姓》是一部关于汉字姓氏的作品，主要选取的是汉族姓氏。按文献记载，成文于北宋初年。原收集姓氏 411 个，后增补到 504 个，其中单姓 444 个，复姓 60 个。版本颇为丰富，尤以清代为甚。《百家姓》采用四言体例，对姓氏进行了排列，而且句句押韵，虽然它的内容没有文理，但对于中国姓氏文化的传承、中国文字的认识等方面都起了巨大作用，这也是能够流传千百年的一个重要因素。
-    sections:
   - key: qian-zi-wen
     group: 1
     title: 千字文
@@ -30,9 +26,6 @@ books:
     sha256sum: 6bb47a1ce83a354ae8398db2d0d14ada79e71cdcdd601d228e63a53ddf443cd3
     background: '#006045'
     intro: 《千字文》原名《次韵王羲之书千字》，是中国古代三大蒙学经典教材之一。南北朝时期梁朝，梁武帝萧衍为了教育皇室子女学习汉字和书法，命人从王羲之书法作品中选出 1000 个不重复的字，由散骑侍郎、给事中周兴嗣所编纂，周兴嗣耗费整夜时间，最终编成这篇《千字文》。内容涵盖天文史地、飞禽走兽、农业知识、道德规范、成语谚语等，被称为“千古奇文”。隋唐时，继续在社会上广泛流传。唐宋以后，一直在全国范围内被用作儿童启蒙的识字教材。
-    sections:
-      - 第一部分@1,2
-      - 第二部分@3,4
   - key: di-zi-gui
     group: 1
     title: 弟子规
@@ -42,9 +35,6 @@ books:
     sha256sum: sha256sum
     background: '#3c6300'
     intro: 《弟子规》，原名《训蒙文》，是一本清朝出现的文学作品，以韵文写成。它从孔门四教之首的德行教育来入门，具体而微地阐述了求学之人应循的生活轨范与修学方法，即先扎德行根本，再求丰富学识，以为推动仁德事业之基础。一般认为作者是满清康熙年间的秀才李毓秀，后经贾存仁修订改编，改称《弟子规》。
-    sections:
-      - 第一部分@1,2
-      - 第二部分@3,4
   - key: li-weng-dui-yun
     group: 1
     title: 笠翁对韵
@@ -54,9 +44,6 @@ books:
     sha256sum: sha256sum
     background: '#973c00'
     intro: intro
-    sections:
-      - 第一部分@1,2
-      - 第二部分@3,4
   - key: sheng-lv-qi-meng
     group: 1
     title: 声律启蒙
@@ -66,9 +53,6 @@ books:
     sha256sum: sha256sum
     background: '#9f0712'
     intro: intro
-    sections:
-      - 第一部分@1,2
-      - 第二部分@3,4
   - key: zeng-guang-xian-wen
     group: 1
     title: 增广贤文
@@ -78,9 +62,15 @@ books:
     sha256sum: sha256sum
     background: '#8a0194'
     intro: intro
-    sections:
-      - 第一部分@1,2
-      - 第二部分@3,4
+  - key: yu-you-shi
+    group: 2
+    title: 余幼时
+    author: （明）宋濂
+    sentences: 0
+    seconds: 0
+    sha256sum: sha256sum
+    background: ''
+    intro: intro
   - key: qian-gua
     group: 2
     title: 乾卦
@@ -90,102 +80,75 @@ books:
     sha256sum: sha256sum
     background: ''
     intro: 周易
-    sections:
-      - 第一部分@1,2
-      - 第二部分@3,4
   - key: ti-dao
     group: 2
     title: 体道
-    author: 老子
+    author: （春秋）老子
     sentences: 0
     seconds: 0
     sha256sum: sha256sum
     background: ''
     intro: 道德经
-    sections:
-      - 第一部分@1,2
-      - 第二部分@3,4
   - key: xiao-yao-you
     group: 2
     title: 逍遥游
-    author: 庄子
+    author: （战国）庄子
     sentences: 0
     seconds: 0
     sha256sum: sha256sum
     background: ''
     intro: 庄子
-    sections:
-      - 第一部分@1,2
-      - 第二部分@3,4
   - key: xue-er
     group: 2
     title: 学而
-    author: 孔子
+    author: （春秋）孔子
     sentences: 0
     seconds: 0
     sha256sum: sha256sum
     background: ''
     intro: 论语
-    sections:
-      - 第一部分@1,2
-      - 第二部分@3,4
   - key: guan-ju
     group: 2
     title: 关雎
-    author: 无名氏
+    author: （西周）无名氏
     sentences: 0
     seconds: 0
     sha256sum: sha256sum
     background: ''
     intro: 诗经
-    sections:
-      - 第一部分@1,2
-      - 第二部分@3,4
   - key: ji-pian
     group: 2
     title: 计篇
-    author: 孙子
+    author: （春秋）孙子
     sentences: 0
     seconds: 0
     sha256sum: sha256sum
     background: ''
     intro: 孙子兵法
-    sections:
-      - 第一部分@1,2
-      - 第二部分@3,4
   - key: xin-jing
     group: 2
     title: 心经
-    author: 玄奘
+    author: （唐）玄奘
     sentences: 0
     seconds: 0
     sha256sum: sha256sum
     background: ''
     intro: intro
-    sections:
-      - 第一部分@1,2
-      - 第二部分@3,4
   - key: teng-wang-ge-xu
     group: 2
     title: 滕王阁序
-    author: 王勃
+    author: （唐）王勃
     sentences: 0
     seconds: 0
     sha256sum: sha256sum
     background: ''
     intro: intro
-    sections:
-      - 第一部分@1,2
-      - 第二部分@3,4
   - key: jie-zi-shu
     group: 2
     title: 诫子书
-    author: 诸葛亮
+    author: （三国）诸葛亮
     sentences: 0
     seconds: 0
     sha256sum: sha256sum
     background: ''
     intro: intro
-    sections:
-      - 第一部分@1,2
-      - 第二部分@3,4

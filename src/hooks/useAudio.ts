@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { getFormatTime } from '../utils'
 
-const audio: HTMLAudioElement = new Audio()
+const audioEl: HTMLAudioElement = new Audio()
 
 export function useAudio() {
 
@@ -20,11 +20,11 @@ export function useAudio() {
   }, [currentTime, duration])
 
   const play = useCallback(() => {
-    audio.play()
+    audioEl.play()
   }, [])
 
   const pause = useCallback(() => {
-    audio.pause()
+    audioEl.pause()
   }, [])
 
   const toggle = useCallback(() => {
@@ -37,46 +37,51 @@ export function useAudio() {
 
   const changeUrl = useCallback((u: string) => {
     if (u === url) return
-    audio.pause()
-    audio.src = u
-    audio.load()
+    audioEl.pause()
+    audioEl.src = u
+    audioEl.load()
     setUrl(u)
     setDuration(0)
     setCurrentTime(0)
   }, [url])
 
   const changeCurrentTime = useCallback((time: number) => {
-    audio.currentTime = time
+    audioEl.currentTime = time
     setCurrentTime(time)
   }, [])
 
   const changeVolume = useCallback((vol: number) => {
-    audio.volume = vol
+    audioEl.volume = vol
+  }, [])
+
+  const changePlaybackRate = useCallback((rate: number) => {
+    audioEl.playbackRate = rate
   }, [])
 
   useEffect(() => {
     const handlePlay = () => setIsPlaying(true)
     const handlePause = () => setIsPlaying(false)
-    const handleTimeUpdate = () => setCurrentTime(audio.currentTime)
-    const handleLoadedMetadata = () => setDuration(audio.duration)
-    const handleVolumeChange = () => setVolume(audio.volume)
+    const handleTimeUpdate = () => setCurrentTime(audioEl.currentTime)
+    const handleLoadedMetadata = () => setDuration(audioEl.duration)
+    const handleVolumeChange = () => setVolume(audioEl.volume)
     const handleEnded = () => setIsPlaying(false)
 
-    audio.addEventListener('play', handlePlay)
-    audio.addEventListener('pause', handlePause)
-    audio.addEventListener('timeupdate', handleTimeUpdate)
-    audio.addEventListener('loadedmetadata', handleLoadedMetadata)
-    audio.addEventListener('volumechange', handleVolumeChange)
-    audio.addEventListener('ended', handleEnded)
+    audioEl.addEventListener('play', handlePlay)
+    audioEl.addEventListener('pause', handlePause)
+    audioEl.addEventListener('timeupdate', handleTimeUpdate)
+    audioEl.addEventListener('loadedmetadata', handleLoadedMetadata)
+    audioEl.addEventListener('volumechange', handleVolumeChange)
+    audioEl.addEventListener('ended', handleEnded)
+    audioEl.addEventListener('', handleEnded)
 
     return () => {
-      audio.pause()
-      audio.removeEventListener('play', handlePlay)
-      audio.removeEventListener('pause', handlePause)
-      audio.removeEventListener('timeupdate', handleTimeUpdate)
-      audio.removeEventListener('loadedmetadata', handleLoadedMetadata)
-      audio.removeEventListener('volumechange', handleVolumeChange)
-      audio.removeEventListener('ended', handleEnded)
+      audioEl.pause()
+      audioEl.removeEventListener('play', handlePlay)
+      audioEl.removeEventListener('pause', handlePause)
+      audioEl.removeEventListener('timeupdate', handleTimeUpdate)
+      audioEl.removeEventListener('loadedmetadata', handleLoadedMetadata)
+      audioEl.removeEventListener('volumechange', handleVolumeChange)
+      audioEl.removeEventListener('ended', handleEnded)
     }
   }, [])
   
@@ -93,5 +98,6 @@ export function useAudio() {
     changeUrl,
     changeCurrentTime,
     changeVolume,
+    changePlaybackRate,
   }
 }

@@ -10,7 +10,10 @@ export function Header() {
       >
         <div className="flex items-center">
           <img src="/assets/logo.png" className="w-10 h-10" />
-          <p className="ml-2 text-2xl font-bold font-song">蒙学文吟</p>
+          <div className="ml-2">
+            <div className="text-xl font-bold font-song">蒙学文吟</div>
+            <div className="text-xs text-zinc-400">合抱之木，生于毫末；九层之台，起于累土</div>
+          </div>
         </div>
         <div className="">
           <a

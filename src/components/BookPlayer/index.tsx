@@ -9,6 +9,7 @@ import { SvgIcon } from '../SvgIcon'
 import { VolumeSlider } from './VolumeSlider'
 import { VolumeIcon } from './VolumeIcon'
 import { Container } from '../layout/Container'
+import Settings from './Settings'
 
 export function BookPlayer () {
   const audio = useAudio()
@@ -16,6 +17,9 @@ export function BookPlayer () {
 
   const [textContentVisible, setTextContentVisible] = useState(false)
   const [volumeSliderVisible, setVolumeSliderVisible] = useState(false)
+  const [fontSize, setFontSize] = useState(20)
+  const [playbackRate, setPlaybackRate] = useState(1)
+  const [settingsVisible, setSettingsVisible] = useState(false)
 
   const { request: queryBookDetail, response } = useRequest(BookApi.queryBookDetail)
 
@@ -59,6 +63,17 @@ export function BookPlayer () {
 
     audio.changeVolume(targetVolume)
   }, [audio])
+
+  const handlePlaybackRateChange = useCallback((r: number) => {
+    audio.changePlaybackRate(r)
+    setPlaybackRate(r)
+  }, [audio])
+
+  const handleFontSizeChange = useCallback((offset: number) => {
+    const size = fontSize + offset
+    if (size < 10) return
+    setFontSize(size)
+  }, [fontSize])
 
   useEffect(() => {
     if (!activeBookEntry) return
@@ -122,10 +137,10 @@ export function BookPlayer () {
                 key={time}
                 data-index={sentenceIndex}
                 className={line(`
-                  relative z-0 mx-auto py-1 max-w-5xl
+                  mxwy-sentence
+                  relative z-0 mx-auto max-w-5xl
                   text-center cursor-pointer
                   hover:outline-2 hover:outline-green-500 -outline-offset-2
-                  transition-all duration-100
                   group
                   ${isActive ? 'bg-green-200' : ''}  
                 `)}
@@ -133,22 +148,28 @@ export function BookPlayer () {
               >
                 <div className="hidden items-center absolute z-10 top-0 left-0 -mt-6 p-1 h-6 bg-green-500 text-green-200 text-xs group-hover:flex">
                   <SvgIcon.Play size={12} />
-                  <span className="ml-1">{time.slice(0, -3)}</span>
+                  <span className="ml-1">{sentenceIndex + 1}@{time.slice(0, -3)}</span>
                 </div>
 
-                {textList.map((char, index) => {
-                  const pinyin = pinyinList[index]
+                {textList.map((char, charIndex) => {
+                  const pinyin = pinyinList[charIndex]
+                  const isPunctuation = !pinyin
                   return (
                     <div
-                      key={index}
-                      className={`inline-block ${!pinyin ? 'w-3' : 'w-12'} overflow-hidden`}
+                      key={charIndex}
+                      data-pinyin={pinyin}
+                      className={line(`
+                        mxwy-sentence-character
+                        relative inline-block overflow-hidden font-kai
+                      `)}
+                      style={{
+                        paddingTop: fontSize + fontSize * 0.4,
+                        paddingBottom: fontSize * 0.1,
+                        width: isPunctuation ? fontSize / 4 : fontSize * 2.2,
+                        fontSize,
+                      }}
                     >
-                      <div className="text-sm font-py">
-                        {pinyin}
-                      </div>
-                      <div className="text-xl font-kai">
-                        {char}
-                      </div>
+                      {char}
                     </div>
                   )
                 })}
@@ -168,8 +189,6 @@ export function BookPlayer () {
         >
           {isPlaying ? <SvgIcon.Pause size={20} /> : <SvgIcon.Play size={20} />}
         </div>
-
-        {/* <div className="ml-4 w-12 h-12 rounded bg-zinc-100" /> */}
 
         <div className="grow ml-4">
           <div className="flex justify-between items-center flex-col md:flex-row">
@@ -203,8 +222,6 @@ export function BookPlayer () {
           <VolumeSlider
             show={volumeSliderVisible}
             volume={volume}
-            right={-2}
-            bottom={28}
             onClose={() => setVolumeSliderVisible(false)}
             onVolumeChange={handleVolumeChange}
           />
@@ -212,11 +229,19 @@ export function BookPlayer () {
 
         <div
           className="shrink-0 ml-4 cursor-pointer hover:text-green-500"
-          onClick={() => {}}
+          onClick={() => setSettingsVisible(true)}
         >
           <SvgIcon.Settings size={20} />
         </div>
       </Container>
+
+      <Settings
+        visible={settingsVisible}
+        playbackRate={playbackRate}
+        onPlaybackRateChange={handlePlaybackRateChange}
+        onFontSizeChange={handleFontSizeChange}
+        onClose={() => setSettingsVisible(false)}
+      />
     </>
   )
 }

@@ -17,6 +17,7 @@
     "luxon": "^3.7.2",
     "react": "18",
     "react-dom": "18",
+    "react-vant": "^3.3.5",
     "recoil": "^0.7.7",
     "tailwindcss": "^4.1.17",
     "yaml": "^2.8.1"

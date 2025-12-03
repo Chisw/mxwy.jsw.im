@@ -10,7 +10,7 @@ export function Reciter() {
         </div>
         <div className="ml-4">
           <div className="text-xs md:text-sm text-zinc-400">
-            朗诵者：
+            朗读者：
           </div>
           <div className="flex items-center mt-1">
             <span className="text-lg md:text-2xl font-bold">白云出岫</span>

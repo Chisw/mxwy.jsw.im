@@ -7,6 +7,7 @@ export interface ISentence {
 
 export interface IBookDetail {
   key: string
+  sections: string[]
   sentences: ISentence[]
 }
 
@@ -20,5 +21,4 @@ export interface IBookEntry {
   sha256sum: string
   background: string
   intro: string
-  sections: string[]
 }

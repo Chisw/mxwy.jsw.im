@@ -1,3 +1,7 @@
+:root {
+  --rv-primary-color: #00a63e;
+}
+
 /* customized-scrollbar */
 [data-customized-scrollbar]::-webkit-scrollbar,
 [data-customized-scrollbar]::-webkit-scrollbar-button,
@@ -21,18 +25,14 @@
   background-color: rgba(0, 0, 0, .2);
 }
 
-/* volume-slider */
-.volume-slider {
-  appearance: none;
-  width: 95px;
-  height: 2px;
-  transform: rotate(270deg) translateX(-100px) translateY(16px);
-  @apply bg-zinc-200 origin-left cursor-pointer;
-}
-
-.volume-slider::-webkit-slider-thumb {
-  appearance: none;
-  width: 8px;
-  height: 8px;
-  @apply bg-green-500 rounded-full;
+.mxwy-sentence-character::after {
+  content: attr(data-pinyin);
+  display: inline-block;
+  position: absolute;
+  z-index: 0;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 75%;
+  font-family: '印氪先生汉语拼音 人教版W3';
 }
