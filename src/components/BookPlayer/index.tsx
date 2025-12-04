@@ -20,6 +20,7 @@ export function BookPlayer () {
   const [fontSize, setFontSize] = useState(20)
   const [playbackRate, setPlaybackRate] = useState(1)
   const [settingsVisible, setSettingsVisible] = useState(false)
+  const [loopCount, setLoopCount] = useState(1)
 
   const { request: queryBookDetail, response } = useRequest(BookApi.queryBookDetail)
 
@@ -238,8 +239,10 @@ export function BookPlayer () {
       <Settings
         visible={settingsVisible}
         playbackRate={playbackRate}
+        loopCount={loopCount}
         onPlaybackRateChange={handlePlaybackRateChange}
         onFontSizeChange={handleFontSizeChange}
+        onLoopCountChange={setLoopCount}
         onClose={() => setSettingsVisible(false)}
       />
     </>
