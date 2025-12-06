@@ -5,6 +5,17 @@ export interface ISentence {
   annotation: Record<number, string>
 }
 
+export interface ISentenceRow extends ISentence {
+  startTime: number
+  endTime: number
+}
+
+export interface ISection {
+  name: string
+  from: number
+  to: number
+}
+
 export interface IBookDetail {
   key: string
   sections: string[]

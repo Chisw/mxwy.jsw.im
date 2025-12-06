@@ -10,6 +10,7 @@ import { VolumeSlider } from './VolumeSlider'
 import { VolumeIcon } from './VolumeIcon'
 import { Container } from '../layout/Container'
 import Settings from './Settings'
+import type { ISection, ISentenceRow } from '../../type'
 
 export function BookPlayer () {
   const audio = useAudio()
@@ -21,6 +22,7 @@ export function BookPlayer () {
   const [playbackRate, setPlaybackRate] = useState(1)
   const [settingsVisible, setSettingsVisible] = useState(false)
   const [loopCount, setLoopCount] = useState(1)
+  const [section, setPlayingSection] = useState<ISection>({ name: '全部', from: 1, to: activeBookEntry?.sentences || 1 })
 
   const { request: queryBookDetail, response } = useRequest(BookApi.queryBookDetail)
 
@@ -34,21 +36,40 @@ export function BookPlayer () {
   } = useMemo(() => audio, [audio])
 
   const {
-    sentenceList,
+    sectionList,
+    sentenceRowList,
     timeList,
   } = useMemo(() => {
-    const sentenceList = (response?.sentences || [])
-    const timeList = sentenceList.map(o => getSecondsByTime(o.time))
+    const list = (response?.sentences || [])
+    const sentenceRowList: ISentenceRow[] = list.map((s, sIndex) => {
+      const nextSentence = list[sIndex + 1];
+      const startTime = getSecondsByTime(s.time)
+      const endTime = nextSentence ? getSecondsByTime(nextSentence.time) : activeBookEntry!.seconds
+      return {
+        ...s,
+        startTime,
+        endTime,
+      }
+    })
+
+    const sectionList: ISection[] = (response?.sections || []).map(s => {
+      const [name, from, to] = s.split(/@|,/)
+      return { name, from: +from, to: +to }
+    })
+
+    const timeList = sentenceRowList.map(s => s.startTime)
+
     return {
-      sentenceList,
+      sectionList,
+      sentenceRowList,
       timeList,
     }
-  }, [response])
+  }, [response, activeBookEntry])
 
   const activeSentenceIndex = useMemo(() => sortedIndex(timeList, currentTime) - 1, [currentTime, timeList])
 
-  const handleSentenceClick = useCallback((time: string) => {
-    audio.changeCurrentTime(getSecondsByTime(time))
+  const handleSentenceClick = useCallback((startTime: number) => {
+    audio.changeCurrentTime(startTime)
     audio.play()
   }, [audio])
 
@@ -69,12 +90,6 @@ export function BookPlayer () {
     audio.changePlaybackRate(r)
     setPlaybackRate(r)
   }, [audio])
-
-  const handleFontSizeChange = useCallback((offset: number) => {
-    const size = fontSize + offset
-    if (size < 10) return
-    setFontSize(size)
-  }, [fontSize])
 
   useEffect(() => {
     if (!activeBookEntry) return
@@ -120,61 +135,70 @@ export function BookPlayer () {
           <SvgIcon.ChevronBottom size={28} />
         </div>
 
-        <div className="absolute z-10 inset-0 bottom-auto h-12 bg-linear-to-b from-green-100 via-green-100/90 to-transparent pointer-events-none" />
-        <div className="absolute z-10 inset-0    top-auto h-12 bg-linear-to-t from-green-100 via-green-100/90 to-transparent pointer-events-none" />
+        {/* <div className="absolute z-10 inset-0 bottom-auto h-12 bg-linear-to-b from-green-100 via-green-100/90 to-transparent pointer-events-none" />
+        <div className="absolute z-10 inset-0    top-auto h-12 bg-linear-to-t from-green-100 via-green-100/90 to-transparent pointer-events-none" /> */}
 
         <div
           ref={scrollRef}
           data-customized-scrollbar
-          className="absolute z-0 inset-0 py-20 overflow-y-auto select-none"
+          className="absolute z-0 inset-0 py-10 overflow-y-auto select-none"
         >
-          {sentenceList.map(({ time, text, pinyin }, sentenceIndex) => {
+          {sentenceRowList.map(({ time, text, pinyin, startTime }, sentenceIndex) => {
             const textList = text.split('')
             const pinyinList = getInjectedPinyinList(pinyin, text)
             const isActive = sentenceIndex === activeSentenceIndex
+            const section = sectionList.find(s => s.from === sentenceIndex + 1)
 
             return (
-              <div
-                key={time}
-                data-index={sentenceIndex}
-                className={line(`
-                  mxwy-sentence
-                  relative z-0 mx-auto max-w-5xl
-                  text-center cursor-pointer
-                  hover:outline-2 hover:outline-green-500 -outline-offset-2
-                  group
-                  ${isActive ? 'bg-green-200' : ''}  
-                `)}
-                onClick={() => handleSentenceClick(time)}
-              >
-                <div className="hidden items-center absolute z-10 top-0 left-0 -mt-6 p-1 h-6 bg-green-500 text-green-200 text-xs group-hover:flex">
-                  <SvgIcon.Play size={12} />
-                  <span className="ml-1">{sentenceIndex + 1}@{time.slice(0, -3)}</span>
-                </div>
+              <>
+                {!!section && (
+                  <div className="sticky z-10 -top-10 mt-4 py-6 text-center text-sm bg-linear-to-b from-green-100 via-green-100/90 to-transparent">
+                    {section.name}
+                  </div>
+                )}
+                <div
+                  key={time}
+                  data-index={sentenceIndex}
+                  className={line(`
+                    mxwy-sentence
+                    relative z-0
+                    text-center cursor-pointer
+                    hover:outline-2 hover:outline-green-500 -outline-offset-2
+                    group
+                    ${isActive ? 'bg-green-200' : ''}  
+                  `)}
+                  onClick={() => handleSentenceClick(startTime)}
+                >
+                  <div className="hidden items-center absolute z-10 top-0 left-0 -mt-6 p-1 h-6 bg-green-500 text-green-200 text-xs group-hover:flex">
+                    <SvgIcon.Play size={12} />
+                    <span className="ml-1">{sentenceIndex + 1}@{time.slice(0, -3)}</span>
+                  </div>
 
-                {textList.map((char, charIndex) => {
-                  const pinyin = pinyinList[charIndex]
-                  const isPunctuation = !pinyin
-                  return (
-                    <div
-                      key={charIndex}
-                      data-pinyin={pinyin}
-                      className={line(`
-                        mxwy-sentence-character
-                        relative inline-block overflow-hidden font-kai
-                      `)}
-                      style={{
-                        paddingTop: fontSize + fontSize * 0.4,
-                        paddingBottom: fontSize * 0.1,
-                        width: isPunctuation ? fontSize / 4 : fontSize * 2.2,
-                        fontSize,
-                      }}
-                    >
-                      {char}
-                    </div>
-                  )
-                })}
-              </div>
+                  {textList.map((char, charIndex) => {
+                    const pinyin = pinyinList[charIndex]
+                    const isPunctuation = !pinyin
+                    return (
+                      <div
+                        key={charIndex}
+                        data-pinyin={pinyin}
+                        className={line(`
+                          mxwy-sentence-character
+                          relative inline-block overflow-hidden font-kai
+                          ${isPunctuation ? 'text-left' : ''}
+                        `)}
+                        style={{
+                          paddingTop: fontSize + fontSize * 0.4,
+                          paddingBottom: fontSize * 0.1,
+                          width: isPunctuation ? fontSize / 2 : fontSize * 2.2,
+                          fontSize,
+                        }}
+                      >
+                        {char}
+                      </div>
+                    )
+                  })}
+                </div>
+              </>
             )
           })}
         </div>
@@ -238,10 +262,17 @@ export function BookPlayer () {
 
       <Settings
         visible={settingsVisible}
-        playbackRate={playbackRate}
-        loopCount={loopCount}
+        {...{
+          fontSize,
+          playbackRate,
+          loopCount,
+          sentenceRowList,
+          sectionList,
+          section,
+        }}
+        onSectionChange={setPlayingSection}
         onPlaybackRateChange={handlePlaybackRateChange}
-        onFontSizeChange={handleFontSizeChange}
+        onFontSizeChange={setFontSize}
         onLoopCountChange={setLoopCount}
         onClose={() => setSettingsVisible(false)}
       />
