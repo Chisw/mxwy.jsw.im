@@ -1,6 +1,6 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { Fragment, useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { useRecoilState } from 'recoil'
-import { activeBookEntryState } from '../../states'
+import { activeBookEntryState, playerConfigState } from '../../states'
 import { useAudio, useRequest } from '../../hooks'
 import { AudioApi, BookApi } from '../../api'
 import { getInjectedPinyinList, getSecondsByTime, line } from '../../utils'
@@ -14,22 +14,22 @@ import type { ISection, ISentenceRow } from '../../type'
 
 export function BookPlayer () {
   const audio = useAudio()
+
   const [activeBookEntry] = useRecoilState(activeBookEntryState)
+  const [playerConfig] = useRecoilState(playerConfigState)
 
   const [textContentVisible, setTextContentVisible] = useState(false)
   const [volumeSliderVisible, setVolumeSliderVisible] = useState(false)
-  const [fontSize, setFontSize] = useState(20)
-  const [playbackRate, setPlaybackRate] = useState(1)
   const [settingsVisible, setSettingsVisible] = useState(false)
-  const [loopCount, setLoopCount] = useState(1)
   const [section, setPlayingSection] = useState<ISection>({ name: '全部', from: 1, to: activeBookEntry?.sentences || 1 })
 
-  const { request: queryBookDetail, response } = useRequest(BookApi.queryBookDetail)
+  const { request: queryBookDetail, response, setResponse } = useRequest(BookApi.queryBookDetail)
 
   const scrollRef = useRef<HTMLDivElement | null>(null)
 
   const {
     isPlaying,
+    isEnded,
     currentTime,
     volume,
     playInfo,
@@ -66,11 +66,12 @@ export function BookPlayer () {
     }
   }, [response, activeBookEntry])
 
-  const activeSentenceIndex = useMemo(() => sortedIndex(timeList, currentTime) - 1, [currentTime, timeList])
+  const activeSentenceIndex = useMemo(() => {
+    return sortedIndex(timeList, +currentTime.toFixed(2)) - 1
+  }, [currentTime, timeList])
 
-  const handleSentenceClick = useCallback((startTime: number) => {
-    audio.changeCurrentTime(startTime)
-    audio.play()
+  const handleSentenceClick = useCallback((time: number) => {
+    audio.changeCurrentTime(time)
   }, [audio])
 
   const handleVolumeChange = useCallback((vol: number, offset?: number) => {
@@ -86,16 +87,12 @@ export function BookPlayer () {
     audio.changeVolume(targetVolume)
   }, [audio])
 
-  const handlePlaybackRateChange = useCallback((r: number) => {
-    audio.changePlaybackRate(r)
-    setPlaybackRate(r)
-  }, [audio])
-
   useEffect(() => {
     if (!activeBookEntry) return
+    setResponse(null)
     queryBookDetail(activeBookEntry.key)
     setTextContentVisible(true)
-  }, [queryBookDetail, activeBookEntry])
+  }, [queryBookDetail, activeBookEntry, setResponse])
 
   useEffect(() => {
     if (!activeBookEntry) return
@@ -104,11 +101,18 @@ export function BookPlayer () {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeBookEntry])
 
-
   useEffect(() => {
     if (!scrollRef.current) return
     document.querySelector(`[data-index="${activeSentenceIndex}"]`)?.scrollIntoView({ block: 'center' })
   }, [activeSentenceIndex])
+
+  useEffect(() => {
+    if (isEnded && playerConfig.loop) {
+      audio.changeCurrentTime(0)
+      audio.play()
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isEnded, playerConfig.loop])
 
   if (!activeBookEntry) {
     return <></>
@@ -125,9 +129,10 @@ export function BookPlayer () {
         `)}
       >
 
+        {/* 关闭 */}
         <div
           className={line(`
-            flex-center-center absolute z-20 top-0 right-0 m-4 w-10 h-10 rounded-full
+            flex-center-center absolute z-20 top-0 right-0 m-2 w-10 h-10 rounded-full
           bg-white text-green-500 cursor-pointer shadow-lg shadow-green-200
           `)}
           onClick={() => setTextContentVisible(false)}
@@ -138,6 +143,7 @@ export function BookPlayer () {
         {/* <div className="absolute z-10 inset-0 bottom-auto h-12 bg-linear-to-b from-green-100 via-green-100/90 to-transparent pointer-events-none" />
         <div className="absolute z-10 inset-0    top-auto h-12 bg-linear-to-t from-green-100 via-green-100/90 to-transparent pointer-events-none" /> */}
 
+        {/* 文本区域 */}
         <div
           ref={scrollRef}
           data-customized-scrollbar
@@ -150,15 +156,17 @@ export function BookPlayer () {
             const section = sectionList.find(s => s.from === sentenceIndex + 1)
 
             return (
-              <>
+              <Fragment key={time}>
+
                 {!!section && (
-                  <div className="sticky z-10 -top-10 mt-4 py-6 text-center text-sm bg-linear-to-b from-green-100 via-green-100/90 to-transparent">
+                  <div className="sticky z-10 -top-10 py-2 text-center text-xs text-green-600 bg-green-100">
                     {section.name}
                   </div>
                 )}
+
                 <div
-                  key={time}
                   data-index={sentenceIndex}
+                  data-tag={`${sentenceIndex + 1}@${time.slice(0, -3)}`}
                   className={line(`
                     mxwy-sentence
                     relative z-0
@@ -167,16 +175,12 @@ export function BookPlayer () {
                     group
                     ${isActive ? 'bg-green-200' : ''}  
                   `)}
-                  onClick={() => handleSentenceClick(startTime)}
+                  onClick={() => handleSentenceClick(startTime + 0.01)}
                 >
-                  <div className="hidden items-center absolute z-10 top-0 left-0 -mt-6 p-1 h-6 bg-green-500 text-green-200 text-xs group-hover:flex">
-                    <SvgIcon.Play size={12} />
-                    <span className="ml-1">{sentenceIndex + 1}@{time.slice(0, -3)}</span>
-                  </div>
-
                   {textList.map((char, charIndex) => {
                     const pinyin = pinyinList[charIndex]
                     const isPunctuation = !pinyin
+                    const { fontSize } = playerConfig
                     return (
                       <div
                         key={charIndex}
@@ -198,18 +202,20 @@ export function BookPlayer () {
                     )
                   })}
                 </div>
-              </>
+              </Fragment>
             )
           })}
         </div>
       </div>
 
+      {/* player */}
       <Container
         className="fixed z-10 right-0 bottom-0 left-0 h-16 bg-zinc-900 text-white"
         innerClassName="flex items-center h-full select-none"
+        onClick={() => setTextContentVisible(true)}
       >
         <div
-          className="shrink-0 flex-center-center w-8 h-8 text-white bg-green-500 rounded-full cursor-pointer"
+          className="shrink-0 flex-center-center w-10 h-10 text-white bg-green-500 rounded-full cursor-pointer"
           onClick={audio.toggle}
         >
           {isPlaying ? <SvgIcon.Pause size={20} /> : <SvgIcon.Play size={20} />}
@@ -218,12 +224,16 @@ export function BookPlayer () {
         <div className="grow ml-4">
           <div className="flex justify-between items-center flex-col md:flex-row">
             <div className="text-xs">
-              <span className="cursor-pointer" onClick={() => setTextContentVisible(true)}>《{activeBookEntry.title}》{activeBookEntry.author}</span>
-              <span className="ml-4 opacity-40">白云出岫</span>
+              <span className="cursor-pointer">
+                《{activeBookEntry.title}》
+              </span>
+              <span className="ml-1 opacity-40">
+                {activeBookEntry.author}
+              </span>
             </div>
             <div className="text-xs tabular-nums">
               <span>{playInfo.currentTimeLabel}</span>
-              <span className="opacity-40">/{playInfo.durationLabel}</span>
+              <span className="opacity-50">/{playInfo.durationLabel}</span>
             </div>
           </div>
           <div className="mt-2">
@@ -236,6 +246,7 @@ export function BookPlayer () {
           </div>
         </div>
 
+        {/* volume */}
         <div className="shrink-0 relative z-0 ml-4">
           <div
             className="cursor-pointer hover:text-green-500"
@@ -252,6 +263,7 @@ export function BookPlayer () {
           />
         </div>
 
+        {/* settings */}
         <div
           className="shrink-0 ml-4 cursor-pointer hover:text-green-500"
           onClick={() => setSettingsVisible(true)}
@@ -263,17 +275,12 @@ export function BookPlayer () {
       <Settings
         visible={settingsVisible}
         {...{
-          fontSize,
-          playbackRate,
-          loopCount,
-          sentenceRowList,
-          sectionList,
           section,
+          sectionList,
+          sentenceRowList,
         }}
         onSectionChange={setPlayingSection}
-        onPlaybackRateChange={handlePlaybackRateChange}
-        onFontSizeChange={setFontSize}
-        onLoopCountChange={setLoopCount}
+        onPlaybackRateChange={audio.changePlaybackRate}
         onClose={() => setSettingsVisible(false)}
       />
     </>

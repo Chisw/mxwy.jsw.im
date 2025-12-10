@@ -1,11 +1,11 @@
 import { useCallback, useMemo, useState, type ReactNode } from 'react'
 import { ActionSheet, Button, Stepper, Switch, Tabs, Notify } from 'react-vant'
-import { SvgIcon } from '../SvgIcon'
 import { Container } from '../layout/Container'
 import { useRecoilState } from 'recoil'
-import { activeBookEntryState } from '../../states'
-import type { ISection, ISentenceRow } from '../../type'
+import { activeBookEntryState, playerConfigState } from '../../states'
+import type { IPlayerConfig, ISection, ISentenceRow } from '../../type'
 import { getFormatTime, line } from '../../utils'
+// import { BlobApi } from '../../api'
 
 const rateList = [0.75, 1, 1.25, 1.5, 2]
 
@@ -24,39 +24,31 @@ function SettingItem(props: { label: string, children: ReactNode, wrap?: boolean
 
 interface SettingsProps {
   visible: boolean
-  fontSize: number
-  playbackRate: number
-  loopCount: number
-  sentenceRowList: ISentenceRow[]
-  sectionList: ISection[]
   section: ISection
+  sectionList: ISection[]
+  sentenceRowList: ISentenceRow[]
   onSectionChange: (s: ISection) => void
   onPlaybackRateChange: (rate: number) => void
-  onFontSizeChange: (offset: number) => void
-  onLoopCountChange: (count: number) => void
   onClose: () => void
 }
 
 export default function Settings(props: SettingsProps) {
   const {
     visible,
-    fontSize,
-    playbackRate,
-    loopCount,
-    sentenceRowList,
-    sectionList,
     section,
+    sectionList,
+    sentenceRowList,
     onSectionChange,
     onPlaybackRateChange,
-    onFontSizeChange,
-    onLoopCountChange,
     onClose,
   } = props
 
   const [activeBookEntry] = useRecoilState(activeBookEntryState)
+  const [playerConfig, setPlayerConfig] = useRecoilState(playerConfigState)
 
   const [activeTab, setActiveTab] = useState('common')
   const [sectionCache, setSectionCache] = useState(section)
+  // const [isCached, setIsCached] = useState(false)
 
   const sentenceCount = useMemo(() => activeBookEntry?.sentences || 1, [activeBookEntry])
 
@@ -74,9 +66,13 @@ export default function Settings(props: SettingsProps) {
     return getFormatTime(seconds)
   }, [activeBookEntry, sectionCache, selectedSentenceCount, sentenceCount, sentenceRowList])
 
-  const isDirty = useMemo(() => {
+  const isSectionChanged = useMemo(() => {
     return sectionCache.from !== section.from || sectionCache.to !== section.to
   }, [section, sectionCache])
+
+  const handleConfigChange = useCallback((config: Partial<IPlayerConfig>) => {
+    setPlayerConfig({ ...playerConfig, ...config })
+  }, [playerConfig, setPlayerConfig])
 
   const handleApplyClick = useCallback(() => {
     onSectionChange(sectionCache)
@@ -84,10 +80,35 @@ export default function Settings(props: SettingsProps) {
     Notify.show({ type: 'success', message: '应用成功' })
   }, [onClose, onSectionChange, sectionCache])
 
+  // const handleFetchCache = useCallback(async () => {
+  //   const res = await BlobApi.fetchAudioBlob(bookKey)
+  //   console.log(123, res)
+  //   if (res) {
+  //     setIsCached(true)
+  //   }
+  // }, [bookKey])
+
+  // const handleCacheClick = useCallback(async () => {
+  //   if (isCached) {
+  //     const res = await BlobApi.clearAudioBlob(bookKey)
+  //     setIsCached(false)
+  //     console.log(1234, res)
+  //   } else {
+  //     BlobApi.cacheAudioBlob(bookKey, (received, total) => {
+  //       console.log(received, total)
+  //     })
+  //     setIsCached(true)
+  //   }
+  // }, [bookKey, isCached])
+
+  // useEffect(() => {
+  //   handleFetchCache()
+  // }, [handleFetchCache])
+
   return (
     <ActionSheet
       overlayClass="mxwy-settings-overlay"
-      duration={300}
+      duration={200}
       visible={visible}
       onCancel={onClose}
     >
@@ -106,22 +127,17 @@ export default function Settings(props: SettingsProps) {
           >
             <div className="divide-y divide-zinc-200">
               <SettingItem label="全屏">
-                <Button
-                  round
-                  size="small"
-                  onClick={() => {
+                <Switch
+                  size={24}
+                  checked={document.fullscreen}
+                  onChange={() => {
                     if (document.fullscreen) {
                       document.exitFullscreen()
                     } else {
                       document.querySelector('html')?.requestFullscreen()
                     }
                   }}
-                >
-                  {document.fullscreen
-                    ? <SvgIcon.FullscreenExit className="w-8" />
-                    : <SvgIcon.Fullscreen className="w-8" />
-                  }
-                </Button>
+                />
               </SettingItem>
 
               <SettingItem label="字号">
@@ -132,27 +148,16 @@ export default function Settings(props: SettingsProps) {
                   max={200}
                   step={2}
                   buttonSize={28}
-                  value={fontSize}
-                  onChange={(v) => onFontSizeChange(v!)}
-                />
-              </SettingItem>
-
-              <SettingItem label="每句重复次数">
-                <Stepper
-                  integer
-                  theme="round"
-                  min={1}
-                  max={100}
-                  step={1}
-                  buttonSize={28}
-                  value={loopCount}
-                  onChange={(v) => onLoopCountChange(v || 1)}
+                  value={playerConfig.fontSize}
+                  onChange={(v) => handleConfigChange({ fontSize: v! })}
                 />
               </SettingItem>
 
               <SettingItem label="循环播放">
                 <Switch
                   size={24}
+                  checked={playerConfig.loop}
+                  onChange={(loop) => handleConfigChange({ loop })}
                 />
               </SettingItem>
 
@@ -161,8 +166,11 @@ export default function Settings(props: SettingsProps) {
                   {rateList.map((r) => (
                     <Button
                       key={r}
-                      type={r === playbackRate ? 'primary' : 'default'}
-                      onClick={() => onPlaybackRateChange(r)}
+                      type={r === playerConfig.playbackRate ? 'primary' : 'default'}
+                      onClick={() => {
+                        handleConfigChange({ playbackRate: r })
+                        onPlaybackRateChange(r)
+                      }}
                     >
                       <div className="w-8">{`${r.toFixed(2)}x`}</div>
                     </Button>
@@ -176,13 +184,13 @@ export default function Settings(props: SettingsProps) {
             key="section"
             title="播放区间"
           >
-            <div className="py-6 font-bold text-center">
+            {/* <div className="py-6 font-bold text-center">
               《{activeBookEntry?.title}》{activeBookEntry?.author}
-            </div>
+            </div> */}
 
             <div
               data-customized-scrollbar
-              className="pb-3 grid grid-cols-3 gap-2"
+              className="mt-4 pb-3 grid grid-cols-3 gap-2"
             >
               {[
                 { name: '全部', from: 1, to: sentenceCount },
@@ -252,7 +260,7 @@ export default function Settings(props: SettingsProps) {
                   block
                   round
                   type="primary"
-                  disabled={!isDirty}
+                  disabled={!isSectionChanged}
                   onClick={handleApplyClick}
                 >
                   应用
@@ -261,12 +269,16 @@ export default function Settings(props: SettingsProps) {
             </div>
           </Tabs.TabPane>
 
-          <Tabs.TabPane
+          {/* <Tabs.TabPane
             key="cache"
             title="缓存"
           >
-
-          </Tabs.TabPane>
+            <Button
+              onClick={handleCacheClick}
+            >
+              {isCached ? 'clear' : 'cache'} {bookKey}
+            </Button>
+          </Tabs.TabPane> */}
         </Tabs>
 
       </Container>

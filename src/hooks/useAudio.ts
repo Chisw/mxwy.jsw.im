@@ -10,6 +10,7 @@ export function useAudio() {
   const [currentTime, setCurrentTime] = useState(0)
   const [volume, setVolume] = useState(1)
   const [isPlaying, setIsPlaying] = useState(false)
+  const [isEnded, setIsEnded] = useState(false)
 
   const playInfo = useMemo(() => {
     return {
@@ -59,12 +60,20 @@ export function useAudio() {
   }, [])
 
   useEffect(() => {
-    const handlePlay = () => setIsPlaying(true)
+    const handlePlay = () => {
+      setIsPlaying(true)
+      setIsEnded(false)
+    }
+
     const handlePause = () => setIsPlaying(false)
     const handleTimeUpdate = () => setCurrentTime(audioEl.currentTime)
     const handleLoadedMetadata = () => setDuration(audioEl.duration)
     const handleVolumeChange = () => setVolume(audioEl.volume)
-    const handleEnded = () => setIsPlaying(false)
+
+    const handleEnded = () => {
+      setIsPlaying(false)
+      setIsEnded(true)
+    }
 
     audioEl.addEventListener('play', handlePlay)
     audioEl.addEventListener('pause', handlePause)
@@ -91,6 +100,7 @@ export function useAudio() {
     currentTime,
     volume,
     isPlaying,
+    isEnded,
     playInfo,
     play,
     pause,

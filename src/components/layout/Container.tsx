@@ -5,6 +5,7 @@ interface ContainerProps {
   children: ReactNode
   className?: string
   innerClassName?: string
+  onClick?: () => void
 }
 
 export function Container(props: ContainerProps) {
@@ -12,10 +13,11 @@ export function Container(props: ContainerProps) {
     children,
     className,
     innerClassName = '',
+    onClick,
   } = props
 
   return (
-    <div className={className}>
+    <div className={className} onClick={onClick}>
       <div
         className={line(`
           mx-auto px-4 max-w-5xl

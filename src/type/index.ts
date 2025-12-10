@@ -33,3 +33,11 @@ export interface IBookEntry {
   background: string
   intro: string
 }
+
+export interface IPlayerConfig {
+  fontSize: number
+  loop: boolean
+  playbackRate: number
+}
+
+export type ProgressHandler = (received: number, total: number) => void
