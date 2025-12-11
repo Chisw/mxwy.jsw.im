@@ -1,3 +1,5 @@
 export * from './useAudio'
 export * from './useClickAway'
+export * from './useHotKey'
+export * from './usePlayerConfig'
 export * from './useRequest'

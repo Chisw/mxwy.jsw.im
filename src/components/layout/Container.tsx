@@ -20,7 +20,7 @@ export function Container(props: ContainerProps) {
     <div className={className} onClick={onClick}>
       <div
         className={line(`
-          mx-auto px-4 max-w-5xl
+          mx-auto px-4 max-w-4xl
           ${innerClassName}  
         `)}
       >

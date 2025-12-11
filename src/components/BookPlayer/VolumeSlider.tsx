@@ -1,25 +1,23 @@
-import { useRef, useState } from 'react'
-import { useClickAway } from '../../hooks'
+import { useRef } from 'react'
+import { useClickAway, usePlayerConfig } from '../../hooks'
 import { line } from '../../utils'
 import { Slider } from 'react-vant'
 
 interface VolumeSliderProps {
-  show: boolean
-  volume: number
+  visible: boolean
+  onVolumeChange: (v: number) => void
   onClose: () => void
-  onVolumeChange: (vol: number) => void
 }
 
 export function VolumeSlider(props: VolumeSliderProps) {
 
   const {
-    show,
-    volume,
-    onClose,
+    visible,
     onVolumeChange,
+    onClose,
   } = props
 
-  const [value, setValue] = useState(volume)
+  const { playerConfig, setPlayerConfig } = usePlayerConfig()
 
   const sliderRef = useRef(null)
   
@@ -32,24 +30,26 @@ export function VolumeSlider(props: VolumeSliderProps) {
         className={line(`
           absolute z-20
           flex flex-col items-center
-          p-2 pb-4 w-10 h-56 rounded-md bg-white shadow-lg
-          ${show ? 'block' : 'hidden'}
+          p-2 pb-4 w-12 h-56 bg-white shadow-xl
+          border border-zinc-100 rounded-md
+          ${visible ? 'block' : 'hidden'}
         `)}
-        style={{ right: -8, bottom: 32 }}
+        style={{ right: -12, bottom: 32 }}
       >
         <div className="mb-4 text-xs text-black">
-          {(value * 100).toFixed(0)}%
+          {(playerConfig.volume * 100).toFixed(0)}%
         </div>
         <Slider
           vertical
           reverse
           min={0}
           max={1}
-          step={.01}
-          value={value}
-          onChangeAfter={(v: number) => {
-            setValue(v)
-            onVolumeChange(v)
+          barHeight={4}
+          step={0.01}
+          value={playerConfig.volume}
+          onChange={(volume: number) => {
+            setPlayerConfig({ volume })
+            onVolumeChange(volume)
           }}
         />
       </div>

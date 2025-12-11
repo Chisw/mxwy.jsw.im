@@ -1,7 +1,10 @@
 key: san-zi-jing
 sections:
-  - 第一部分@2,100
-  - 第二部分@101,185
+  - 第一部分@2,15
+  - 第二部分@16,54
+  - 第三部分@55,88
+  - 第四部分@89,146
+  - 第五部分@147,191
 sentences:
   - time: 00:01.00
     text: 三字经
@@ -29,7 +32,7 @@ sentences:
     pinyin: dòu yān shān yǒu yì fāng
   - time: 00:27.66
     text: 教五子，名俱扬。
-    pinyin: jiāo wǔ zǐ míng jù yáng
+    pinyin: jiào wǔ zǐ míng jù yáng
   - time: 00:31.19
     text: 养不教，父之过。
     pinyin: yǎng bú jiào fù zhī guò
@@ -65,7 +68,7 @@ sentences:
     pinyin: róng sì suì néng ràng lí
   - time: 01:09.28
     text: 弟于长，宜先知。
-    pinyin: dì yú zhǎng yí xiān zhī
+    pinyin: tì yú zhǎng yí xiān zhī
   - time: 01:12.75
     text: 首孝悌，次见闻。
     pinyin: shǒu xiào tì cì jiàn wén
@@ -252,7 +255,7 @@ sentences:
   - time: 04:49.05
     text: 三传者，有公羊。
     pinyin: sān zhuàn zhě yǒu gōng yáng
-  - time: 04:52.78
+  - time: 04:52.28
     text: 有左氏，有谷梁。
     pinyin: yǒu zuǒ shì yǒu gǔ liáng
   - time: 04:56.04
@@ -391,30 +394,48 @@ sentences:
     text: 辽与金，帝号纷。
     pinyin: liáo yǔ jīn dì hào fēn
   - time: 07:38.20
-    text: 元灭金，绝宋世。
-    pinyin: yuán miè jīn jué sòng shì
-  - time: 07:50.54
-    text: 莅中国，兼戎狄。
-    pinyin: lì zhōng guó jiān róng dí
+    text: 迨灭辽，宋犹存。
+    pinyin: dài miè liáo sòng yóu cún
+  - time: 07:42.00
+    text: 至元兴，金绪歇。
+    pinyin: zhì yuán xīng jīn xù xiē
+  - time: 07:46.00
+    text: 有宋世，一同灭。
+    pinyin: yǒu sòng shì yì tóng miè
+  - time: 07:49.54
+    text: 并中国，兼戎狄。
+    pinyin: bìng zhōng guó jiān róng dí 
   - time: 07:53.07
     text: 九十年，国祚废。
     pinyin: jiǔ shí nián guó zuò fèi
   - time: 07:56.37
-    text: 太祖兴，国大明。
-    pinyin: tài zǔ xīng guó dà míng
+    text: 明太祖，久亲师。
+    pinyin: míng tài zǔ jiǔ qīn shī
+  - time: 08:00.00
+    text: 传建文，方四祀。
+    pinyin: chuán jiàn wén fāng sì sì 
+  - time: 08:04.00
+    text: 迁北京，永乐嗣。
+    pinyin: qiān běi jīng yǒng lè sì 
+  - time: 08:07.80
+    text: 迨崇祯，煤山逝。
+    pinyin: dài chóng zhēn méi shān shì 
   - time: 08:12.21
     text: 清太祖，膺景命。
     pinyin: qīng tài zǔ yīng jǐng mìng
-  - time: 08:15.42
+  - time: 08:15.52
     text: 靖四方，克大定。
     pinyin: jìng sì fāng kè dà dìng
-  - time: 08:18.82
-    text: 古今史，全在兹。
-    pinyin: gǔ jīn shǐ quán zài zī
+  - time: 08:19.00
+    text: 至世祖，乃大同。
+    pinyin: zhì shì zǔ nǎi dà tóng
+  - time: 08:22.50
+    text: 十二世，清祚终。
+    pinyin: shí èr shì qīng zuò zhōng
   - time: 08:26.28
     text: 读史者，考实录。
     pinyin: dú shǐ zhě kǎo shí lù
-  - time: 08:29.86
+  - time: 08:29.66
     text: 通古今，若亲目。
     pinyin: tōng gǔ jīn ruò qīn mù
   - time: 08:33.06
@@ -431,7 +452,7 @@ sentences:
     pinyin: gǔ shèng xián shàng qín xué
   - time: 08:47.26
     text: 赵中令，读鲁论。
-    pinyin: zhào zhōng lìng dú lǔ lùn
+    pinyin: zhào zhōng lìng dú lǔ lún
   - time: 08:50.70
     text: 彼既仕，学且勤。
     pinyin: bǐ jì shì xué qiě qín
@@ -548,7 +569,7 @@ sentences:
     pinyin: guāng yú qián yù yú hòu
   - time: 11:05.65
     text: 人遗子，金满籝。
-    pinyin: rén yí zǐ jīn mǎn yíng
+    pinyin: rén wèi zǐ jīn mǎn yíng
   - time: 11:09.27
     text: 我教子，惟一经。
     pinyin: wǒ jiào zǐ wéi yī jīng

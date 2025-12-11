@@ -1,16 +1,14 @@
 import { atom } from 'recoil'
-import type { IBookEntry, IPlayerConfig } from '../type'
+import type { IBookEntry } from '../type'
+import { PlayerConfig } from '../type'
+import { PlayerConfigStorage } from '../utils/storage.util'
 
 export const activeBookEntryState = atom<IBookEntry | null>({
   key: 'activeBookEntry',
   default: null,
 })
 
-export const playerConfigState = atom<IPlayerConfig>({
+export const playerConfigState = atom<PlayerConfig>({
   key: 'playerConfig',
-  default: {
-    fontSize: 20,
-    loop: false,
-    playbackRate: 1,
-  },
+  default: PlayerConfigStorage.get(),
 })

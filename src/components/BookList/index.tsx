@@ -1,6 +1,6 @@
-import { useEffect, useMemo } from 'react'
+import { useCallback, useEffect, useMemo } from 'react'
 import { BookApi } from '../../api'
-import { useRequest } from '../../hooks'
+import { usePlayerConfig, useRequest } from '../../hooks'
 import { getFormatTime, line } from '../../utils'
 import { SvgIcon } from '../SvgIcon'
 import { Container } from '../layout/Container'
@@ -8,28 +8,52 @@ import { useRecoilState } from 'recoil'
 import { activeBookEntryState } from '../../states'
 import { groupBy } from 'lodash-es'
 import { Skeleton } from 'react-vant'
+import type { IBookEntry } from '../../type'
 
 export function BookList() {
 
-  const [, setActiveBookEntry] = useRecoilState(activeBookEntryState)
+  const { playerConfig, setPlayerConfig } = usePlayerConfig()
+
+  const [activeBookEntry, setActiveBookEntry] = useRecoilState(activeBookEntryState)
 
   const { request: queryBookList, response, loading } = useRequest(BookApi.queryBookList)
 
-  const bookGroupList = useMemo(() => {
+  const { list, groupList } = useMemo(() => {
     const list = response?.books || []
-    return groupBy(list, 'group')
+    const groupList = groupBy(list, 'group')
+    return { list, groupList }
   }, [response])
+
+  const handleBookClick = useCallback((entry: IBookEntry) => {
+    if (!entry.seconds) return
+    setActiveBookEntry({ ...entry, autoPlay: true })
+    setPlayerConfig({ bookKey: entry.key })
+  }, [setActiveBookEntry, setPlayerConfig])
 
   useEffect(() => {
     queryBookList()
   }, [queryBookList])
+
+  useEffect(() => {
+    if (!playerConfig.bookKey || !!activeBookEntry) return
+
+    const entry = list.find(b => b.key === playerConfig.bookKey)
+
+    if (entry) {
+      setActiveBookEntry(entry)
+    }
+  }, [activeBookEntry, playerConfig.bookKey, list, setActiveBookEntry])
   
   return (
     <>
       <Container className="pt-3 md:pt-6 pb-16 select-none">
-        {loading && <Skeleton row={4} />}
+        {loading && (
+          <div className="mt-8 h-72">
+            <Skeleton row={4} />
+          </div>
+        )}
 
-        {Object.entries(bookGroupList).map(([group, bookList]) => {
+        {Object.entries(groupList).map(([group, bookList]) => {
           return (
             <div key={group}>
               <div className="mt-4 mb-2 py-3 font-bold">
@@ -45,7 +69,7 @@ export function BookList() {
                         p-2 md:p-4 rounded-md
                         ${seconds ? 'cursor-pointer hover:bg-zinc-100' : 'cursor-not-allowed opacity-30'}
                       `)}
-                      onClick={() => seconds && setActiveBookEntry(entry)}
+                      onClick={() => handleBookClick(entry)}
                     >
                       <div
                         className={line(`

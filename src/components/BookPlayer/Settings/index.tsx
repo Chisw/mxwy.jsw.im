@@ -1,33 +1,19 @@
-import { useCallback, useMemo, useState, type ReactNode } from 'react'
+import { useCallback, useMemo, useState } from 'react'
 import { ActionSheet, Button, Stepper, Switch, Tabs, Notify } from 'react-vant'
-import { Container } from '../layout/Container'
-import { useRecoilState } from 'recoil'
-import { activeBookEntryState, playerConfigState } from '../../states'
-import type { IPlayerConfig, ISection, ISentenceRow } from '../../type'
-import { getFormatTime, line } from '../../utils'
+import type { IBookEntry, ISection, ISentence } from '../../../type'
+import { getFormatTime, line } from '../../../utils'
+import { usePlayerConfig } from '../../../hooks'
+import { SettingItem } from './SettingItem'
+import { getDefaultSection } from '../../../utils/book.util'
 // import { BlobApi } from '../../api'
 
-const rateList = [0.75, 1, 1.25, 1.5, 2]
-
-function SettingItem(props: { label: string, children: ReactNode, wrap?: boolean }) {
-  return (
-    <div className={`flex py-3 ${props.wrap ? 'flex-col justify-start' : 'items-center'}`}>
-      <div className="shrink-0 w-24 select-none">
-        {props.label}
-      </div>
-      <div className={`grow flex ${props.wrap ? 'mt-2' : 'justify-end ml-2'}`}>
-        {props.children}
-      </div>
-    </div>
-  )
-}
+const RATE_LIST = [0.75, 1, 1.25, 1.5]
 
 interface SettingsProps {
   visible: boolean
-  section: ISection
+  bookEntry: IBookEntry
   sectionList: ISection[]
-  sentenceRowList: ISentenceRow[]
-  onSectionChange: (s: ISection) => void
+  sentenceList: ISentence[]
   onPlaybackRateChange: (rate: number) => void
   onClose: () => void
 }
@@ -35,50 +21,51 @@ interface SettingsProps {
 export default function Settings(props: SettingsProps) {
   const {
     visible,
-    section,
+    bookEntry,
     sectionList,
-    sentenceRowList,
-    onSectionChange,
+    sentenceList,
     onPlaybackRateChange,
     onClose,
   } = props
 
-  const [activeBookEntry] = useRecoilState(activeBookEntryState)
-  const [playerConfig, setPlayerConfig] = useRecoilState(playerConfigState)
+  const defaultSection = getDefaultSection(bookEntry)
+
+  const { playerConfig, memoSection, setPlayerConfig, setSectionRecord } = usePlayerConfig()
 
   const [activeTab, setActiveTab] = useState('common')
-  const [sectionCache, setSectionCache] = useState(section)
+  const [sectionForm, setSectionForm] = useState(memoSection || defaultSection)
   // const [isCached, setIsCached] = useState(false)
 
-  const sentenceCount = useMemo(() => activeBookEntry?.sentences || 1, [activeBookEntry])
+  const sentenceCount = useMemo(() => {
+    return bookEntry.sentences || 0
+  }, [bookEntry])
 
-  const selectedSentenceCount = useMemo(() => sectionCache.to - sectionCache.from + 1, [sectionCache])
+  const selectedSentenceCount = useMemo(() => {
+    return sectionForm.to - sectionForm.from + 1
+  }, [sectionForm])
 
   const selectedDuration = useMemo(() => {
-    const { from, to } = sectionCache
-    const fromStart = sentenceRowList[from - 1]?.startTime || 0
-    const toEnd = sentenceRowList[to - 1]?.endTime || 0
+    const { from, to } = sectionForm
+    const fromStart = sentenceList[from - 1]?.startTime || 0
+    const toEnd = sentenceList[to - 1]?.endTime || 0
 
     const seconds = selectedSentenceCount === sentenceCount
-      ? activeBookEntry?.seconds || 0
+      ? bookEntry.seconds || 0
       : toEnd - fromStart
 
     return getFormatTime(seconds)
-  }, [activeBookEntry, sectionCache, selectedSentenceCount, sentenceCount, sentenceRowList])
+  }, [bookEntry, sectionForm, selectedSentenceCount, sentenceCount, sentenceList])
 
-  const isSectionChanged = useMemo(() => {
-    return sectionCache.from !== section.from || sectionCache.to !== section.to
-  }, [section, sectionCache])
-
-  const handleConfigChange = useCallback((config: Partial<IPlayerConfig>) => {
-    setPlayerConfig({ ...playerConfig, ...config })
-  }, [playerConfig, setPlayerConfig])
+  const isSectionFromDirty = useMemo(() => {
+    const { from, to } = memoSection || defaultSection
+    return sectionForm.from !== from || sectionForm.to !== to
+  }, [defaultSection, memoSection, sectionForm])
 
   const handleApplyClick = useCallback(() => {
-    onSectionChange(sectionCache)
+    setSectionRecord(bookEntry.key, sectionForm)
     onClose()
     Notify.show({ type: 'success', message: '应用成功' })
-  }, [onClose, onSectionChange, sectionCache])
+  }, [setSectionRecord, bookEntry, sectionForm, onClose])
 
   // const handleFetchCache = useCallback(async () => {
   //   const res = await BlobApi.fetchAudioBlob(bookKey)
@@ -112,10 +99,7 @@ export default function Settings(props: SettingsProps) {
       visible={visible}
       onCancel={onClose}
     >
-      <Container
-        className="pt-2 pb-4"
-        innerClassName="min-h-72"
-      >
+      <div className="pt-2 pb-4 mx-auto max-w-lg min-h-72">
 
         <Tabs
           active={activeTab}
@@ -149,7 +133,15 @@ export default function Settings(props: SettingsProps) {
                   step={2}
                   buttonSize={28}
                   value={playerConfig.fontSize}
-                  onChange={(v) => handleConfigChange({ fontSize: v! })}
+                  onChange={(v) => setPlayerConfig({ fontSize: v! })}
+                />
+              </SettingItem>
+
+              <SettingItem label="字幕滚动">
+                <Switch
+                  size={24}
+                  checked={playerConfig.autoScroll}
+                  onChange={(autoScroll) => setPlayerConfig({ autoScroll })}
                 />
               </SettingItem>
 
@@ -157,22 +149,22 @@ export default function Settings(props: SettingsProps) {
                 <Switch
                   size={24}
                   checked={playerConfig.loop}
-                  onChange={(loop) => handleConfigChange({ loop })}
+                  onChange={(loop) => setPlayerConfig({ loop })}
                 />
               </SettingItem>
 
-              <SettingItem wrap label="播放速度">
+              <SettingItem label="播放速度">
                 <Button.Group block round size="small">
-                  {rateList.map((r) => (
+                  {RATE_LIST.map((r) => (
                     <Button
                       key={r}
                       type={r === playerConfig.playbackRate ? 'primary' : 'default'}
                       onClick={() => {
-                        handleConfigChange({ playbackRate: r })
+                        setPlayerConfig({ playbackRate: r })
                         onPlaybackRateChange(r)
                       }}
                     >
-                      <div className="w-8">{`${r.toFixed(2)}x`}</div>
+                      {r}&times;
                     </Button>
                   ))}
                 </Button.Group>
@@ -185,7 +177,7 @@ export default function Settings(props: SettingsProps) {
             title="播放区间"
           >
             {/* <div className="py-6 font-bold text-center">
-              《{activeBookEntry?.title}》{activeBookEntry?.author}
+              《{bookEntry.title}》{bookEntry.author}
             </div> */}
 
             <div
@@ -193,11 +185,11 @@ export default function Settings(props: SettingsProps) {
               className="mt-4 pb-3 grid grid-cols-3 gap-2"
             >
               {[
-                { name: '全部', from: 1, to: sentenceCount },
+                defaultSection,
                 ...sectionList,
               ].map((section) => {
                 const { name, from, to } = section
-                const { from: _from, to: _to } = sectionCache
+                const { from: _from, to: _to } = sectionForm
                 const isActive = from === _from && to === _to
 
                 return (
@@ -208,7 +200,7 @@ export default function Settings(props: SettingsProps) {
                       select-none cursor-pointer
                       ${isActive ? 'border-green-500' : 'border-zinc-200'}
                     `)}
-                    onClick={() => setSectionCache(section)}
+                    onClick={() => setSectionForm(section)}
                   >
                     <div className="flex-between-center text-sm font-bold truncate">
                       {name}
@@ -224,31 +216,31 @@ export default function Settings(props: SettingsProps) {
                   integer
                   theme="round"
                   min={1}
-                  max={sectionCache.to - 1}
+                  max={sectionForm.to - 1}
                   step={1}
                   buttonSize={28}
-                  value={sectionCache.from}
-                  onChange={(v) => setSectionCache({ ...sectionCache, from: v! })}
+                  value={sectionForm.from}
+                  onChange={(v) => setSectionForm({ ...sectionForm, name: '自定义', from: v! })}
                 />
               </SettingItem>
-              <div className="mb-2 pb-4 truncate text-sm font-kai border-b border-zinc-200">
-                {sentenceRowList[sectionCache.from - 1]?.text}
+              <div className="mb-2 pb-4 truncate text-lg font-kai border-b border-zinc-200">
+                {sentenceList[sectionForm.from - 1]?.text}
               </div>
 
               <SettingItem label="终止句">
                 <Stepper
                   integer
                   theme="round"
-                  min={sectionCache.from + 1}
-                  max={activeBookEntry?.sentences || 1000}
+                  min={sectionForm.from + 1}
+                  max={bookEntry.sentences || 1000}
                   step={1}
                   buttonSize={28}
-                  value={sectionCache.to}
-                  onChange={(v) => setSectionCache({ ...sectionCache, to: v! })}
+                  value={sectionForm.to}
+                  onChange={(v) => setSectionForm({ ...sectionForm, name: '自定义', to: v! })}
                 />
               </SettingItem>
-              <div className="mb-2 pb-4 truncate text-sm font-kai">
-                {sentenceRowList[sectionCache.to - 1]?.text}
+              <div className="mb-2 pb-4 truncate text-lg font-kai">
+                {sentenceList[sectionForm.to - 1]?.text}
               </div>
 
               <div className="text-sm text-center text-zinc-400">
@@ -260,7 +252,7 @@ export default function Settings(props: SettingsProps) {
                   block
                   round
                   type="primary"
-                  disabled={!isSectionChanged}
+                  disabled={!isSectionFromDirty}
                   onClick={handleApplyClick}
                 >
                   应用
@@ -281,7 +273,7 @@ export default function Settings(props: SettingsProps) {
           </Tabs.TabPane> */}
         </Tabs>
 
-      </Container>
+      </div>
     </ActionSheet>
   )
 }

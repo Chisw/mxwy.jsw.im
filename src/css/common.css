@@ -25,6 +25,15 @@
   background-color: rgba(0, 0, 0, .2);
 }
 
+.mxwy-sentence::after {
+  content: attr(data-tag);
+  @apply hidden absolute z-10 top-0 left-0 px-2 py-1 text-xs text-green-800 bg-green-400/80;
+}
+
+.mxwy-sentence:hover::after {
+  @apply inline-block;
+}
+
 .mxwy-sentence-character::after {
   content: attr(data-pinyin);
   display: inline-block;
@@ -33,7 +42,7 @@
   top: 10%;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 68%;
+  font-size: 65%;
   font-family: 'mxwy-pinyin';
 }
 

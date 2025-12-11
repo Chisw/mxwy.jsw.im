@@ -1,434 +1,221 @@
 key: bai-jia-xing
 sections:
-  - 单姓@2,103
-  - 复姓@104,143
+  - 单姓@2,51
+  - 复姓@52,72
 sentences:
   - time: 00:01.00
     text: 百家姓
     pinyin: bǎi jiā xìng
   - time: 00:03.52
-    text: 赵钱孙李
-    pinyin: zhào qián sūn lǐ
-  - time: 00:06.12
-    text: 周吴郑王
-    pinyin: zhōu wú zhèng wáng
+    text: 赵钱孙李，周吴郑王
+    pinyin: zhào qián sūn lǐ zhōu wú zhèng wáng
   - time: 00:08.21
-    text: 冯陈褚卫
-    pinyin: féng chén chǔ wèi
-  - time: 00:11.04
-    text: 蒋沈韩杨
-    pinyin: jiǎng shěn hán yáng
+    text: 冯陈褚卫，蒋沈韩杨
+    pinyin: féng chén chǔ wèi jiǎng shěn hán yáng
   - time: 00:13.42
-    text: 朱秦尤许
-    pinyin: zhū qín yóu xǔ
-  - time: 00:16.34
-    text: 何吕施张
-    pinyin: hé lǚ shī zhāng
+    text: 朱秦尤许，何吕施张
+    pinyin: zhū qín yóu xǔ hé lǚ shī zhāng
   - time: 00:18.76
-    text: 孔曹严华
-    pinyin: kǒng cáo yán huà
-  - time: 00:21.78
-    text: 金魏陶姜
-    pinyin: jīn wèi táo jiāng
+    text: 孔曹严华，金魏陶姜
+    pinyin: kǒng cáo yán huà jīn wèi táo jiāng
   - time: 00:24.42
-    text: 戚谢邹喻
-    pinyin: qī xiè zōu yù
-  - time: 00:26.98
-    text: 柏水窦章
-    pinyin: bǎi shuǐ dòu zhāng
+    text: 戚谢邹喻，柏水窦章
+    pinyin: qī xiè zōu yù bǎi shuǐ dòu zhāng
   - time: 00:29.54
-    text: 云苏潘葛
-    pinyin: yún sū pān gě
-  - time: 00:32.57
-    text: 奚范彭郎
-    pinyin: xī fàn péng láng
+    text: 云苏潘葛，奚范彭郎
+    pinyin: yún sū pān gě xī fàn péng láng
   - time: 00:34.88
-    text: 鲁韦昌马
-    pinyin: lǔ wéi chāng mǎ
-  - time: 00:37.80
-    text: 苗凤花方
-    pinyin: miáo fèng huā fāng
+    text: 鲁韦昌马，苗凤花方
+    pinyin: lǔ wéi chāng mǎ miáo fèng huā fāng
   - time: 00:40.11
-    text: 俞任袁柳
-    pinyin: yú rèn yuán liǔ
-  - time: 00:43.26
-    text: 酆鲍史唐
-    pinyin: fēng bào shǐ táng
+    text: 俞任袁柳，酆鲍史唐
+    pinyin: yú rèn yuán liǔ fēng bào shǐ táng
   - time: 00:45.48
-    text: 费廉岑薛
-    pinyin: fèi lián cén xuē
-  - time: 00:48.18
-    text: 雷贺倪汤
-    pinyin: léi hè ní tāng
+    text: 费廉岑薛，雷贺倪汤
+    pinyin: fèi lián cén xuē léi hè ní tāng
   - time: 00:50.39
-    text: 滕殷罗毕
-    pinyin: téng yīn luó bì
-  - time: 00:52.98
-    text: 郝邬安常
-    pinyin: hǎo wū ān cháng
+    text: 滕殷罗毕，郝邬安常
+    pinyin: téng yīn luó bì hǎo wū ān cháng
   - time: 00:55.43
-    text: 乐于时傅
-    pinyin: yuè yú shí fù
-  - time: 00:58.37
-    text: 皮卞齐康
-    pinyin: pí biàn qí kāng
+    text: 乐于时傅，皮卞齐康
+    pinyin: yuè yú shí fù pí biàn qí kāng
   - time: 01:00.79
-    text: 伍余元卜
-    pinyin: wǔ yú yuán bǔ
-  - time: 01:03.57
-    text: 顾孟平黄
-    pinyin: gù mèng píng huáng
+    text: 伍余元卜，顾孟平黄
+    pinyin: wǔ yú yuán bǔ gù mèng píng huáng
   - time: 01:05.99
-    text: 和穆萧尹
-    pinyin: hé mù xiāo yǐn
-  - time: 01:08.88
-    text: 姚邵湛汪
-    pinyin: yáo shào zhàn wāng
+    text: 和穆萧尹，姚邵湛汪
+    pinyin: hé mù xiāo yǐn yáo shào zhàn wāng
   - time: 01:10.97
-    text: 祁毛禹狄
-    pinyin: qí máo yǔ dí
-  - time: 01:13.75
-    text: 米贝明臧
-    pinyin: mǐ bèi míng zāng
+    text: 祁毛禹狄，米贝明臧
+    pinyin: qí máo yǔ dí mǐ bèi míng zāng
   - time: 01:16.05
-    text: 计伏成戴
-    pinyin: jì fú chéng dài
-  - time: 01:18.82
-    text: 谈宋茅庞
-    pinyin: tán sòng máo páng
+    text: 计伏成戴，谈宋茅庞
+    pinyin: jì fú chéng dài tán sòng máo páng
   - time: 01:20.89
-    text: 熊纪舒屈
-    pinyin: xióng jì shū qū
-  - time: 01:23.99
-    text: 项祝董梁
-    pinyin: xiàng zhù dǒng liáng
+    text: 熊纪舒屈，项祝董梁
+    pinyin: xióng jì shū qū xiàng zhù dǒng liáng
   - time: 01:26.40
-    text: 杜阮蓝闵
-    pinyin: dù ruǎn lán mǐn
-  - time: 01:29.40
-    text: 席季麻强
-    pinyin: xí jì má qiáng
+    text: 杜阮蓝闵，席季麻强
+    pinyin: dù ruǎn lán mǐn xí jì má qiáng
   - time: 01:31.82
-    text: 贾路娄危
-    pinyin: jiǎ lù lóu wēi
-  - time: 01:34.68
-    text: 江童颜郭
-    pinyin: jiāng tóng yán guō
+    text: 贾路娄危，江童颜郭
+    pinyin: jiǎ lù lóu wēi jiāng tóng yán guō
   - time: 01:36.95
-    text: 梅盛林刁
-    pinyin: méi shèng lín diāo
-  - time: 01:39.93
-    text: 钟徐邱骆
-    pinyin: zhōng xú qiū luò
+    text: 梅盛林刁，钟徐邱骆
+    pinyin: méi shèng lín diāo zhōng xú qiū luò
   - time: 01:42.24
-    text: 高夏蔡田
-    pinyin: gāo xià cài tián
-  - time: 01:45.00
-    text: 樊胡凌霍
-    pinyin: fán hú líng huò
+    text: 高夏蔡田，樊胡凌霍
+    pinyin: gāo xià cài tián fán hú líng huò
   - time: 01:47.58
-    text: 虞万支柯
-    pinyin: yú wàn zhī kē
-  - time: 01:50.35
-    text: 昝管卢莫
-    pinyin: zǎn guǎn lú mò
+    text: 虞万支柯，昝管卢莫
+    pinyin: yú wàn zhī kē zǎn guǎn lú mò
   - time: 01:52.69
-    text: 经房裘缪
-    pinyin: jīng fáng qiú miào
-  - time: 01:55.42
-    text: 干解应宗
-    pinyin: gān xiè yīng zōng
+    text: 经房裘缪，干解应宗
+    pinyin: jīng fáng qiú miào gān xiè yīng zōng
   - time: 01:57.92
-    text: 丁宣贲邓
-    pinyin: dīng xuān bēn dèng
-  - time: 02:00.99
-    text: 郁单杭洪
-    pinyin: yù shàn háng hóng
+    text: 丁宣贲邓，郁单杭洪
+    pinyin: dīng xuān bēn dèng yù shàn háng hóng
   - time: 02:03.31
-    text: 包诸左石
-    pinyin: bāo zhū zuǒ shí
-  - time: 02:06.29
-    text: 崔吉钮龚
-    pinyin: cuī jí niǔ gōng
+    text: 包诸左石，崔吉钮龚
+    pinyin: bāo zhū zuǒ shí cuī jí niǔ gōng
   - time: 02:08.53
-    text: 程嵇邢滑
-    pinyin: chéng jī xíng huá
-  - time: 02:11.25
-    text: 裴陆荣翁
-    pinyin: péi lù róng wēng
+    text: 程嵇邢滑，裴陆荣翁
+    pinyin: chéng jī xíng huá péi lù róng wēng
   - time: 02:13.54
-    text: 荀羊於惠
-    pinyin: xún yáng yū huì
-  - time: 02:16.41
-    text: 甄曲家封
-    pinyin: zhēn qū jiā fēng
+    text: 荀羊於惠，甄曲家封
+    pinyin: xún yáng yū huì zhēn qū jiā fēng
   - time: 02:19.05
-    text: 芮羿储靳
-    pinyin: ruì yì chǔ jìn
-  - time: 02:21.68
-    text: 汲邴糜松
-    pinyin: jí bǐng mí sōng
+    text: 芮羿储靳，汲邴糜松
+    pinyin: ruì yì chǔ jìn jí bǐng mí sōng
   - time: 02:24.05
-    text: 井段富巫
-    pinyin: jǐng duàn fù wū
-  - time: 02:26.71
-    text: 乌焦巴弓
-    pinyin: wū jiāo bā gōng
+    text: 井段富巫，乌焦巴弓
+    pinyin: jǐng duàn fù wū wū jiāo bā gōng
   - time: 02:29.25
-    text: 牧隗山谷
-    pinyin: mù kuí shān gǔ
-  - time: 02:32.38
-    text: 车侯宓蓬
-    pinyin: chē hóu mì péng
+    text: 牧隗山谷，车侯宓蓬
+    pinyin: mù kuí shān gǔ chē hóu mì péng
   - time: 02:34.48
-    text: 全郗班仰
-    pinyin: quán xī bān yǎng
-  - time: 02:37.04
-    text: 秋仲伊宫
-    pinyin: qiū zhòng yī gōng
+    text: 全郗班仰，秋仲伊宫
+    pinyin: quán xī bān yǎng qiū zhòng yī gōng
   - time: 02:39.41
-    text: 宁仇栾暴
-    pinyin: nìng qiú luán bào
-  - time: 02:42.17
-    text: 甘钭厉戎
-    pinyin: gān tǒu lì róng
+    text: 宁仇栾暴，甘钭厉戎
+    pinyin: nìng qiú luán bào gān tǒu lì róng
   - time: 02:44.43
-    text: 祖武符刘
-    pinyin: zǔ wǔ fú liú
-  - time: 02:47.05
-    text: 景詹束龙
-    pinyin: jǐng zhān shù lóng
+    text: 祖武符刘，景詹束龙
+    pinyin: zǔ wǔ fú liú jǐng zhān shù lóng
   - time: 02:49.25
-    text: 叶幸司韶
-    pinyin: yè xìng sī sháo
-  - time: 02:52.00
-    text: 郜黎蓟薄
-    pinyin: gào lí jì bó
+    text: 叶幸司韶，郜黎蓟薄
+    pinyin: yè xìng sī sháo gào lí jì bó
   - time: 02:54.67
-    text: 印宿白怀
-    pinyin: yìn sù bái huái
-  - time: 02:57.42
-    text: 蒲邰从鄂
-    pinyin: pú tái cóng è
+    text: 印宿白怀，蒲邰从鄂
+    pinyin: yìn sù bái huái pú tái cóng è
   - time: 02:59.86
-    text: 索咸籍赖
-    pinyin: suǒ xián jí lài
-  - time: 03:02.68
-    text: 卓蔺屠蒙
-    pinyin: zhuó lìn tú méng
+    text: 索咸籍赖，卓蔺屠蒙
+    pinyin: suǒ xián jí lài zhuó lìn tú méng
   - time: 03:04.84
-    text: 池乔阴鬱
-    pinyin: chí qiáo yīn yù
-  - time: 03:07.26
-    text: 胥能苍双
-    pinyin: xū nài cāng shuāng
+    text: 池乔阴鬱，胥能苍双
+    pinyin: chí qiáo yīn yù xū nài cāng shuāng
   - time: 03:09.87
-    text: 闻莘党翟
-    pinyin: wén shēn dǎng zhái
-  - time: 03:12.89
-    text: 谭贡劳逄
-    pinyin: tán gòng láo páng
+    text: 闻莘党翟，谭贡劳逄
+    pinyin: wén shēn dǎng zhái tán gòng láo páng
   - time: 03:15.05
-    text: 姬申扶堵
-    pinyin: jī shēn fú dǔ
-  - time: 03:17.93
-    text: 冉宰郦雍
-    pinyin: rǎn zǎi lì yōng
+    text: 姬申扶堵，冉宰郦雍
+    pinyin: jī shēn fú dǔ rǎn zǎi lì yōng
   - time: 03:20.18
-    text: 郤璩桑桂
-    pinyin: xì qú sāng guì
-  - time: 03:23.24
-    text: 濮牛寿通
-    pinyin: pú niú shòu tōng
+    text: 郤璩桑桂，濮牛寿通
+    pinyin: xì qú sāng guì pú niú shòu tōng
   - time: 03:25.54
-    text: 边扈燕冀
-    pinyin: biān hù yān jì
-  - time: 03:27.90
-    text: 郏浦尚农
-    pinyin: jiá pǔ shàng nóng
+    text: 边扈燕冀，郏浦尚农
+    pinyin: biān hù yān jì jiá pǔ shàng nóng
   - time: 03:30.23
-    text: 温别庄晏
-    pinyin: wēn bié zhuāng yàn
-  - time: 03:32.91
-    text: 柴瞿阎充
-    pinyin: chái qú yán chōng
+    text: 温别庄晏，柴瞿阎充
+    pinyin: wēn bié zhuāng yàn chái qú yán chōng
   - time: 03:35.47
-    text: 慕连茹习
-    pinyin: mù lián rú xí
-  - time: 03:37.95
-    text: 宦艾鱼容
-    pinyin: huàn ài yú róng
+    text: 慕连茹习，宦艾鱼容
+    pinyin: mù lián rú xí huàn ài yú róng
   - time: 03:40.23
-    text: 向古易慎
-    pinyin: xiàng gǔ yì shèn
-  - time: 03:42.68
-    text: 戈廖庾终
-    pinyin: gē liào yǔ zhōng
+    text: 向古易慎，戈廖庾终
+    pinyin: xiàng gǔ yì shèn gē liào yǔ zhōng
   - time: 03:45.09
-    text: 暨居衡步
-    pinyin: jì jū héng bù
-  - time: 03:47.60
-    text: 都耿满弘
-    pinyin: dū gěng mǎn hóng
+    text: 暨居衡步，都耿满弘
+    pinyin: jì jū héng bù dū gěng mǎn hóng
   - time: 03:50.03
-    text: 匡国文寇
-    pinyin: kuāng guó wén kòu
-  - time: 03:52.58
-    text: 广禄阙东
-    pinyin: guǎng lù quē dōng
+    text: 匡国文寇，广禄阙东
+    pinyin: kuāng guó wén kòu guǎng lù quē dōng
   - time: 03:54.87
-    text: 欧殳沃利
-    pinyin: ōu shū wò lì
-  - time: 03:57.57
-    text: 蔚越夔隆
-    pinyin: wèi yuè kuí lóng
+    text: 欧殳沃利，蔚越夔隆
+    pinyin: ōu shū wò lì yù yuè kuí lóng
   - time: 04:00.04
-    text: 师巩厍聂
-    pinyin: shī gǒng shè niè
-  - time: 04:02.73
-    text: 晁勾敖融
-    pinyin: cháo gōu áo róng
+    text: 师巩厍聂，晁勾敖融
+    pinyin: shī gǒng shè niè cháo gōu áo róng
   - time: 04:05.04
-    text: 冷訾辛阚
-    pinyin: lěng zǐ xīn kàn
-  - time: 04:07.46
-    text: 那简饶空
-    pinyin: nā jiǎn ráo kōng
+    text: 冷訾辛阚，那简饶空
+    pinyin: lěng zī xīn kàn nā jiǎn ráo kōng
   - time: 04:09.94
-    text: 曾母沙乜
-    pinyin: zēng mǔ shā niè
-  - time: 04:12.60
-    text: 养鞠须丰
-    pinyin: yǎng jū xū fēng
+    text: 曾母沙乜，养鞠须丰
+    pinyin: zēng wú shā niè yǎng jū xū fēng
   - time: 04:15.43
-    text: 巢关蒯相
-    pinyin: cháo guān kuǎi xiàng
-  - time: 04:17.69
-    text: 查后荆红
-    pinyin: zhā hòu jīng hóng
+    text: 巢关蒯相，查后荆红
+    pinyin: cháo guān kuǎi xiàng zhā hòu jīng hóng
   - time: 04:20.16
-    text: 游竺权逯
-    pinyin: yóu zhú quán lù
-  - time: 04:22.77
-    text: 盖益桓公
-    pinyin: gài yì huán gōng
+    text: 游竺权逯，盖益桓公
+    pinyin: yóu zhú quán lù gě yì huán gōng
   - time: 04:25.34
-    text: 万俟司马
-    pinyin: mò qí sī mǎ
-  - time: 04:27.68
-    text: 上官欧阳
-    pinyin: shàng guān ōu yáng
+    text: 万俟司马，上官欧阳
+    pinyin: mò qí sī mǎ shàng guān ōu yáng
   - time: 04:29.94
-    text: 夏侯诸葛
-    pinyin: xià hóu zhū gě
-  - time: 04:32.50
-    text: 闻人东方
-    pinyin: wén rén dōng fāng
+    text: 夏侯诸葛，闻人东方
+    pinyin: xià hóu zhū gě wén rén dōng fāng
   - time: 04:34.60
-    text: 赫连皇甫
-    pinyin: hè lián huáng pǔ
-  - time: 04:37.24
-    text: 尉迟公羊
-    pinyin: yù chí gōng yáng
+    text: 赫连皇甫，尉迟公羊
+    pinyin: hè lián huáng fǔ yù chí gōng yáng
   - time: 04:39.75
-    text: 澹台公冶
-    pinyin: tán tái gōng yě
-  - time: 04:42.15
-    text: 宗政濮阳
-    pinyin: zōng zhèng pú yáng
+    text: 澹台公冶，宗政濮阳
+    pinyin: tán tái gōng yě zōng zhèng pú yáng
   - time: 04:44.51
-    text: 淳于单于
-    pinyin: chún yú chán yú
-  - time: 04:47.06
-    text: 太叔申屠
-    pinyin: tài shū shēn tú
+    text: 淳于单于，太叔申屠
+    pinyin: chún yú chán yú tài shū shēn tú
   - time: 04:49.60
-    text: 公孙仲孙
-    pinyin: gōng sūn zhòng sūn
-  - time: 04:52.23
-    text: 轩辕令狐
-    pinyin: xuān yuán lìng hú
+    text: 公孙仲孙，轩辕令狐
+    pinyin: gōng sūn zhòng sūn xuān yuán líng hú
   - time: 04:54.81
-    text: 钟离宇文
-    pinyin: zhōng lí yǔ wén
-  - time: 04:56.92
-    text: 长孙慕容
-    pinyin: zhǎng sūn mù róng
+    text: 钟离宇文，长孙慕容
+    pinyin: zhōng lí yǔ wén zhǎng sūn mù róng
   - time: 04:59.17
-    text: 鲜于闾丘
-    pinyin: xiān yú lǘ qiū
-  - time: 05:01.66
-    text: 司徒司空
-    pinyin: sī tú sī kōng
+    text: 鲜于闾丘，司徒司空
+    pinyin: xiān yú lǘ qiū sī tú sī kōng
   - time: 05:04.10
-    text: 亓官司寇
-    pinyin: qí guān sī kòu
-  - time: 05:06.64
-    text: 仉督子车
-    pinyin: zhǎng dū zǐ jū
+    text: 亓官司寇，仉督子车
+    pinyin: qí guān sī kòu zhǎng dū zǐ jū
   - time: 05:08.91
-    text: 颛孙端木
-    pinyin: zhuān sūn duān mù
-  - time: 05:11.30
-    text: 巫马公西
-    pinyin: wū mǎ gōng xī
+    text: 颛孙端木，巫马公西
+    pinyin: zhuān sūn duān mù wū mǎ gōng xī
   - time: 05:14.05
-    text: 漆雕乐正
-    pinyin: qī diāo yuè zhèng
-  - time: 05:16.27
-    text: 壤驷公良
-    pinyin: rǎng sì gōng liáng
+    text: 漆雕乐正，壤驷公良
+    pinyin: qī diāo yuè zhèng rǎng sì gōng liáng
   - time: 05:18.73
-    text: 拓跋夹谷
-    pinyin: tuò bá jiá gǔ
-  - time: 05:21.42
-    text: 宰父榖梁
-    pinyin: zǎi fǔ gǔ liáng
+    text: 拓跋夹谷，宰父榖梁
+    pinyin: tuò bá jiā gǔ zǎi fǔ gǔ liáng
   - time: 05:23.77
-    text: 晋楚闫法
-    pinyin: jìn chǔ yán fǎ
-  - time: 05:26.62
-    text: 汝鄢涂钦
-    pinyin: rǔ yān tú qīn
+    text: 晋楚闫法，汝鄢涂钦
+    pinyin: jìn chǔ yán fǎ rǔ yān tú qīn
   - time: 05:28.98
-    text: 段干百里
-    pinyin: duàn gān bǎi lǐ
-  - time: 05:31.35
-    text: 东郭南门
-    pinyin: dōng guō nán mén
+    text: 段干百里，东郭南门
+    pinyin: duàn gān bǎi lǐ dōng guō nán mén
   - time: 05:33.63
-    text: 呼延归海
-    pinyin: hū yán guī hǎi
-  - time: 05:36.09
-    text: 羊舌微生
-    pinyin: yáng shé wēi shēng
+    text: 呼延归海，羊舌微生
+    pinyin: hū yán guī hǎi yáng shé wēi shēng
   - time: 05:38.43
-    text: 岳帅缑亢
-    pinyin: yuè shuài gōu kàng
-  - time: 05:41.13
-    text: 况后有琴
-    pinyin: kuàng hòu yǒu qín
+    text: 岳帅缑亢，况后有琴
+    pinyin: yuè shuài gōu kàng kuàng hòu yǒu qín
   - time: 05:43.44
-    text: 梁丘左丘
-    pinyin: liáng qiū zuǒ qiū
-  - time: 05:46.18
-    text: 东门西门
-    pinyin: dōng mén xī mén
+    text: 梁丘左丘，东门西门
+    pinyin: liáng qiū zuǒ qiū dōng mén xī mén
   - time: 05:48.49
-    text: 商牟佘佴
-    pinyin: shāng móu shé nài
-  - time: 05:50.90
-    text: 伯赏南宫
-    pinyin: bó shǎng nán gōng
+    text: 商牟佘佴，伯赏南宫
+    pinyin: shāng móu shé nài bó shǎng nán gōng
   - time: 05:53.07
-    text: 墨哈谯笪
-    pinyin: mò hǎ qiáo dá
-  - time: 05:55.49
-    text: 年爱阳佟
-    pinyin: nián ài yáng tóng
+    text: 墨哈谯笪，年爱阳佟
+    pinyin: mò hǎ qiáo dá nián ài yáng tóng
   - time: 05:57.87
-    text: 第五言福
-    pinyin: dì wǔ yán fú
-  - time: 06:00.63
-    text: 百家姓终
-    pinyin: bǎi jiā xìng zhōng
+    text: 第五言福，百家姓终
+    pinyin: dì wǔ yán fú bǎi jiā xìng zhōng
