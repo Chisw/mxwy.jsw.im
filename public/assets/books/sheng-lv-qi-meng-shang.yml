@@ -150,7 +150,7 @@ sentences:
     pinyin: liǔ táng fēng dàn dàn huā pǔ yuè nóng nóng
   - time: 04:02.08
     text: 春日正宜朝看蝶，秋风那更夜闻蛩。
-    pinyin: chūn rì zhèng yí cháo kàn dié qiū fēng nǎ gèng yè wén qióng
+    pinyin: chūn rì zhèng yí zhāo kàn dié qiū fēng nǎ gèng yè wén qióng
   - time: 04:09.00
     text: 战士邀功，必借干戈成勇武；
     pinyin: zhàn shì yāo gōng bì jiè gàn gē chéng yǒng wǔ
@@ -192,7 +192,7 @@ sentences:
     pinyin: shān jí jí shuǐ cóng cóng gǔ zhèn duì zhōng zhuàng
   - time: 05:20.58
     text: 清风生酒舍，白月照书窗。
-    pinyin: qīng fēng shēng jiǔ shě bái yuè zhào shū chuāng
+    pinyin: qīng fēng shēng jiǔ shè bái yuè zhào shū chuāng
   - time: 05:25.87
     text: 阵上倒戈辛纣战，道旁系剑子婴降。
     pinyin: zhèn shàng dǎo gē xīn zhòu zhàn dào páng xì jiàn zǐ yīng xiáng
@@ -234,7 +234,7 @@ sentences:
     pinyin: zāi huā duì zhòng zhú luò xù duì yóu sī
   - time: 06:37.53
     text: 四目颉，一足夔，鸲鹆对鹭鸶。
-    pinyin: sì mù jié yī zú kuí qú yù duì lù sī
+    pinyin: sì mù jié yì zú kuí qú yù duì lù sī
   - time: 06:43.11
     text: 半池红菡萏，一架白荼蘼。
     pinyin: bàn chí hóng hàn dàn yí jià bái tú mí
@@ -261,7 +261,7 @@ sentences:
     pinyin: huā kāi hóng jǐn xiù shuǐ yàng bì liú lí
   - time: 07:29.39
     text: 去妇因探邻舍枣，出妻为种后园葵。
-    pinyin: qù fù yīn tàn lín shě zǎo chū qī wéi zhòng hòu yuán kuí
+    pinyin: qù fù yīn tàn lín shè zǎo chū qī wéi zhòng hòu yuán kuí
   - time: 07:36.04
     text: 笛韵和谐，仙管恰从云里降；
     pinyin: dí yùn hé xié xiān guǎn qià cóng yún lǐ jiàng
@@ -351,7 +351,7 @@ sentences:
     pinyin: chū shǐ zhèn wēi féng fèng shì zhì mín yì děng yǐn wēng guī
   - time: 10:19.28
     text: 燕我弟兄，载咏棣棠韡韡；
-    pinyin: yàn wǒ dì xiōng zǎi yǒng dì táng wěi wěi
+    pinyin: yàn wǒ dì xiōng zài yǒng dì táng wěi wěi
   - time: 10:24.65
     text: 命伊将帅，为歌杨柳依依。
     pinyin: mìng yī jiāng shuài wéi gē yáng liǔ yī yī
@@ -363,7 +363,7 @@ sentences:
     pinyin: wú duì yǒu shí duì xū zuò fù duì guān shū
   - time: 10:38.98
     text: 绿窗对朱户，宝马对香车。
-    pinyin: lǜ chuāng duì zhū hù bǎo mǎ duì xiāng chē
+    pinyin: lǜ chuāng duì zhū hù bǎo mǎ duì xiāng jū
   - time: 10:44.34
     text: 伯乐马，浩然驴，弋雁对求鱼。
     pinyin: bó lè mǎ hào rán lǘ yì yàn duì qiú yú
@@ -396,7 +396,7 @@ sentences:
     pinyin: luò yè wǔ fēng gāo fù xià xiǎo hé fú shuǐ juǎn huán shū
   - time: 11:41.35
     text: 爱见人长，共服宣尼休假盖；
-    pinyin: ài xiàn rén zhǎng gòng fú xuān ní xiū jiǎ gài
+    pinyin: ài xiàn rén cháng gòng fú xuān ní xiū jiǎ gài
   - time: 11:46.78
     text: 恐彰己吝，谁知阮裕竟焚车。
     pinyin: kǒng zhāng jǐ lìn shuí zhī ruǎn yù jìng fén jū
@@ -456,13 +456,13 @@ sentences:
     pinyin: jiū bǔ zǐ yàn tiáo chú shí zhàng duì xún chú
   - time: 13:31.81
     text: 烟轻笼岸柳，风急撼庭梧。
-    pinyin: yān qīng lóng àn liǔ fēng jí hàn tíng wú
+    pinyin: yān qīng lǒng àn liǔ fēng jí hàn tíng wú
   - time: 13:37.28
     text: 鸜眼一方端石砚，龙涎三炷博山炉。
     pinyin: qú yǎn yī fāng duān shí yàn lóng xián sān zhù bó shān lú
   - time: 13:44.05
     text: 曲沼鱼多，可使渔人结网；
-    pinyin: qǔ zhǎo yú duō kě shǐ yú rén jié wǎng
+    pinyin: qū zhǎo yú duō kě shǐ yú rén jié wǎng
   - time: 13:48.91
     text: 平田兔少，漫劳耕者守株。
     pinyin: píng tián tù shǎo màn láo gēng zhě shǒu zhū
@@ -576,7 +576,7 @@ sentences:
     pinyin: huǎn fǔ qín xián xiàng liú yīng ér bìng yǔ
   - time: 17:16.92
     text: 斜排筝柱，类过雁之相挨。
-    pinyin: xié pái zhēng zhù lěi guò yàn zhī xiàng āi
+    pinyin: xié pái zhēng zhù lěi guò yàn zhī xiāng āi
   - time: 17:22.02
     text: 丰对俭，等对差，布袄对荆钗。
     pinyin: fēng duì jiǎn děng duì chā bù ǎo duì jīng chāi
@@ -741,7 +741,7 @@ sentences:
     pinyin: rén wú dí dé yǒu lín wàn dàn duì qiān jūn
   - time: 22:30.22
     text: 滔滔三峡水，冉冉一溪冰。
-    pinyin: tāo tāo sān xiá shuǐ rǎn rǎn yī xī bīng
+    pinyin: tāo tāo sān xiá shuǐ rǎn rǎn yì xī bīng
   - time: 22:35.63
     text: 充国功名当画阁，子张言行贵书绅。
     pinyin: chōng guó gōng míng dāng huà gé zǐ zhāng yán xíng guì shū shēn
@@ -857,8 +857,8 @@ sentences:
     text: 馥馥早梅思驿使，萋萋芳草怨王孙。
     pinyin: fù fù zǎo méi sī yì shǐ qī qī fāng cǎo yuàn wáng sūn
   - time: 26:10.04
-    text: 秋夕月明，苏子黄岗游绝壁；
-    pinyin: qiū xī yuè míng sū zǐ huáng gāng yóu jué bì
+    text: 秋夕月明，苏子黄岗游赤壁；
+    pinyin: qiū xī yuè míng sū zǐ huáng gāng yóu chì bì
   - time: 26:15.88
     text: 春朝花发，石家金谷启芳园。
     pinyin: chūn zhāo huā fā shí jiā jīn gǔ qǐ fāng yuán
@@ -915,7 +915,7 @@ sentences:
     pinyin: hán zhān duì nuǎn xí yè yǐn duì chén cān
   - time: 27:57.88
     text: 叔子带，仲由冠，郏鄏对邯郸。
-    pinyin: shū zǐ dài zhòng yóu guàn jiá rǔ duì hán dān
+    pinyin: shū zǐ dài zhòng yóu guān jiá rǔ duì hán dān
   - time: 28:03.56
     text: 嘉禾忧夏旱，衰柳耐秋寒。
     pinyin: jiā hé yōu xià hàn shuāi liǔ nài qiū hán
@@ -954,7 +954,7 @@ sentences:
     pinyin: shí wǔ shān
   - time: 29:10.42
     text: 兴对废，附对攀，露草对霜菅。
-    pinyin: xìng duì fèi fù duì pān lù cǎo duì shuāng jiān
+    pinyin: xīng duì fèi fù duì pān lù cǎo duì shuāng jiān
   - time: 29:16.31
     text: 歌廉对借寇，习孔对希颜。
     pinyin: gē lián duì jiè kòu xí kǒng duì xī yán
