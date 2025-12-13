@@ -1,10 +1,9 @@
 import { useCallback, useMemo, useState } from 'react'
 import { ActionSheet, Button, Stepper, Switch, Tabs, Notify } from 'react-vant'
 import type { IBookEntry, ISection, ISentence } from '../../../type'
-import { getFormatTime, line } from '../../../utils'
+import { getDefaultSection, getFormatTime, line } from '../../../utils'
 import { usePlayerConfig } from '../../../hooks'
 import { SettingItem } from './SettingItem'
-import { getDefaultSection } from '../../../utils/book.util'
 // import { BlobApi } from '../../api'
 
 const RATE_LIST = [0.75, 1, 1.25, 1.5]
@@ -99,7 +98,7 @@ export default function Settings(props: SettingsProps) {
       visible={visible}
       onCancel={onClose}
     >
-      <div className="pt-2 pb-4 mx-auto max-w-lg min-h-72">
+      <div className="pt-2 pb-4 mx-auto px-4 max-w-lg min-h-72">
 
         <Tabs
           active={activeTab}
@@ -194,7 +193,7 @@ export default function Settings(props: SettingsProps) {
 
                 return (
                   <div
-                    key={from}
+                    key={`${from}-${to}`}
                     className={line(`
                       shrink-0 px-3 py-2 border rounded-lg
                       select-none cursor-pointer
@@ -255,7 +254,7 @@ export default function Settings(props: SettingsProps) {
                   disabled={!isSectionFromDirty}
                   onClick={handleApplyClick}
                 >
-                  应用
+                  {isSectionFromDirty ? '' : '已'}应用
                 </Button>
               </div>
             </div>

@@ -1,5 +1,5 @@
+export * from './book.util'
 export * from './common.util'
 export * from './constant.util'
-export * from './pinyin.util'
 export * from './storage.util'
 export * from './time.util'

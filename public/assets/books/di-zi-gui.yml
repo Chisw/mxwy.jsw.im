@@ -1,0 +1,551 @@
+key: di-zi-gui
+sections:
+  - 总叙@1,4
+  - 入则孝@5,32
+  - 出则弟@33,54
+  - 谨@55,88
+  - 信@89,118
+  - 泛爱众@119,148
+  - 亲仁@149,156
+  - 余力学文@157,180
+sentences:
+  - time: 00:02.00
+    text: 弟子规，圣人训；
+    pinyin: dì zǐ guī shèng rén xùn
+  - time: 00:05.75
+    text: 首孝弟，次谨信。
+    pinyin: shǒu xiào tì cì jǐn xìn
+  - time: 00:09.27
+    text: 泛爱众，而亲仁；
+    pinyin: fàn ài zhòng ér qīn rén
+  - time: 00:12.95
+    text: 有余力，则学文。
+    pinyin: yǒu yú lì zé xué wén
+  - time: 00:16.49
+    text: 父母呼，应勿缓；
+    pinyin: fù mǔ hū yìng wù huǎn
+  - time: 00:21.21
+    text: 父母命，行勿懒。
+    pinyin: fù mǔ mìng xíng wù lǎn
+  - time: 00:24.76
+    text: 父母教，须敬听；
+    pinyin: fù mǔ jiào xū jìng tīng
+  - time: 00:27.86
+    text: 父母责，须顺承。
+    pinyin: fù mǔ zé xū shùn chéng
+  - time: 00:31.26
+    text: 冬则温，夏则凊；
+    pinyin: dōng zé wēn xià zé qìng
+  - time: 00:35.33
+    text: 晨则省，昏则定。
+    pinyin: chén zé xǐng hūn zé dìng
+  - time: 00:38.86
+    text: 出必告，反必面；
+    pinyin: chū bì gào fǎn bì miàn
+  - time: 00:42.39
+    text: 居有常，业无变。
+    pinyin: jū yǒu cháng yè wú biàn
+  - time: 00:46.05
+    text: 事虽小，勿擅为；
+    pinyin: shì suī xiǎo wù shàn wéi
+  - time: 00:50.07
+    text: 苟擅为，子道亏。
+    pinyin: gǒu shàn wéi zǐ dào kuī
+  - time: 00:53.90
+    text: 物虽小，勿私藏；
+    pinyin: wù suī xiǎo wù sī cáng
+  - time: 00:57.57
+    text: 苟私藏，亲心伤。
+    pinyin: gǒu sī cáng qīn xīn shāng
+  - time: 01:01.00
+    text: 亲所好，力为具；
+    pinyin: qīn suǒ hào lì wèi jù
+  - time: 01:05.14
+    text: 亲所恶，谨为去。
+    pinyin: qīn suǒ wù jǐn wèi qù
+  - time: 01:08.82
+    text: 身有伤，贻亲忧；
+    pinyin: shēn yǒu shāng yí qīn yōu
+  - time: 01:12.57
+    text: 德有伤，贻亲羞。
+    pinyin: dé yǒu shāng yí qīn xiū
+  - time: 01:16.24
+    text: 亲爱我，孝何难；
+    pinyin: qīn ài wǒ xiào hé nán
+  - time: 01:20.72
+    text: 亲恶我，孝方贤。
+    pinyin: qīn wù wǒ xiào fāng xián
+  - time: 01:24.52
+    text: 亲有过，谏使更；
+    pinyin: qīn yǒu guò jiàn shǐ gēng
+  - time: 01:28.52
+    text: 怡吾色，柔吾声。
+    pinyin: yí wú sè róu wú shēng
+  - time: 01:32.19
+    text: 谏不入，悦复谏；
+    pinyin: jiàn bù rù yuè fù jiàn
+  - time: 01:36.19
+    text: 号泣随，挞无怨。
+    pinyin: háo qì suí tà wú yuàn
+  - time: 01:40.37
+    text: 亲有疾，药先尝；
+    pinyin: qīn yǒu jí yào xiān cháng
+  - time: 01:45.03
+    text: 昼夜侍，不离床。
+    pinyin: zhòu yè shì bù lí chuáng
+  - time: 01:48.69
+    text: 丧三年，常悲咽；
+    pinyin: sāng sān nián cháng bēi yè
+  - time: 01:52.54
+    text: 居处变，酒肉绝。
+    pinyin: jū chǔ biàn jiǔ ròu jué
+  - time: 01:56.15
+    text: 丧尽礼，祭尽诚；
+    pinyin: sāng jìn lǐ jì jìn chéng
+  - time: 02:00.69
+    text: 事死者，如事生。
+    pinyin: shì sǐ zhě rú shì shēng
+  - time: 02:04.19
+    text: 兄道友，弟道恭；
+    pinyin: xiōng dào yǒu dì dào gōng
+  - time: 02:08.14
+    text: 兄弟睦，孝在中。
+    pinyin: xiōng dì mù xiào zài zhōng
+  - time: 02:11.75
+    text: 财物轻，怨何生；
+    pinyin: cái wù qīng yuàn hé shēng
+  - time: 02:16.03
+    text: 言语忍，忿自泯。
+    pinyin: yán yǔ rěn fèn zì mǐn
+  - time: 02:19.75
+    text: 或饮食，或坐走；
+    pinyin: huò yǐn shí huò zuò zǒu
+  - time: 02:24.19
+    text: 长者先，幼者后。
+    pinyin: zhǎng zhě xiān yòu zhě hòu
+  - time: 02:27.58
+    text: 长呼人，即代叫；
+    pinyin: zhǎng hū rén jí dài jiào
+  - time: 02:31.91
+    text: 人不在，己即到。
+    pinyin: rén bù zài jǐ jí dào
+  - time: 02:35.39
+    text: 称尊长，勿呼名；
+    pinyin: chēng zūn zhǎng wù hū míng
+  - time: 02:39.26
+    text: 对尊长，勿见能。
+    pinyin: duì zūn zhǎng wù xiàn néng
+  - time: 02:43.05
+    text: 路遇长，疾趋揖；
+    pinyin: lù yù zhǎng jí qū yī
+  - time: 02:46.61
+    text: 长无言，退恭立。
+    pinyin: zhǎng wú yán tuì gōng lì
+  - time: 02:49.97
+    text: 骑下马，乘下车；
+    pinyin: qí xià mǎ chéng xià jū
+  - time: 02:54.14
+    text: 过犹待，百步余。
+    pinyin: guò yóu dài bǎi bù yú
+  - time: 02:57.78
+    text: 长者立，幼勿坐；
+    pinyin: zhǎng zhě lì yòu wù zuò
+  - time: 03:01.88
+    text: 长者坐，命乃坐。
+    pinyin: zhǎng zhě zuò mìng nǎi zuò
+  - time: 03:05.68
+    text: 尊长前，声要低；
+    pinyin: zūn zhǎng qián shēng yào dī
+  - time: 03:09.33
+    text: 低不闻，却非宜。
+    pinyin: dī bù wén què fēi yí
+  - time: 03:12.97
+    text: 进必趋，退必迟；
+    pinyin: jìn bì qū tuì bì chí
+  - time: 03:16.85
+    text: 问起对，视勿移。
+    pinyin: wèn qǐ duì shì wù yí
+  - time: 03:20.68
+    text: 事诸父，如事父；
+    pinyin: shì zhū fù rú shì fù
+  - time: 03:24.67
+    text: 事诸兄，如事兄。
+    pinyin: shì zhū xiōng rú shì xiōng
+  - time: 03:28.89
+    text: 朝起早，夜眠迟；
+    pinyin: zhāo qǐ zǎo yè mián chí
+  - time: 03:32.93
+    text: 老易至，惜此时。
+    pinyin: lǎo yì zhì xī cǐ shí
+  - time: 03:36.81
+    text: 晨必盥，兼漱口；
+    pinyin: chén bì guàn jiān shù kǒu
+  - time: 03:40.39
+    text: 便溺回，辄净手。
+    pinyin: biàn niào huí zhé jìng shǒu
+  - time: 03:43.94
+    text: 冠必正，纽必结；
+    pinyin: guān bì zhèng niǔ bì jié
+  - time: 03:47.73
+    text: 袜与履，俱紧切。
+    pinyin: wà yǔ lǚ jù jǐn qiè
+  - time: 03:51.11
+    text: 置冠服，有定位；
+    pinyin: zhì guān fú yǒu dìng wèi
+  - time: 03:54.93
+    text: 勿乱顿，致污秽。
+    pinyin: wù luàn dùn zhì wū huì
+  - time: 03:58.75
+    text: 衣贵洁，不贵华；
+    pinyin: yī guì jié bù guì huá
+  - time: 04:02.60
+    text: 上循分，下称家。
+    pinyin: shàng xún fèn xià chèng jiā
+  - time: 04:06.23
+    text: 对饮食，勿拣择；
+    pinyin: duì yǐn shí wù jiǎn zé
+  - time: 04:10.14
+    text: 食适可，勿过则。
+    pinyin: shí shì kě wù guò zé
+  - time: 04:13.93
+    text: 年方少，勿饮酒；
+    pinyin: nián fāng shào wù yǐn jiǔ
+  - time: 04:18.02
+    text: 饮酒醉，最为丑。
+    pinyin: yǐn jiǔ zuì zuì wéi chǒu
+  - time: 04:21.80
+    text: 步从容，立端正；
+    pinyin: bù cóng róng lì duān zhèng
+  - time: 04:26.08
+    text: 揖深圆，拜恭敬。
+    pinyin: yī shēn yuán bài gōng jìng
+  - time: 04:29.99
+    text: 勿践阈，勿跛倚；
+    pinyin: wù jiàn yù wù bì yǐ
+  - time: 04:33.89
+    text: 勿箕踞，勿摇髀。
+    pinyin: wù jī jù wù yáo bì
+  - time: 04:37.65
+    text: 缓揭帘，勿有声；
+    pinyin: huǎn jiē lián wù yǒu shēng
+  - time: 04:41.96
+    text: 宽转弯，勿触棱。
+    pinyin: kuān zhuǎn wān wù chù léng
+  - time: 04:45.61
+    text: 执虚器，如执盈；
+    pinyin: zhí xū qì rú zhí yíng
+  - time: 04:49.34
+    text: 入虚室，如有人。
+    pinyin: rù xū shì rú yǒu rén
+  - time: 04:52.99
+    text: 事勿忙，忙多错；
+    pinyin: shì wù máng máng duō cuò
+  - time: 04:57.00
+    text: 勿畏难，勿轻略。
+    pinyin: wù wèi nán wù qīng luè
+  - time: 05:00.41
+    text: 斗闹场，绝勿近；
+    pinyin: dòu nào chǎng jué wù jìn
+  - time: 05:04.11
+    text: 邪僻事，绝勿问。
+    pinyin: xié pì shì jué wù wèn
+  - time: 05:07.71
+    text: 将入门，问孰存；
+    pinyin: jiāng rù mén wèn shú cún
+  - time: 05:11.98
+    text: 将上堂，声必扬。
+    pinyin: jiāng shàng táng shēng bì yáng
+  - time: 05:15.80
+    text: 人问谁，对以名；
+    pinyin: rén wèn shuí duì yǐ míng
+  - time: 05:19.39
+    text: 吾与我，不分明。
+    pinyin: wú yǔ wǒ bù fēn míng
+  - time: 05:23.10
+    text: 用人物，须明求；
+    pinyin: yòng rén wù xū míng qiú
+  - time: 05:27.42
+    text: 倘不问，即为偷。
+    pinyin: tǎng bù wèn jí wéi tōu
+  - time: 05:30.78
+    text: 借人物，及时还；
+    pinyin: jiè rén wù jí shí huán
+  - time: 05:34.54
+    text: 人借物，有勿悭。
+    pinyin: rén jiè wù yǒu wù qiān
+  - time: 05:38.20
+    text: 凡出言，信为先；
+    pinyin: fán chū yán xìn wéi xiān
+  - time: 05:42.69
+    text: 诈与妄，奚可焉。
+    pinyin: zhà yǔ wàng xī kě yān
+  - time: 05:46.40
+    text: 话说多，不如少；
+    pinyin: huà shuō duō bù rú shǎo
+  - time: 05:49.88
+    text: 惟其是，勿佞巧。
+    pinyin: wéi qí shì wù nìng qiǎo
+  - time: 05:53.81
+    text: 刻薄语，秽污词；
+    pinyin: kè bó yǔ huì wū cí
+  - time: 05:57.76
+    text: 市井气，切戒之。
+    pinyin: shì jǐng qì qiè jiè zhī
+  - time: 06:01.58
+    text: 见未真，勿轻言；
+    pinyin: jiàn wèi zhēn wù qīng yán
+  - time: 06:05.75
+    text: 知未的，勿轻传。
+    pinyin: zhī wèi dí wù qīng chuán
+  - time: 06:09.55
+    text: 事非宜，勿轻诺；
+    pinyin: shì fēi yí wù qīng nuò
+  - time: 06:13.02
+    text: 苟轻诺，进退错。
+    pinyin: gǒu qīng nuò jìn tuì cuò
+  - time: 06:16.68
+    text: 凡道字，重且舒；
+    pinyin: fán dào zì zhòng qiě shū
+  - time: 06:21.32
+    text: 勿急疾，勿模糊。
+    pinyin: wù jí jí wù mó hu
+  - time: 06:25.10
+    text: 彼说长，此说短；
+    pinyin: bǐ shuō cháng cǐ shuō duǎn
+  - time: 06:28.40
+    text: 不关己，莫闲管。
+    pinyin: bù guān jǐ mò xián guǎn
+  - time: 06:32.37
+    text: 见人善，即思齐；
+    pinyin: jiàn rén shàn jí sī qí
+  - time: 06:36.70
+    text: 纵去远，以渐跻。
+    pinyin: zòng qù yuǎn yǐ jiàn jī
+  - time: 06:40.54
+    text: 见人恶，即内省；
+    pinyin: jiàn rén è jí nèi xǐng
+  - time: 06:44.31
+    text: 有则改，无加警。
+    pinyin: yǒu zé gǎi wú jiā jǐng
+  - time: 06:48.14
+    text: 唯德学，唯才艺；
+    pinyin: wéi dé xué wéi cái yì
+  - time: 06:52.12
+    text: 不如人，当自砺。
+    pinyin: bù rú rén dāng zì lì
+  - time: 06:55.71
+    text: 若衣服，若饮食；
+    pinyin: ruò yī fú ruò yǐn shí
+  - time: 06:59.60
+    text: 不如人，勿生戚。
+    pinyin: bù rú rén wù shēng qī
+  - time: 07:03.24
+    text: 闻过怒，闻誉乐；
+    pinyin: wén guò nù wén yù lè
+  - time: 07:07.58
+    text: 损友来，益友却。
+    pinyin: sǔn yǒu lái yì yǒu què
+  - time: 07:11.18
+    text: 闻誉恐，闻过欣；
+    pinyin: wén yù kǒng wén guò xīn
+  - time: 07:14.83
+    text: 直谅士，渐相亲。
+    pinyin: zhí liàng shì jiàn xiāng qīn
+  - time: 07:18.22
+    text: 无心非，名为错；
+    pinyin: wú xīn fēi míng wéi cuò
+  - time: 07:22.75
+    text: 有心非，名为恶。
+    pinyin: yǒu xīn fēi míng wéi è
+  - time: 07:26.68
+    text: 过能改，归于无；
+    pinyin: guò néng gǎi guī yú wú
+  - time: 07:29.98
+    text: 倘掩饰，增一辜。
+    pinyin: tǎng yǎn shì zēng yì gū
+  - time: 07:33.81
+    text: 凡是人，皆须爱；
+    pinyin: fán shì rén jiē xū ài
+  - time: 07:39.14
+    text: 天同覆，地同载。
+    pinyin: tiān tóng fù dì tóng zài
+  - time: 07:42.82
+    text: 行高者，名自高；
+    pinyin: xìng gāo zhě míng zì gāo
+  - time: 07:46.70
+    text: 人所重，非貌高。
+    pinyin: rén suǒ zhòng fēi mào gāo
+  - time: 07:50.74
+    text: 才大者，望自大；
+    pinyin: cái dà zhě wàng zì dà
+  - time: 07:54.31
+    text: 人所服，非言大。
+    pinyin: rén suǒ fú fēi yán dà
+  - time: 07:58.04
+    text: 己有能，勿自私；
+    pinyin: jǐ yǒu néng wù zì sī
+  - time: 08:02.12
+    text: 人有能，勿轻訾。
+    pinyin: rén yǒu néng wù qīng zǐ
+  - time: 08:05.96
+    text: 勿谄富，勿骄贫；
+    pinyin: wù chǎn fù wù jiāo pín
+  - time: 08:09.77
+    text: 勿厌故，勿喜新。
+    pinyin: wù yàn gù wù xǐ xīn
+  - time: 08:13.29
+    text: 人不闲，勿事搅；
+    pinyin: rén bù xián wù shì jiǎo
+  - time: 08:17.07
+    text: 人不安，勿话扰。
+    pinyin: rén bù ān wù huà rǎo
+  - time: 08:20.63
+    text: 人有短，切莫揭；
+    pinyin: rén yǒu duǎn qiè mò jiē
+  - time: 08:24.54
+    text: 人有私，切莫说。
+    pinyin: rén yǒu sī qiè mò shuō
+  - time: 08:28.26
+    text: 道人善，即是善；
+    pinyin: dào rén shàn jí shì shàn
+  - time: 08:31.84
+    text: 人知之，愈思勉。
+    pinyin: rén zhī zhī yù sī miǎn
+  - time: 08:35.64
+    text: 扬人恶，即是恶；
+    pinyin: yáng rén è jí shì è
+  - time: 08:39.46
+    text: 疾之甚，祸且作。
+    pinyin: jí zhī shèn huò qiě zuò
+  - time: 08:43.32
+    text: 善相劝，德皆建；
+    pinyin: shàn xiàng quàn dé jiē jiàn
+  - time: 08:47.61
+    text: 过不规，道两亏。
+    pinyin: guò bù guī dào liǎng kuī
+  - time: 08:51.34
+    text: 凡取与，贵分晓；
+    pinyin: fán qǔ yǔ guì fēn xiǎo
+  - time: 08:55.75
+    text: 与宜多，取宜少。
+    pinyin: yǔ yí duō qǔ yí shǎo
+  - time: 08:59.32
+    text: 将加人，先问己；
+    pinyin: jiāng jiā rén xiān wèn jǐ
+  - time: 09:02.96
+    text: 己不欲，即速已。
+    pinyin: jǐ bù yù jí sù yǐ
+  - time: 09:06.79
+    text: 恩欲报，怨欲忘；
+    pinyin: ēn yù bào yuàn yù wàng
+  - time: 09:10.58
+    text: 报怨短，报恩长。
+    pinyin: bào yuàn duǎn bào ēn cháng
+  - time: 09:14.32
+    text: 待婢仆，身贵端；
+    pinyin: dài bì pú shēn guì duān
+  - time: 09:18.78
+    text: 虽贵端，慈而宽。
+    pinyin: suī guì duān cí ér kuān
+  - time: 09:22.76
+    text: 势服人，心不然；
+    pinyin: shì fú rén xīn bù rán
+  - time: 09:26.67
+    text: 理服人，方无言。
+    pinyin: lǐ fú rén fāng wú yán
+  - time: 09:30.59
+    text: 同是人，类不齐；
+    pinyin: tóng shì rén lèi bù qí
+  - time: 09:34.96
+    text: 流俗众，仁者希。
+    pinyin: liú sú zhòng rén zhě xī
+  - time: 09:39.02
+    text: 果仁者，人多畏；
+    pinyin: guǒ rén zhě rén duō wèi
+  - time: 09:42.99
+    text: 言不讳，色不媚。
+    pinyin: yán bù huì sè bù mèi
+  - time: 09:46.92
+    text: 能亲仁，无限好；
+    pinyin: néng qīn rén wú xiàn hǎo
+  - time: 09:51.10
+    text: 德日进，过日少。
+    pinyin: dé rì jìn guò rì shǎo
+  - time: 09:54.83
+    text: 不亲仁，无限害；
+    pinyin: bù qīn rén wú xiàn hài
+  - time: 09:58.71
+    text: 小人进，百事坏。
+    pinyin: xiǎo rén jìn bǎi shì huài
+  - time: 10:02.78
+    text: 不力行，但学文；
+    pinyin: bú lì xíng dàn xué wén
+  - time: 10:07.50
+    text: 长浮华，成何人。
+    pinyin: zhǎng fú huá chéng hé rén
+  - time: 10:11.15
+    text: 但力行，不学文；
+    pinyin: dàn lì xíng bù xué wén
+  - time: 10:15.00
+    text: 任己见，昧理真。
+    pinyin: rèn jǐ jiàn mèi lǐ zhēn
+  - time: 10:18.77
+    text: 读书法，有三到；
+    pinyin: dú shū fǎ yǒu sān dào
+  - time: 10:22.97
+    text: 心眼口，信皆要。
+    pinyin: xīn yǎn kǒu xìn jiē yào
+  - time: 10:26.48
+    text: 方读此，勿慕彼；
+    pinyin: fāng dú cǐ wù mù bǐ
+  - time: 10:30.44
+    text: 此未终，彼勿起。
+    pinyin: cǐ wèi zhōng bǐ wù qǐ
+  - time: 10:34.05
+    text: 宽为限，紧用功；
+    pinyin: kuān wéi xiàn jǐn yòng gōng
+  - time: 10:38.03
+    text: 工夫到，滞塞通。
+    pinyin: gōng fū dào zhì sè tōng
+  - time: 10:41.51
+    text: 心有疑，随札记；
+    pinyin: xīn yǒu yí suí zhá jì
+  - time: 10:45.77
+    text: 就人问，求确义。
+    pinyin: jiù rén wèn qiú què yì
+  - time: 10:49.39
+    text: 房室清，墙壁净；
+    pinyin: fáng shì qīng qiáng bì jìng
+  - time: 10:53.27
+    text: 几案洁，笔砚正。
+    pinyin: jī àn jié bǐ yàn zhèng
+  - time: 10:57.05
+    text: 墨磨偏，心不端；
+    pinyin: mò mó piān xīn bù duān
+  - time: 11:00.95
+    text: 字不敬，心先病。
+    pinyin: zì bù jìng xīn xiān bìng
+  - time: 11:04.77
+    text: 列典籍，有定处；
+    pinyin: liè diǎn jí yǒu dìng chù
+  - time: 11:08.70
+    text: 读看毕，还原处。
+    pinyin: dú kàn bì huán yuán chù
+  - time: 11:11.98
+    text: 虽有急，卷束齐；
+    pinyin: suī yǒu jí juǎn shù qí
+  - time: 11:15.92
+    text: 有缺损，就补之。
+    pinyin: yǒu quē sǔn jiù bǔ zhī
+  - time: 11:19.89
+    text: 非圣书，屏勿视；
+    pinyin: fēi shèng shū bǐng wù shì
+  - time: 11:24.05
+    text: 蔽聪明，坏心志。
+    pinyin: bì cōng míng huài xīn zhì
+  - time: 11:27.69
+    text: 勿自暴，勿自弃；
+    pinyin: wù zì bào wù zì qì
+  - time: 11:31.48
+    text: 圣与贤，可驯致。
+    pinyin: shèng yǔ xián kě xún zhì

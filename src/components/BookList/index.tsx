@@ -2,7 +2,6 @@ import { useCallback, useEffect, useMemo } from 'react'
 import { BookApi } from '../../api'
 import { usePlayerConfig, useRequest } from '../../hooks'
 import { getFormatTime, line } from '../../utils'
-import { SvgIcon } from '../SvgIcon'
 import { Container } from '../layout/Container'
 import { useRecoilState } from 'recoil'
 import { activeBookEntryState } from '../../states'
@@ -62,6 +61,7 @@ export function BookList() {
               <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 md:gap-5">
                 {bookList.map((entry) => {
                   const { key, title, author, background, seconds } = entry
+                  const titleChars = title.replace(/(（上）|（下）)/, '').split('')
                   return (
                     <div
                       key={key}
@@ -90,7 +90,7 @@ export function BookList() {
                             outline-2 -outline-offset-4 outline-black text-base md:text-2xl font-song  
                           `)}
                         >
-                          {title.split('').map((c, i) => (<div key={i}>{c}</div>))}
+                          {titleChars.map((c, i) => (<div key={i}>{c}</div>))}
                         </div>
                       </div>
 
@@ -101,8 +101,7 @@ export function BookList() {
                         <div className="mt-1 text-zinc-400">
                           {author}
                         </div>
-                        <div className="flex justify-center items-center text-zinc-400">
-                          <SvgIcon.Time size={14} />&nbsp;
+                        <div className="text-center text-zinc-400">
                           {getFormatTime(seconds)}
                         </div>
                       </div>

@@ -3,7 +3,7 @@ import { useRecoilState } from 'recoil'
 import { activeBookEntryState } from '../../states'
 import { useAudio, useHotKey, usePlayerConfig, useRequest } from '../../hooks'
 import { AudioApi, BookApi } from '../../api'
-import { getInjectedPinyinList, getRound2, line } from '../../utils'
+import { getInjectedPinyinList, getRound2, getSection, getSentenceList, line } from '../../utils'
 import { sortedIndex } from 'lodash-es'
 import { SvgIcon } from '../SvgIcon'
 import { VolumeSlider } from './VolumeSlider'
@@ -11,7 +11,6 @@ import { VolumeIcon } from './VolumeIcon'
 import { Container } from '../layout/Container'
 import Settings from './Settings'
 import type { ISection } from '../../type'
-import { getSection, getSentenceList } from '../../utils/book.util'
 
 export function BookPlayer () {
   const audio = useAudio()
@@ -254,7 +253,7 @@ export function BookPlayer () {
           <div className="flex justify-between items-center flex-col md:flex-row">
             <div className="text-xs">
               <span className="cursor-pointer">
-                《{activeBookEntry?.title}》
+                {activeBookEntry?.title}
               </span>
               <span className="ml-1 opacity-40">
                 {activeBookEntry?.author}

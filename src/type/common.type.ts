@@ -23,6 +23,7 @@ export interface IBookEntry {
   author: string
   sentences: number
   seconds: number
+  size: number
   sha256sum: string
   background: string
   intro: string

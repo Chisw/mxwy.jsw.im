@@ -6,7 +6,7 @@ export function Reciter() {
     <Container className="mt-6 md:mt-12">
       <div className="flex items-center px-4 py-3 md:px-8 md:py-6 bg-zinc-100 rounded-2xl">
         <div className="shrink-0 w-20 md:w-24 h-20 md:h-24 rounded-full bg-zinc-100 overflow-hidden">
-          <img src="https://imagev2.xmcdn.com/group88/M06/5B/F1/wKg5CV99YqWynuPOAABxuU9Rhow323.jpg!strip=1&quality=10&magick=webp&op_type=5&upload_type=cover&name=web_large&device_type=ios" />
+          <img src="/assets/avatar.jpg" />
         </div>
         <div className="ml-4">
           <div className="text-xs md:text-sm text-zinc-400">
