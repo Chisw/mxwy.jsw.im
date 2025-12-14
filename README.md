@@ -4,23 +4,27 @@
 
 https://mxwy.jsw.im
 
-### 简介
+### 一、简介
 
 教自己小孩拼音识字用的，开源分享给同好的家长们 ❤️
 
 使用 [Netlify](https://www.netlify.com) 自动部署，国内访问可能比较卡顿，本地部署会好点
 
-现有 19 条音频（蒙学 7 部、选文 10 篇）已涵盖 xxx 个不重复的汉字，基本满足幼儿的识字需求，因此不再增录，大佬们可自行 fork 处理
+现有 19 条音频（蒙学 7 部、选文 10 篇）已涵盖 2200+ 个汉字，完全满足幼儿的识字需求，因此不再增录，大佬们可自行 fork 处理
 
 字幕拼音均为本人逐字听取校排，难免有错讹之处，欢迎指正
 
-### 感谢
+### 二、感谢
 
 <img src="./public/assets/avatar.jpg" style="height: 64px;" />
 
 在此由衷感谢 [白云出岫](https://www.ximalaya.com/zhubo/4228109) 老师，他在朗读经典上所浇筑的心血，普惠大众，功德无量 🙏🏻
 
-### 开发构建
+### 三、扫码访问
+
+<img src="./public/assets/qr-code.png" style="height: 200px" />
+
+### 四、开发构建
 
 ```sh
 # 安装依赖
@@ -36,7 +40,22 @@ yarn build
 # āáǎà ōóǒò ēéěè īíǐì ūúǔù ǖǘǚǜ
 ```
 
-### 自行增录
+按需生成字体：
+
+```sh
+# 将字体文件重命名为 font.ttf 放入
+./font-generator
+```
+
+```sh
+# 首次安装
+npm i -g font-spider
+
+# 执行
+./font-generator/gen.sh
+```
+
+### 五、自行增录
 
 > 以《道德经》为例，注意 yml 文件的空格对齐
 
@@ -93,7 +112,3 @@ sentences:
     background: '#000000' # 封面底色
     intro: 文本介绍
 ```
-
-### 扫码访问
-
-<img src="./public/assets/qr-code.png" style="height: 200px" />

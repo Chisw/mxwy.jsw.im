@@ -7,11 +7,3 @@
 .flex-between-center {
   @apply flex justify-between items-center;
 }
-
-.font-kai {
-  font-family: 'kai', 'FZKai\-Z03';
-}
-
-.font-song {
-  font-family: 'Songti SC';
-}

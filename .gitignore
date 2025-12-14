@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+font-generator/.font-spider
+font-generator/all-chars.txt
+font-generator/temp.html
+font-generator/font.ttf
+font-generator/font.woff

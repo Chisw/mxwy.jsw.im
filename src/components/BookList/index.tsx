@@ -87,7 +87,7 @@ export function BookList() {
                             flex flex-col justify-around items-center
                             absolute z-10 top-[10%] bottom-[10%] left-[28%] right-[28%]
                             pt-[2%] pb-[6%] bg-white
-                            outline-2 -outline-offset-4 outline-black text-base md:text-2xl font-song  
+                            outline-2 -outline-offset-4 outline-black text-base md:text-2xl font-kai  
                           `)}
                         >
                           {titleChars.map((c, i) => (<div key={i}>{c}</div>))}

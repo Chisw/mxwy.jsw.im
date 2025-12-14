@@ -6,3 +6,12 @@
 .font-pinyin {
   font-family: "mxwy-pinyin";
 }
+
+@font-face {
+  font-family: "mxwy-kai";
+  src: url("./font.woff");
+}
+
+.font-kai {
+  font-family: "mxwy-kai", "kai", "FZKai\-Z03";
+}
