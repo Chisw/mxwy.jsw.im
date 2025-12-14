@@ -93,7 +93,7 @@ export default function Settings(props: SettingsProps) {
 
   return (
     <ActionSheet
-      overlayClass="mxwy-settings-overlay"
+      overlayClass="mxwy-action-sheet-overlay"
       duration={200}
       visible={visible}
       onCancel={onClose}
@@ -257,6 +257,26 @@ export default function Settings(props: SettingsProps) {
                   {isSectionFromDirty ? '' : '已'}应用
                 </Button>
               </div>
+            </div>
+          </Tabs.TabPane>
+
+          <Tabs.TabPane
+            key="hotkey"
+            title="快捷键"
+          >
+            <div className="flex justify-center py-4 text-sm leading-loose">
+              <pre>
+                <code>
+                  <div>        ↑:  音量+</div>
+                  <div>        ↓:  音量-</div>
+                  <div>        ←:  前一句</div>
+                  <div>        →:  后一句</div>
+                  <div>Backspace:  当前句重放</div>
+                  <div>      Esc:  退出字幕</div>
+                  <div>    Enter:  进入字幕</div>
+                  <div>    Space:  播放/暂停</div>
+                </code>
+              </pre>
             </div>
           </Tabs.TabPane>
 

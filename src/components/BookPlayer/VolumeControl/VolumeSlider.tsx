@@ -1,6 +1,6 @@
 import { useRef } from 'react'
-import { useClickAway, usePlayerConfig } from '../../hooks'
-import { line } from '../../utils'
+import { useClickAway, usePlayerConfig } from '../../../hooks'
+import { line } from '../../../utils'
 import { Slider } from 'react-vant'
 
 interface VolumeSliderProps {

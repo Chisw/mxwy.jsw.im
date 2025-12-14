@@ -27,11 +27,12 @@
 
 .mxwy-sentence::after {
   content: attr(data-tag);
-  @apply hidden absolute z-10 top-0 left-0 px-2 py-1 text-xs text-green-800 bg-green-400/80;
+  font-size: 10px;
+  @apply hidden absolute z-10 top-0 left-0 px-1 py-0.5 text-green-800 bg-green-400/80;
 }
 
 .mxwy-sentence:hover::after {
-  @apply inline-block;
+  @apply md:inline-block;
 }
 
 .mxwy-sentence-character::after {
@@ -46,6 +47,6 @@
   font-family: 'mxwy-pinyin';
 }
 
-.mxwy-settings-overlay {
+.mxwy-action-sheet-overlay {
   background: rgba(0, 0, 0, .23);
 }

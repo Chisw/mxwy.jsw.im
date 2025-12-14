@@ -56,7 +56,7 @@ export function BookList() {
           return (
             <div key={group}>
               <div className="mt-4 mb-2 py-3 font-bold">
-                {{ 1: '辨音识字', 2: '百家选文' }[group]}
+                {{ 1: '辨音识字', 2: '百家选文', 3: '自定义' }[group]}
               </div>
               <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 md:gap-5">
                 {bookList.map((entry) => {
@@ -102,7 +102,7 @@ export function BookList() {
                           {author}
                         </div>
                         <div className="text-center text-zinc-400">
-                          {getFormatTime(seconds)}
+                          {seconds ? getFormatTime(seconds) : '制作中'}
                         </div>
                       </div>
 

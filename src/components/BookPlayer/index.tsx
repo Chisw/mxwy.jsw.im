@@ -6,11 +6,10 @@ import { AudioApi, BookApi } from '../../api'
 import { getInjectedPinyinList, getRound2, getSection, getSentenceList, line } from '../../utils'
 import { sortedIndex } from 'lodash-es'
 import { SvgIcon } from '../SvgIcon'
-import { VolumeSlider } from './VolumeSlider'
-import { VolumeIcon } from './VolumeIcon'
 import { Container } from '../layout/Container'
 import Settings from './Settings'
 import type { ISection } from '../../type'
+import { VolumeIcon, VolumeSlider } from './VolumeControl'
 
 export function BookPlayer () {
   const audio = useAudio()
@@ -95,6 +94,7 @@ export function BookPlayer () {
       'ArrowDown, ArrowDown': () => handleVolumeChange(-0.05),
       'ArrowLeft, ArrowLeft': () => handleSentenceChange(-1),
       'ArrowRight, ArrowRight': () => handleSentenceChange(1),
+      'Backspace, Backspace': () => handleSentenceChange(0),
       'Enter, Enter': () => setSentenceVisible(true),
       'Escape, Escape': () => {
         if (settingsVisible) {
@@ -153,12 +153,20 @@ export function BookPlayer () {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [audio.isEnded, audio.currentTime, playerConfig.loop, computedSection])
 
+  useEffect(() => {
+    let timer = 0
+    timer = setTimeout(() => {
+      setVolumeSliderVisible(false)
+    }, 2000)
+    return () => clearTimeout(timer)
+  }, [playerConfig.volume])
+
   return (
     <>
       <div
         className={line(`
           fixed z-10 inset-0 bottom-16
-        text-green-900 bg-green-100
+          text-green-900 bg-green-100
           transition-all duration-200
           ${sentenceVisible ? '' : 'translate-y-[120vh]'}  
         `)}
@@ -252,7 +260,7 @@ export function BookPlayer () {
         <div className="grow ml-4">
           <div className="flex justify-between items-center flex-col md:flex-row">
             <div className="text-xs">
-              <span className="cursor-pointer">
+              <span>
                 {activeBookEntry?.title}
               </span>
               <span className="ml-1 opacity-40">
@@ -267,7 +275,7 @@ export function BookPlayer () {
           <div className="mt-2">
             <div className="relative w-full h-1 bg-zinc-700">
               <div
-                className="h-full bg-green-500 transition-all duration-100"
+                className="h-full bg-green-500"
                 style={{ width: `${audio.playInfo.percent}%` }}
               />
               {computedSection.enabled && (
@@ -286,13 +294,22 @@ export function BookPlayer () {
         {/* volume */}
         <div className="shrink-0 relative z-0 ml-4 p-1">
           <div
-            className="cursor-pointer hover:text-green-500"
+            className="relative z-0 cursor-pointer hover:text-green-500"
             onClick={() => setVolumeSliderVisible(true)}
           >
             <VolumeIcon
               size={20}
               volume={playerConfig.volume}
              />
+
+            <div
+              className={line(`
+                absolute z-10 -right-2 -bottom-1.5 p-0.5
+                bg-zinc-900 rounded-full text-[8px]
+              `)}
+            >
+              {(playerConfig.volume * 100).toFixed(0)}
+            </div>
           </div>
 
           <VolumeSlider
@@ -313,13 +330,21 @@ export function BookPlayer () {
         {/* toggle */}
         <div
           className={line(`
+            relative z-0
             shrink-0 ml-2 p-1 cursor-pointer hover:text-green-500
-            transition-transform duration-200
-            ${sentenceVisible ? '' : 'rotate-180'}
           `)}
           onClick={() => setSentenceVisible(!sentenceVisible)}
         >
-          <SvgIcon.ChevronBottom size={20} />
+          <SvgIcon.Sentences size={20} />
+          <div
+            className={line(`
+              absolute z-10 right-0 bottom-0 bg-zinc-900 rounded-full
+              transition-transform duration-200
+              ${sentenceVisible ? '' : 'rotate-180'}
+            `)}
+          >
+            <SvgIcon.ChevronBottom size={14} />
+          </div>
         </div>
       </Container>
 

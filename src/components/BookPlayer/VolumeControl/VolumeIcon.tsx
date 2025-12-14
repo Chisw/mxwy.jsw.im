@@ -1,4 +1,4 @@
-import { SvgIcon } from '../SvgIcon'
+import { SvgIcon } from '../../SvgIcon'
 
 interface VolumeIconProps {
   size: number
