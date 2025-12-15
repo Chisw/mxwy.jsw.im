@@ -52,9 +52,9 @@ export function Header() {
       >
         <div
           data-customized-scrollbar
-          className="px-6 py-8 max-h-96 overflow-y-auto"
+          className="mt-4 px-6 pt-4 pb-8 max-h-96 overflow-y-auto"
         >
-          <div className="font-bold text-green-600">项目简介</div>
+          <div className="font-bold text-green-600">简介</div>
           <div className="mt-2">
             <p className="mb-2">教自己小孩拼音识字用的，开源分享给同好的家长们 ❤️</p>
             <p className="mb-2">使用 Netlify 自动部署，国内访问可能比较卡顿，本地部署会好点</p>
@@ -79,17 +79,33 @@ export function Header() {
             </div>
           </div>
 
-          <div className="mt-4 font-bold text-green-600">感谢</div>
+          <div className="mt-8 font-bold text-green-600">感谢</div>
           <div className="mt-2">
             在此由衷感谢 白云出岫 老师，他在朗读经典上所浇筑的心血，普惠大众，功德无量 🙏🏻
           </div>
 
-          <div className="mt-4 font-bold text-green-600">扫码访问</div>
+          <div className="mt-8 font-bold text-green-600">扫码访问</div>
           <div className="mt-2">
             <img src="/assets/qr-code.png" className="mx-auto w-48 h-48" />
           </div>
 
-          <div className="mt-4 font-bold text-green-600">更多蒙学音频</div>
+          <div className="mt-8 font-bold text-green-600">快捷键</div>
+          <div className="flex justify-center mt-2 text-sm leading-loose">
+            <pre>
+              <code>
+                <div>        ↑: 音量+</div>
+                <div>        ↓: 音量-</div>
+                <div>        ←: 前一句</div>
+                <div>        →: 后一句</div>
+                <div>Backspace: 当前句重放</div>
+                <div>      Esc: 退出字幕</div>
+                <div>    Enter: 进入字幕</div>
+                <div>    Space: 播放/暂停</div>
+              </code>
+            </pre>
+          </div>
+
+          <div className="mt-8 font-bold text-green-600">更多音频</div>
           <div className="mt-2 grid grid-cols-3 gap-1">
             {list.map(({ name, href }, i) => (
               <a

@@ -84,13 +84,19 @@ export function BookList() {
                         />
                         <div
                           className={line(`
-                            flex flex-col justify-around items-center
-                            absolute z-10 top-[10%] bottom-[10%] left-[28%] right-[28%]
-                            pt-[2%] pb-[6%] bg-white
-                            outline-2 -outline-offset-4 outline-black text-base md:text-2xl font-kai  
+                            flex flex-col justify-center items-center
+                            absolute z-10 top-[12%] bottom-[12%] left-[28%] right-[28%]
+                            outline-2 -outline-offset-4 outline-black text-base md:text-2xl font-kai bg-white
                           `)}
                         >
-                          {titleChars.map((c, i) => (<div key={i}>{c}</div>))}
+                          {titleChars.map((c, i) => (
+                            <div
+                              key={i}
+                              className="leading-5 md:leading-7"
+                            >
+                              {c}
+                            </div>
+                          ))}
                         </div>
                       </div>
 

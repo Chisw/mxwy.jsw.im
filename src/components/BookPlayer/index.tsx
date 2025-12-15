@@ -71,6 +71,13 @@ export function BookPlayer () {
     return computedSection
   }, [memoSection, activeBookEntry, sentenceList, audio.duration])
 
+  const handleToggleClick = useCallback(() => {
+    if (!audio.isPlaying) {
+      setSentenceVisible(true)
+    }
+    audio.toggle()
+  }, [audio])
+
   const handleVolumeChange = useCallback((offset: number) => {
     const min = 0
     const max = 1
@@ -251,7 +258,7 @@ export function BookPlayer () {
         {/* button */}
         <div
           className="shrink-0 flex-center-center w-10 h-10 text-white bg-green-500 rounded-full cursor-pointer"
-          onClick={audio.toggle}
+          onClick={handleToggleClick}
         >
           {audio.isPlaying ? <SvgIcon.Pause size={24} /> : <SvgIcon.Play size={24} />}
         </div>

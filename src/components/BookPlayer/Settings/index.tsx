@@ -1,9 +1,10 @@
 import { useCallback, useMemo, useState } from 'react'
 import { ActionSheet, Button, Stepper, Switch, Tabs, Notify } from 'react-vant'
 import type { IBookEntry, ISection, ISentence } from '../../../type'
-import { getDefaultSection, getFormatTime, line } from '../../../utils'
+import { downloadTxt, getDefaultSection, getFormatDateTime, getFormatTime, getInjectedPinyinList, line } from '../../../utils'
 import { usePlayerConfig } from '../../../hooks'
 import { SettingItem } from './SettingItem'
+import { SvgIcon } from '../../SvgIcon'
 // import { BlobApi } from '../../api'
 
 const RATE_LIST = [0.75, 1, 1.25, 1.5]
@@ -65,6 +66,78 @@ export default function Settings(props: SettingsProps) {
     onClose()
     Notify.show({ type: 'success', message: '应用成功' })
   }, [setSectionRecord, bookEntry, sectionForm, onClose])
+
+  const handleDownloadClick = useCallback((type: string) => {
+    const { title, author } = bookEntry
+    let textContent = ''
+
+    if (type === 'txt') {
+      textContent = [
+        sentenceList.map(({ text, pinyin }) => `${pinyin}\n${text}`).join('\n'),
+        '',
+      ].join('\n')
+    } else if (type === 'json') {
+      textContent = JSON.stringify({ sectionList, sentenceList })
+    } else if (type === 'lrc') {
+      textContent = [
+        `[ti:${title}]`,
+        `[au:${author}]`,
+        `[ar:白云出岫]`,
+        sentenceList.map(({ time, text }) => `[${time}]${text}`).join('\n'),
+        '',
+      ].join('\n')
+    }
+
+    downloadTxt(`${title}-${author}.${type}`, textContent)
+  }, [bookEntry, sectionList, sentenceList])
+
+  const handlePrintClick = useCallback(() => {
+    const chars = sentenceList
+      .map((s, index) => {
+        const isInRange = index + 1 >= sectionForm.from && index + 1 <= sectionForm.to
+        if (!isInRange) return ''
+
+        const { text, pinyin } = s
+        const pinyinList = getInjectedPinyinList(pinyin, text)
+        const count = text.length
+        const rest = count % 10
+        const max = count + (rest ? (10 - rest) : 0)
+        const chars = text.padEnd(max, ' ').split('')
+
+        return `
+          <div
+            class="flex flex-wrap -mb-px text-center border-t border-l border-r border-green-300"
+            style="page-break-inside: avoid; break-inside: avoid;"
+          >
+            ${chars.map((c, i) => `
+              <div class="w-1/10 border-r border-b border-green-300">
+                <div class="mxwy-print-pinyin flex-center-center h-10 border-b border-green-300">
+                  <span class="text-[1.8rem] font-pinyin text-[#bbb] -translate-y-[12%]">${pinyinList[i] || ''}</span>
+                </div>
+                <div class="mxwy-print-character flex-center-center w-full aspect-square">
+                  <span class="text-[3.6rem] font-kai text-[#bbb] leading-0">${c}</span>
+                </div>
+              </div>  
+            `).join('')}
+          </div>
+        `
+      })
+      .join('')
+
+    document.getElementById('mxwy-print-page')!.innerHTML = `
+      ${chars}
+      <div class="flex justify-between mt-4 text-xs opacity-40">
+        <code>
+          https://mxwy.jsw.im
+        </code>
+        <code>
+          ${getFormatDateTime(new Date())}
+        </code>
+      </div>
+    `
+
+    window.print()
+  }, [sentenceList, sectionForm])
 
   // const handleFetchCache = useCallback(async () => {
   //   const res = await BlobApi.fetchAudioBlob(bookKey)
@@ -243,7 +316,13 @@ export default function Settings(props: SettingsProps) {
               </div>
 
               <div className="text-sm text-center text-zinc-400">
-                总计 {selectedSentenceCount} 句，时长 {selectedDuration}
+                <span>总计 {selectedSentenceCount} 句，时长 {selectedDuration}</span>
+                <span
+                  className="ml-3 text-green-600 cursor-pointer"
+                  onClick={handlePrintClick}
+                >
+                  打印字帖
+                </span>
               </div>
 
               <div className="mt-4">
@@ -261,35 +340,29 @@ export default function Settings(props: SettingsProps) {
           </Tabs.TabPane>
 
           <Tabs.TabPane
-            key="hotkey"
-            title="快捷键"
+            key="more"
+            title="更多"
           >
-            <div className="flex justify-center py-4 text-sm leading-loose">
-              <pre>
-                <code>
-                  <div>        ↑:  音量+</div>
-                  <div>        ↓:  音量-</div>
-                  <div>        ←:  前一句</div>
-                  <div>        →:  后一句</div>
-                  <div>Backspace:  当前句重放</div>
-                  <div>      Esc:  退出字幕</div>
-                  <div>    Enter:  进入字幕</div>
-                  <div>    Space:  播放/暂停</div>
-                </code>
-              </pre>
+            <div className="py-4 grid grid-cols-3 gap-4">
+              {['txt', 'json', 'lrc'].map((t) => (
+                <Button
+                  key={t}
+                  round
+                  size="small"
+                  icon={<SvgIcon.Download />}
+                  onClick={() => handleDownloadClick(t)}
+                >
+                  保存为 .{t}
+                </Button>
+              ))}
             </div>
-          </Tabs.TabPane>
 
-          {/* <Tabs.TabPane
-            key="cache"
-            title="缓存"
-          >
-            <Button
+            {/* <Button
               onClick={handleCacheClick}
             >
               {isCached ? 'clear' : 'cache'} {bookKey}
-            </Button>
-          </Tabs.TabPane> */}
+            </Button> */}
+          </Tabs.TabPane>
         </Tabs>
 
       </div>
