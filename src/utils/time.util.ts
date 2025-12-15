@@ -11,5 +11,5 @@ export const getFormatTime = (seconds: number) => {
 }
 
 export const getFormatDateTime = (date: Date) => {
-  return DateTime.fromJSDate(date).toFormat('yyyy-MM-dd HH:mm:ss')
+  return DateTime.fromJSDate(date).toFormat('yyyy-MM-dd HH:mm:ss', { locale: 'zh-CN' })
 }
