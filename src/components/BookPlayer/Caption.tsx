@@ -1,14 +1,17 @@
 import { Fragment, useEffect, useMemo, useRef, useState } from 'react'
-import { getChineseChars, getInjectedPinyinList, line } from '../../utils'
+import { copy, getChineseChars, getInjectedPinyinList, line } from '../../utils'
 import { usePlayerConfig } from '../../hooks'
 import type { ISection, ISentence } from '../../type'
+import { useRecoilState } from 'recoil'
+import { activeBookEntryState } from '../../states'
+import { Notify } from 'react-vant'
 
 const tabList = [
   { key: 'annotation', name: '注解' },
   { key: 'baidu', name: '百度汉语' },
   { key: 'mengdian', name: '萌典' },
   { key: 'ziyuan', name: '字源' },
-  { key: 'other', name: '其它' },
+  { key: 'more', name: '更多' },
 ]
 
 interface CaptionProps {
@@ -32,7 +35,9 @@ export default function Caption(props: CaptionProps) {
     activeSentenceIndex,
   } = props
 
-  const { playerConfig} = usePlayerConfig()
+  const { playerConfig } = usePlayerConfig()
+
+  const [activeBookEntry] = useRecoilState(activeBookEntryState)
 
   const [activeTab, setActiveTab] = useState('annotation')
 
@@ -139,7 +144,7 @@ export default function Caption(props: CaptionProps) {
         })}
       </div>
 
-      {/* 更多 */}
+      {/* 面板 */}
       {!!activeSentence && (
         <div
           data-customized-scrollbar
@@ -213,11 +218,26 @@ export default function Caption(props: CaptionProps) {
                 ))}
               </div>
             )}
-            {activeTab === 'other' && (
-              <div className="underline decoration-1 underline-offset-4 text-xs">
-                <a className="mr-2" target="_blank" href={`https://www.baidu.com/s?wd=${activeSentence.text}`}>百度一下</a>
-                <a className="mr-2" target="_blank" href={`https://www.google.com/search?q=${activeSentence.text}`}>Google</a>
-                <a className="mr-2" target="_blank" href={`https://github.com/Chisw/mxwy.jsw.im/issues/new`}>纠错</a>
+            {activeTab === 'more' && (
+              <div>
+                <div className="text-xl font-kai">
+                  {activeSentence.text}
+                </div>
+                <div className="mt-2 underline decoration-1 underline-offset-4">
+                  <a className="mr-3" target="_blank" href={`https://www.baidu.com/s?wd=${activeSentence.text}`}>百度一下</a>
+                  <a className="mr-3" target="_blank" href={`https://www.google.com/search?q=${activeSentence.text}`}>Google</a>
+                  <a className="mr-3" target="_blank" href={`https://chatgpt.com/?prompt=${activeSentence.text}`}>ChatGPT</a>
+                  <a className="mr-3" target="_blank" href={`https://github.com/Chisw/mxwy.jsw.im/issues/new?title=${activeBookEntry?.title}_${activeSentence.text}`}>纠错</a>
+                  <a
+                    className="cursor-pointer"
+                    onClick={() => {
+                      copy(activeSentence.text)
+                      Notify.show({ type: 'success', message: '复制成功' })
+                    }}
+                  >
+                    复制句子
+                  </a>
+                </div>
               </div>
             )}
           </div>
