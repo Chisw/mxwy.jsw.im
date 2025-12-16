@@ -1,11 +1,38 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
-import { getFormatTime, getRound2, PlayerConfigStorage } from '../utils'
+import {
+  BACKGROUND_MUSIC_EVENT_TRIGGER,
+  BACKGROUND_MUSIC_VOL_RATIO,
+  getFormatTime,
+  getRound2,
+  PlayerConfigStorage,
+} from '../utils'
+import { AudioApi } from '../api'
+import { usePlayerConfig } from './usePlayerConfig'
+
+let isAudioPlaying = false
 
 const audioEl: HTMLAudioElement = new Audio()
+const bgAudioEl: HTMLAudioElement = new Audio()
+const vol = PlayerConfigStorage.get().volume
 
-audioEl.volume = PlayerConfigStorage.get().volume
+audioEl.volume = vol
+bgAudioEl.volume = vol * BACKGROUND_MUSIC_VOL_RATIO
+bgAudioEl.loop = true
+bgAudioEl.preload = 'none'
+bgAudioEl.src = AudioApi.getAudioUrl('-guang-ling-san')
+
+window.addEventListener(BACKGROUND_MUSIC_EVENT_TRIGGER, (event) => {
+  if ((event as CustomEvent).detail) {
+    if (!isAudioPlaying) return
+    bgAudioEl.play()
+  } else {
+    bgAudioEl.pause()
+  }
+})
 
 export function useAudio() {
+
+  const { playerConfig } = usePlayerConfig()
 
   const [url, setUrl] = useState('')
   const [duration, setDuration] = useState(0)
@@ -23,10 +50,14 @@ export function useAudio() {
 
   const play = useCallback(() => {
     audioEl.play()
-  }, [])
+    if (playerConfig.backgroundMusic) {
+      bgAudioEl.play()
+    }
+  }, [playerConfig.backgroundMusic])
 
   const pause = useCallback(() => {
     audioEl.pause()
+    bgAudioEl.pause()
   }, [])
 
   const toggle = useCallback(() => {
@@ -56,6 +87,7 @@ export function useAudio() {
 
   const changeVolume = useCallback((vol: number) => {
     audioEl.volume = vol
+    bgAudioEl.volume = vol * BACKGROUND_MUSIC_VOL_RATIO
   }, [])
 
   const changePlaybackRate = useCallback((rate: number) => {
@@ -64,11 +96,16 @@ export function useAudio() {
 
   useEffect(() => {
     const handlePlay = () => {
+      isAudioPlaying = true
       setIsPlaying(true)
       setIsEnded(false)
     }
 
-    const handlePause = () => setIsPlaying(false)
+    const handlePause = () => {
+      isAudioPlaying = false
+      setIsPlaying(false)
+    }
+
     const handleTimeUpdate = () => setCurrentTime(audioEl.currentTime)
 
     const handleLoadedMetadata = () => {
@@ -81,6 +118,7 @@ export function useAudio() {
     }
 
     const handleEnded = () => {
+      isAudioPlaying = false
       setIsPlaying(false)
       setIsEnded(true)
     }

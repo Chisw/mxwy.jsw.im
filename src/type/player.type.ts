@@ -6,6 +6,7 @@ export class PlayerConfig {
   bookKey = ''
   fontSize = 20
   autoScroll = true
+  backgroundMusic = true
   loop = true
   volume = 1
   playbackRate = 1
@@ -17,6 +18,7 @@ export class PlayerConfig {
         bookKey,
         fontSize,
         autoScroll,
+        backgroundMusic,
         loop,
         volume,
         playbackRate,
@@ -26,6 +28,7 @@ export class PlayerConfig {
       this.bookKey = bookKey || ''
       this.fontSize = fontSize || 20
       this.autoScroll = autoScroll || true
+      this.backgroundMusic = backgroundMusic || true
       this.loop = loop || false
       this.volume = volume || 1
       this.playbackRate = playbackRate || 1

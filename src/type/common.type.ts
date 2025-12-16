@@ -2,7 +2,7 @@ export interface ISentenceBase {
   time: string
   text: string
   pinyin: string
-  annotation: Record<number, string>
+  annotation?: Record<number, string>
 }
 
 export interface ISentence extends ISentenceBase {

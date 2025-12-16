@@ -25,17 +25,23 @@
   background-color: rgba(0, 0, 0, .2);
 }
 
-.mxwy-sentence::after {
+.mxwy-action-sheet-overlay {
+  background: rgba(0, 0, 0, .23);
+}
+
+/* 句 编号及时间 */
+.mxwy-caption .mxwy-sentence::before {
   content: attr(data-tag);
   font-size: 10px;
   @apply hidden absolute z-10 top-0 left-0 px-1 py-0.5 text-green-800 bg-green-400/80;
 }
 
-.mxwy-sentence:hover::after {
+.mxwy-caption .mxwy-sentence:hover::before {
   @apply md:inline-block;
 }
 
-.mxwy-sentence-character::after {
+/* 字 拼音 */
+.mxwy-caption .mxwy-character::before {
   content: attr(data-pinyin);
   display: inline-block;
   position: absolute;
@@ -47,6 +53,22 @@
   font-family: 'mxwy-pinyin';
 }
 
-.mxwy-action-sheet-overlay {
-  background: rgba(0, 0, 0, .23);
+/* 字 注解 */
+.mxwy-caption .mxwy-character::after {
+  content: attr(data-annotation);
+  display: none;
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  right: 0;
+  font-size: 10px;
+  font-family: 'mxwy-kai';
+}
+
+.mxwy-caption .mxwy-sentence.active .mxwy-character::after {
+  display: inline-block;
+}
+
+.mxwy-caption.is-playing .mxwy-sentence.active .mxwy-character::after {
+  display: none;
 }

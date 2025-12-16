@@ -1,15 +1,16 @@
-import { Fragment, useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useRecoilState } from 'recoil'
 import { activeBookEntryState } from '../../states'
 import { useAudio, useHotKey, usePlayerConfig, useRequest } from '../../hooks'
 import { AudioApi, BookApi } from '../../api'
-import { getInjectedPinyinList, getRound2, getSection, getSentenceList, line } from '../../utils'
+import { getRound2, getSection, getSentenceList, line } from '../../utils'
 import { sortedIndex } from 'lodash-es'
 import { SvgIcon } from '../SvgIcon'
 import { Container } from '../layout/Container'
-import Settings from './Settings'
+import SettingsDrawer from './SettingsDrawer'
 import type { ISection } from '../../type'
 import { VolumeIcon, VolumeSlider } from './VolumeControl'
+import Caption from './Caption'
 
 export function BookPlayer () {
   const audio = useAudio()
@@ -17,13 +18,11 @@ export function BookPlayer () {
 
   const [activeBookEntry] = useRecoilState(activeBookEntryState)
 
-  const [sentenceVisible, setSentenceVisible] = useState(false)
+  const [captionVisible, setCaptionVisible] = useState(false)
   const [volumeSliderVisible, setVolumeSliderVisible] = useState(false)
   const [settingsVisible, setSettingsVisible] = useState(false)
 
   const { request: queryBookDetail, response, setResponse } = useRequest(BookApi.queryBookDetail)
-
-  const scrollRef = useRef<HTMLDivElement | null>(null)
 
   const {
     sectionList,
@@ -73,7 +72,7 @@ export function BookPlayer () {
 
   const handleToggleClick = useCallback(() => {
     if (!audio.isPlaying) {
-      setSentenceVisible(true)
+      setCaptionVisible(true)
     }
     audio.toggle()
   }, [audio])
@@ -102,13 +101,13 @@ export function BookPlayer () {
       'ArrowLeft, ArrowLeft': () => handleSentenceChange(-1),
       'ArrowRight, ArrowRight': () => handleSentenceChange(1),
       'Backspace, Backspace': () => handleSentenceChange(0),
-      'Enter, Enter': () => setSentenceVisible(true),
+      'Enter, Enter': () => setCaptionVisible(true),
       'Escape, Escape': () => {
         if (settingsVisible) {
           setSettingsVisible(false)
           return
         }
-        setSentenceVisible(false)
+        setCaptionVisible(false)
       },
       'Space, Space': audio.toggle,
     },
@@ -119,7 +118,7 @@ export function BookPlayer () {
     setResponse(null)
     queryBookDetail(activeBookEntry.key)
     if (activeBookEntry.autoPlay) {
-      setSentenceVisible(true)
+      setCaptionVisible(true)
     }
   }, [queryBookDetail, activeBookEntry, setResponse])
 
@@ -131,11 +130,6 @@ export function BookPlayer () {
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeBookEntry])
-
-  useEffect(() => {
-    if (!scrollRef.current || !playerConfig.autoScroll) return
-    document.querySelector(`[data-index="${activeSentenceIndex}"]`)?.scrollIntoView({ block: 'center' })
-  }, [activeSentenceIndex, playerConfig.autoScroll])
 
   useEffect(() => {
     if (computedSection.enabled) {
@@ -170,80 +164,14 @@ export function BookPlayer () {
 
   return (
     <>
-      <div
-        className={line(`
-          fixed z-10 inset-0 bottom-16
-          text-green-900 bg-green-100
-          transition-all duration-200
-          ${sentenceVisible ? '' : 'translate-y-[120vh]'}  
-        `)}
-      >
-
-        {/* 文本区域 */}
-        <div
-          ref={scrollRef}
-          data-customized-scrollbar
-          className="absolute z-0 inset-0 py-10 overflow-y-auto select-none"
-        >
-          {sentenceList.map(({ time, text, pinyin, startTime }, sentenceIndex) => {
-            const textList = text.split('')
-            const pinyinList = getInjectedPinyinList(pinyin, text)
-            const isActive = sentenceIndex === activeSentenceIndex
-            const section = sectionList.find(s => s.from === sentenceIndex + 1)
-            const { fontSize } = playerConfig
-
-            return (
-              <Fragment key={time}>
-
-                {!!section && (
-                  <div
-                    className="sticky z-10 -top-10 py-3 text-center text-green-600 bg-green-100"
-                    style={{ fontSize: fontSize * 0.6 }}
-                  >
-                    {section.name}
-                  </div>
-                )}
-
-                <div
-                  data-index={sentenceIndex}
-                  data-tag={`${sentenceIndex + 1}@${time.slice(0, -3)}`}
-                  className={line(`
-                    mxwy-sentence
-                    relative z-0 text-center cursor-pointer group
-                    hover:outline-2 hover:outline-green-500 -outline-offset-2
-                    ${isActive ? 'active bg-green-200' : ''}  
-                  `)}
-                  onClick={() => audio.changeCurrentTime(startTime)}
-                >
-                  {textList.map((char, charIndex) => {
-                    const pinyin = pinyinList[charIndex]
-                    const isPunctuation = !pinyin
-                    return (
-                      <div
-                        key={charIndex}
-                        data-pinyin={pinyin}
-                        className={line(`
-                          mxwy-sentence-character
-                          relative inline-block overflow-hidden font-kai
-                          ${isPunctuation ? 'text-left' : ''}
-                        `)}
-                        style={{
-                          paddingTop: fontSize + fontSize * 0.4,
-                          paddingBottom: fontSize * 0.1,
-                          width: isPunctuation ? fontSize / 2 : fontSize * 2.2,
-                          fontSize,
-                        }}
-                      >
-                        {char}
-                      </div>
-                    )
-                  })}
-                </div>
-              </Fragment>
-            )
-          })}
-        </div>
-      </div>
+      {/* 字幕 */}
+      <Caption
+        audio={audio}
+        visible={captionVisible}
+        sectionList={sectionList}
+        sentenceList={sentenceList}
+        activeSentenceIndex={activeSentenceIndex}
+      />
 
       {/* controls */}
       <Container
@@ -340,14 +268,14 @@ export function BookPlayer () {
             relative z-0
             shrink-0 ml-2 p-1 cursor-pointer hover:text-green-500
           `)}
-          onClick={() => setSentenceVisible(!sentenceVisible)}
+          onClick={() => setCaptionVisible(!captionVisible)}
         >
           <SvgIcon.Sentences size={20} />
           <div
             className={line(`
               absolute z-10 right-0 bottom-0 bg-zinc-900 rounded-full
               transition-transform duration-200
-              ${sentenceVisible ? '' : 'rotate-180'}
+              ${captionVisible ? '' : 'rotate-180'}
             `)}
           >
             <SvgIcon.ChevronBottom size={14} />
@@ -356,7 +284,7 @@ export function BookPlayer () {
       </Container>
 
       {!!activeBookEntry && (
-        <Settings
+        <SettingsDrawer
           key={activeBookEntry.key}
           visible={settingsVisible}
           bookEntry={activeBookEntry}

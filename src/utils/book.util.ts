@@ -1,4 +1,5 @@
 import type { IBookEntry, ISection, ISentence, ISentenceBase } from '../type'
+import { REG_PUNCTUATION } from './constant.util'
 import { getSecondsByTime } from './time.util'
 
 export const getSection = (s: string) => {
@@ -15,7 +16,7 @@ export const getSentenceList = (list: ISentenceBase[], duration: number) => {
   return list.map((s, sIndex) => {
     const nextSentence = list[sIndex + 1];
     const startTime = getSecondsByTime(s.time)
-    const endTime = nextSentence ? getSecondsByTime(nextSentence.time) : duration
+    const endTime = nextSentence ? getSecondsByTime(nextSentence.time, -0.01) : duration
     return {
       ...s,
       startTime,
@@ -30,7 +31,7 @@ export const getInjectedPinyinList = (pinyin: string, text: string) => {
   text
     .split('')
     .reduce((a, b, i) => {
-      if (/(，|。|：|；|？| )/.test(b)) {
+      if (REG_PUNCTUATION.test(b)) {
         a.push(i)
       }
       return a
@@ -40,4 +41,8 @@ export const getInjectedPinyinList = (pinyin: string, text: string) => {
     })
 
   return pinyinList
+}
+
+export const getChineseChars = (text: string) => {
+  return text.split('').filter(s => !REG_PUNCTUATION.test(s))
 }

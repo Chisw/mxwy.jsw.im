@@ -1,7 +1,15 @@
 import { useCallback, useMemo, useState } from 'react'
 import { ActionSheet, Button, Stepper, Switch, Tabs, Notify } from 'react-vant'
 import type { IBookEntry, ISection, ISentence } from '../../../type'
-import { downloadTxt, getDefaultSection, getFormatDateTime, getFormatTime, getInjectedPinyinList, line } from '../../../utils'
+import {
+  BACKGROUND_MUSIC_EVENT_TRIGGER,
+  downloadTxt,
+  getDefaultSection,
+  getFormatDateTime,
+  getFormatTime,
+  getInjectedPinyinList,
+  line,
+} from '../../../utils'
 import { usePlayerConfig } from '../../../hooks'
 import { SettingItem } from './SettingItem'
 import { SvgIcon } from '../../SvgIcon'
@@ -9,7 +17,7 @@ import { SvgIcon } from '../../SvgIcon'
 
 const RATE_LIST = [0.75, 1, 1.25, 1.5]
 
-interface SettingsProps {
+interface SettingsDrawerProps {
   visible: boolean
   bookEntry: IBookEntry
   sectionList: ISection[]
@@ -18,7 +26,7 @@ interface SettingsProps {
   onClose: () => void
 }
 
-export default function Settings(props: SettingsProps) {
+export default function SettingsDrawer(props: SettingsDrawerProps) {
   const {
     visible,
     bookEntry,
@@ -217,6 +225,20 @@ export default function Settings(props: SettingsProps) {
                 />
               </SettingItem>
 
+              <SettingItem label="背景乐">
+                <Switch
+                  size={24}
+                  checked={playerConfig.backgroundMusic}
+                  onChange={(backgroundMusic) => {
+                    setPlayerConfig({ backgroundMusic })
+                    const event = new CustomEvent(BACKGROUND_MUSIC_EVENT_TRIGGER, {
+                      detail: backgroundMusic,
+                    })
+                    window.dispatchEvent(event)
+                  }}
+                />
+              </SettingItem>
+
               <SettingItem label="循环播放">
                 <Switch
                   size={24}
@@ -343,7 +365,7 @@ export default function Settings(props: SettingsProps) {
             key="more"
             title="更多"
           >
-            <div className="py-4 grid grid-cols-3 gap-4">
+            <div className="py-4 grid grid-cols-2 gap-3">
               {['txt', 'json', 'lrc'].map((t) => (
                 <Button
                   key={t}

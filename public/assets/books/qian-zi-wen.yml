@@ -12,10 +12,16 @@ sentences:
     text: 天地玄黄，宇宙洪荒。
     pinyin: tiān dì xuán huáng yǔ zhòu hóng huāng
     annotation:
-      7: 上下四方曰宇，古往今来曰宙。
+      3: 玄：黑。
+      7: 宇宙：上下四方曰宇，古往今来曰宙。
   - time: 00:09.71
     text: 日月盈昃，辰宿列张。
     pinyin: rì yuè yíng zè chén xiù liè zhāng
+    annotation:
+      4: 昃：太阳西斜。日中则昃，月盈则亏。
+      6: 辰：地支第五，表时间。
+      7: 宿：四象二十八星宿。
+      9: 列张：天设日月，列星辰，以张四时。
   - time: 00:15.71
     text: 寒来暑往，秋收冬藏。
     pinyin: hán lái shǔ wǎng qiū shōu dōng cáng
