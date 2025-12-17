@@ -1,7 +1,1020 @@
 key: sheng-lv-qi-meng-xia
 sections:
-  - 第一部分@2,19
-  - 第二部分@20,52
-  - 第三部分@53,82
-  - 第四部分@83,126
+  - 一 先@1,22
+  - 二 萧@23,44
+  - 三 肴@45,66
+  - 四 豪@67,88
+  - 五 歌@89,110
+  - 六 麻@111,132
+  - 七 阳@133,154
+  - 八 庚@155,176
+  - 九 青@177,198
+  - 十 蒸@199,220
+  - 十一 尤@221,242
+  - 十二 侵@243,264
+  - 十三 覃@265,285
+  - 十四 盐@287,288
+  - 十五 咸@309,330
 sentences:
+  - time: 00:00.81
+    text: 一 先
+    pinyin: yī xiān
+  - time: 00:02.73
+    text: 晴对雨，地对天，天地对山川。
+    pinyin: qíng duì yǔ dì duì tiān tiān dì duì shān chuān
+  - time: 00:08.98
+    text: 山川对草木，赤壁对青田。
+    pinyin: shān chuān duì cǎo mù chì bì duì qīng tián
+  - time: 00:14.42
+    text: 郏鄏鼎，武城弦，木笔对苔钱。
+    pinyin: jiá rǔ dǐng wǔ chéng xián mù bǐ duì tái qián
+  - time: 00:20.33
+    text: 金城三月柳，玉井九秋莲。
+    pinyin: jīn chéng sān yuè liǔ yù jǐng jiǔ qiū lián
+  - time: 00:25.74
+    text: 何处春朝风景好，谁家秋夜月华圆。
+    pinyin: hé chù chūn zhāo fēng jǐng hǎo shuí jiā qiū yè yuè huá yuán
+  - time: 00:32.78
+    text: 珠缀花梢，千点蔷薇香露；
+    pinyin: zhū zhuì huā shāo qiān diǎn qiáng wēi xiāng lù
+  - time: 00:38.25
+    text: 练横树杪，几丝杨柳残烟。
+    pinyin: liàn héng shù miǎo jǐ sī yáng liǔ cán yān
+  - time: 00:44.24
+    text: 前对后，后对先，众丑对孤妍。
+    pinyin: qián duì hòu hòu duì xiān zhòng chǒu duì gū yán
+  - time: 00:50.38
+    text: 莺簧对蝶板，虎穴对龙渊。
+    pinyin: yīng huáng duì dié bǎn hǔ xué duì lóng yuān
+  - time: 00:55.61
+    text: 击石磬，观韦编，鼠目对鸢肩。
+    pinyin: jī shí qìng guān wéi biān shǔ mù duì yuān jiān
+  - time: 01:01.84
+    text: 春园花柳地，秋沼芰荷天。
+    pinyin: chūn yuán huā liǔ dì qiū zhǎo jì hé tiān
+  - time: 01:07.76
+    text: 白羽频挥闲客坐，乌纱半坠醉翁眠。
+    pinyin: bái yǔ pín huī xián kè zuò wū shā bàn zhuì zuì wēng mián
+  - time: 01:14.32
+    text: 野店几家，羊角风摇沽酒旆；
+    pinyin: yě diàn jǐ jiā yáng jiǎo fēng yáo gū jiǔ pèi
+  - time: 01:19.47
+    text: 长川一带，鸭头波泛卖鱼船。
+    pinyin: cháng chuān yí dài yā tóu bō fàn mài yú chuán
+  - time: 01:25.59
+    text: 离对坎，震对乾，一日对千年。
+    pinyin: lí duì kǎn zhèn duì qián yí rì duì qiān nián
+  - time: 01:31.52
+    text: 尧天对舜日，蜀水对秦川。
+    pinyin: yáo tiān duì shùn rì shǔ shuǐ duì qín chuān
+  - time: 01:36.66
+    text: 苏武节，郑虔毡，涧壑对林泉。
+    pinyin: sū wǔ jié zhèng qián zhān jiàn hè duì lín quán
+  - time: 01:42.49
+    text: 挥戈能退日，持管莫窥天。
+    pinyin: huī gē néng tuì rì chí guǎn mò kuī tiān
+  - time: 01:47.35
+    text: 寒食芳辰花烂熳，中秋佳节月婵娟。
+    pinyin: hán shí fāng chén huā làn màn zhōng qiū jiā jié yuè chán juān
+  - time: 01:54.22
+    text: 梦里荣华，飘忽枕中之客；
+    pinyin: mèng lǐ róng huá piāo hū zhěn zhōng zhī kè
+  - time: 01:59.07
+    text: 壶中日月，安闲市上之仙。
+    pinyin: hú zhōng rì yuè ān xián shì shàng zhī xiān
+  - time: 02:03.93
+    text: 二 萧
+    pinyin: èr xiāo
+  - time: 02:07.10
+    text: 恭对慢，吝对骄，水远对山遥。
+    pinyin: gōng duì màn lìn duì jiāo shuǐ yuǎn duì shān yáo
+  - time: 02:12.75
+    text: 松轩对竹槛，雪赋对风谣。
+    pinyin: sōng xuān duì zhú jiàn xuě fù duì fēng yáo
+  - time: 02:18.41
+    text: 乘五马，贯双雕，烛灭对香消。
+    pinyin: chéng wú mǎ guàn shuāng diāo zhú miè duì xiāng xiāo
+  - time: 02:24.20
+    text: 明蟾常彻夜，骤雨不终朝。
+    pinyin: míng chán cháng chè yè zhòu yǔ bù zhōng zhāo
+  - time: 02:29.36
+    text: 楼阁天凉风飒飒，关河地隔雨潇潇。
+    pinyin: lóu gé tiān liáng fēng sà sà guān hé dì gé yǔ xiāo xiāo
+  - time: 02:36.62
+    text: 几点鹭鸶，日暮常飞红蓼岸；
+    pinyin: jǐ diǎn lù sī rì mù cháng fēi hóng liǎo àn
+  - time: 02:42.05
+    text: 一双鸂鶒，春朝频泛绿杨桥。
+    pinyin: yì shuāng xī chì chūn zhāo pín fàn lǜ yáng qiáo
+  - time: 02:47.97
+    text: 开对落，暗对昭，赵瑟对虞韶。
+    pinyin: kāi duì luò àn duì zhāo zhào sè duì yú sháo
+  - time: 02:54.73
+    text: 轺车对驿骑，锦绣对琼瑶。
+    pinyin: yáo chē duì yì jì jǐn xiù duì qióng yáo
+  - time: 02:59.80
+    text: 羞攘臂，懒折腰，范甑对颜瓢。
+    pinyin: xiū rǎng bì lǎn zhé yāo fàn zèng duì yán piáo
+  - time: 03:05.70
+    text: 寒天鸳帐酒，夜月凤台箫。
+    pinyin: hán tiān yuān zhàng jiǔ yè yuè fèng tái xiāo
+  - time: 03:11.21
+    text: 舞女腰肢杨柳软，佳人颜貌海棠娇。
+    pinyin: wǔ nǚ yāo zhī yáng liǔ ruǎn jiā rén yán mào hǎi táng jiāo
+  - time: 03:17.89
+    text: 豪客寻春，南陌草青香阵阵；
+    pinyin: háo kè xún chūn nán mò cǎo qīng xiāng zhèn zhèn
+  - time: 03:23.56
+    text: 闲人避暑，东堂蕉绿影摇摇。
+    pinyin: xián rén bì shǔ dōng táng jiāo lǜ yǐng yáo yáo
+  - time: 03:29.71
+    text: 班对马，董对晁，夏昼对春宵。
+    pinyin: bān duì mǎ dǒng duì cháo xià zhòu duì chūn xiāo
+  - time: 03:36.73
+    text: 雷声对电影，麦穗对禾苗。
+    pinyin: léi shēng duì diàn yǐng mài suì duì hé miáo
+  - time: 03:42.03
+    text: 八千路，廿四桥，总角对垂髫。
+    pinyin: bā qiān lù niàn sì qiáo zǒng jiǎo duì chuí tiáo
+  - time: 03:48.05
+    text: 露桃匀嫩脸，风柳舞纤腰。
+    pinyin: lù táo yún nèn liǎn fēng liǔ wǔ xiān yāo
+  - time: 03:53.48
+    text: 贾谊赋成伤鵩鸟，周公诗就托鸱鸮。
+    pinyin: jiǎ yì fù chéng shāng fú niǎo zhōu gōng shī jiù tuō chī xiāo
+  - time: 04:00.34
+    text: 幽寺寻僧，逸兴岂知俄尔尽；
+    pinyin: yōu sì xún sēng yì xìng qǐ zhī é ěr jìn
+  - time: 04:06.10
+    text: 长亭送客，离魂不觉黯然消。
+    pinyin: cháng tíng sòng kè lí hún bù jué àn rán xiāo
+  - time: 04:13.18
+    text: 三 肴
+    pinyin: sān yáo
+  - time: 04:15.26
+    text: 风对雅，象对爻，巨蟒对长蛟。
+    pinyin: fēng duì yǎ xiàng duì yáo jù mǎng duì cháng jiāo
+  - time: 04:21.06
+    text: 天文对地理，蟋蟀对螵蛸。
+    pinyin: tiān wén duì dì lǐ xī shuài duì piāo xiāo
+  - time: 04:26.50
+    text: 龙夭矫，虎咆哮，北学对东胶。
+    pinyin: lóng yāo jiǎo hǔ páo xiào běi xué duì dōng jiāo
+  - time: 04:32.63
+    text: 筑台须垒土，成屋必诛茅。
+    pinyin: zhù tái xū lěi tǔ chéng wū bì zhū máo
+  - time: 04:37.72
+    text: 潘岳不忘秋兴赋，边韶常被昼眠嘲。
+    pinyin: pān yuè bù wàng qiū xìng fù biān sháo cháng bèi zhòu mián cháo
+  - time: 04:45.29
+    text: 抚养群黎，已见国家隆治；
+    pinyin: fǔ yǎng qún lí yǐ jiàn guó jiā lóng zhì
+  - time: 04:50.17
+    text: 滋生万物，方知天地泰交。
+    pinyin: zī shēng wàn wù fāng zhī tiān dì tài jiāo
+  - time: 04:55.19
+    text: 蛇对虺，蜃对蛟，麟薮对鹊巢。
+    pinyin: shé duì huǐ shèn duì jiāo lín sǒu duì què cháo
+  - time: 05:01.33
+    text: 风声对月色，麦穗对桑苞。
+    pinyin: fēng shēng duì yuè sè mài suì duì sāng bāo
+  - time: 05:06.50
+    text: 何妥难，子云嘲，楚甸对商郊。
+    pinyin: hé tuǒ nàn zǐ yún cháo chǔ diàn duì shāng jiāo
+  - time: 05:12.38
+    text: 五音惟耳听，万虑在心包。
+    pinyin: wǔ yīn wéi ěr tīng wàn lǜ zài xīn bāo
+  - time: 05:17.77
+    text: 晋假虞途输重璧，齐临楚境责包茅。
+    pinyin: jìn jiǎ yú tú shū zhòng bì qí lín chǔ jìng zé bāo máo
+    annotation:
+      15: 请注意！本句暂未找到与朗读声音相同的文本，完全是自编的。大多数刻本为：葛被汤征因仇饷，楚遭齐伐责包茅。
+  - time: 05:24.63
+    text: 高矣若天，洵是圣人大道；
+    pinyin: gāo yǐ ruò tiān xún shì shèng rén dà dào
+  - time: 05:29.95
+    text: 淡而如水，实为君子神交。
+    pinyin: dàn ér rú shuǐ shí wéi jūn zǐ shén jiāo
+  - time: 05:34.93
+    text: 牛对马，犬对猫，旨酒对嘉肴。
+    pinyin: niú duì mǎ quǎn duì māo zhǐ jiǔ duì jiā yáo
+  - time: 05:40.89
+    text: 桃红对柳绿，竹叶对松梢。
+    pinyin: táo hóng duì liǔ lǜ zhú yè duì sōng shāo
+  - time: 05:45.98
+    text: 藜杖叟，布衣樵，北野对东郊。
+    pinyin: lí zhàng sǒu bù yī qiáo běi yě duì dōng jiāo
+  - time: 05:51.42
+    text: 白驹形皎皎，黄鸟语交交。
+    pinyin: bái jū xíng jiǎo jiǎo huáng niǎo yǔ jiāo jiāo
+  - time: 05:56.92
+    text: 花圃春残无客到，柴门夜永有僧敲。
+    pinyin: huā pǔ chūn cán wú kè dào chái mén yè yǒng yǒu sēng qiāo
+  - time: 06:03.57
+    text: 墙畔佳人，飘扬竞把秋千舞；
+    pinyin: qiáng pàn jiā rén piāo yáng jìng bǎ qiū qiān wǔ
+  - time: 06:09.32
+    text: 楼前公子，笑语争将蹴踘抛。
+    pinyin: lóu qián gōng zǐ xiào yǔ zhēng jiāng cù jū pāo
+  - time: 06:16.39
+    text: 四 豪
+    pinyin: sì háo
+  - time: 06:18.44
+    text: 琴对瑟，剑对刀，地迥对天高。
+    pinyin: qín duì sè jiàn duì dāo dì jiǒng duì tiān gāo
+  - time: 06:24.35
+    text: 峨冠对博带，紫绶对绯袍。
+    pinyin: é guān duì bó dài zǐ shòu duì fēi páo
+  - time: 06:29.50
+    text: 煎异茗，酌香醪，虎兕对猿猱。
+    pinyin: jiān yì míng zhuó xiāng láo hǔ sì duì yuán náo
+  - time: 06:35.44
+    text: 武夫攻骑射，野妇务蚕缫。
+    pinyin: wǔ fū gōng qí shè yě fù wù cán sāo
+  - time: 06:40.66
+    text: 秋雨一川淇澳竹，春风两岸武陵桃。
+    pinyin: qiū yǔ yì chuān qí yù zhú chūn fēng liǎng àn wǔ líng táo
+  - time: 06:47.45
+    text: 螺髻青浓，楼外晚山千仞；
+    pinyin: luó jì qīng nóng lóu wài wǎn shān qiān rèn
+  - time: 06:53.21
+    text: 鸭头绿腻，溪中春水半篙。
+    pinyin: yā tóu lǜ nì xī zhōng chūn shuǐ bàn gāo
+  - time: 06:58.65
+    text: 刑对赏，贬对褒，破斧对征袍。
+    pinyin: xíng duì shǎng biǎn duì bāo pò fǔ duì zhēng páo
+  - time: 07:05.25
+    text: 梧桐对橘柚，枳棘对蓬蒿。
+    pinyin: wú tóng duì jú yòu zhǐ jí duì péng hāo
+  - time: 07:10.50
+    text: 雷焕剑，吕虔刀，橄榄对葡萄。
+    pinyin: léi huàn jiàn lǚ qián dāo gǎn lǎn duì pú táo
+  - time: 07:15.93
+    text: 一椽书舍小，百尺酒楼高。
+    pinyin: yì chuán shū shè xiǎo bǎi chǐ jiǔ lóu gāo
+  - time: 07:21.12
+    text: 李白能诗时秉笔，刘伶爱酒每哺糟。
+    pinyin: lǐ bái néng shī shí bǐng bǐ liú líng ài jiǔ měi bū zāo
+  - time: 07:28.02
+    text: 礼别尊卑，拱北众星常灿灿；
+    pinyin: lǐ bié zūn bēi gǒng běi zhòng xīng cháng càn càn
+  - time: 07:33.97
+    text: 势分高下，朝东万水自滔滔。
+    pinyin: shì fēn gāo xià cháo dōng wàn shuǐ zì tāo tāo
+  - time: 07:40.00
+    text: 瓜对果，李对桃，犬子对羊羔。
+    pinyin: guā duì guǒ lǐ duì táo quǎn zǐ duì yáng gāo
+  - time: 07:45.94
+    text: 春分对夏至，谷水对山涛。
+    pinyin: chūn fēn duì xià zhì gǔ shuǐ duì shān tāo
+  - time: 07:51.09
+    text: 双凤翼，九牛毛，主逸对臣劳。
+    pinyin: shuāng fèng yì jiǔ niú máo zhǔ yì duì chén láo
+  - time: 07:57.32
+    text: 水流无限阔，山耸有余高。
+    pinyin: shuǐ liú wú xiàn kuò shān sǒng yǒu yú gāo
+  - time: 08:02.61
+    text: 雨打村童新牧笠，尘生边将旧征袍。
+    pinyin: yǔ dǎ cūn tóng xīn mù lì chén shēng biān jiàng jiù zhēng páo
+  - time: 08:09.45
+    text: 俊士居官，荣引鹓雏之序；
+    pinyin: jùn shì jū guān róng yǐn yuān chú zhī xù
+    annotation:
+      9: 鹓雏：鹓鶵。
+  - time: 08:14.74
+    text: 忠臣报国，誓殚犬马之劳。
+    pinyin: zhōng chén bào guó shì dān quǎn mǎ zhī láo
+  - time: 08:20.23
+    text: 五 歌
+    pinyin: wǔ gē
+  - time: 08:22.58
+    text: 山对水，海对河，雪竹对烟萝。
+    pinyin: shān duì shuǐ hǎi duì hé xuě zhú duì yān luó
+  - time: 08:28.73
+    text: 新欢对旧恨，痛饮对高歌。
+    pinyin: xīn huān duì jiù hèn tòng yǐn duì gāo gē
+  - time: 08:34.26
+    text: 琴再抚，剑重磨，媚柳对枯荷。
+    pinyin: qín zài fǔ jiàn chóng mó mèi liǔ duì kū hé
+  - time: 08:40.48
+    text: 荷盘从雨洗，柳线任风搓。
+    pinyin: hé pán cóng yǔ xǐ liǔ xiàn rèn fēng cuō
+  - time: 08:45.98
+    text: 饮酒岂知欹醉帽，观棋不觉烂樵柯。
+    pinyin: yǐn jiǔ qǐ zhī qī zuì mào guān qí bù jué làn qiáo kē
+  - time: 08:52.44
+    text: 山寺清幽，直踞千寻云岭；
+    pinyin: shān sì qīng yōu zhí jù qiān xún yún lǐng
+  - time: 08:57.62
+    text: 江楼宏敞，遥临万顷烟波。
+    pinyin: jiāng lóu hóng chǎng yáo lín wàn qǐng yān bō
+  - time: 09:03.05
+    text: 繁对简，少对多，里咏对途歌。
+    pinyin: fán duì jiǎn shǎo duì duō lǐ yǒng duì tú gē
+  - time: 09:09.70
+    text: 宦情对旅况，银鹿对铜驼。
+    pinyin: huàn qíng duì lǚ kuàng yín lù duì tóng tuó
+  - time: 09:15.20
+    text: 刺史鸭，将军鹅，玉律对金科。
+    pinyin: cì shǐ yā jiāng jūn é yù lǜ duì jīn kē
+  - time: 09:21.15
+    text: 古堤垂老柳，曲沼长新荷。
+    pinyin: gǔ dī chuí lǎo liǔ qū zhǎo zhǎng xīn hé
+    annotation:
+      4: 一作 亸 duǒ
+  - time: 09:26.63
+    text: 命驾吕因思叔夜，引车蔺为避廉颇。
+    pinyin: mìng jià lǚ yīn sī shū yè yǐn chē lìn wèi bì lián pō
+  - time: 09:33.28
+    text: 千尺水帘，今古无人能手卷；
+    pinyin: qiān chǐ shuǐ lián jīn gǔ wú rén néng shǒu juǎn
+  - time: 09:38.87
+    text: 一轮月镜，乾坤何匠用功磨。
+    pinyin: yì lún yuè jìng qián kūn hé jiàng yòng gōng mó
+  - time: 09:44.58
+    text: 霜对露，浪对波，径菊对池荷。
+    pinyin: shuāng duì lù làng duì bō jìng jú duì chí hé
+  - time: 09:50.99
+    text: 酒阑对歌罢，日暖对风和。
+    pinyin: jiǔ lán duì gē bà rì nuǎn duì fēng hé
+  - time: 09:56.27
+    text: 梁父咏，楚狂歌，放鹤对观鹅。
+    pinyin: liáng fǔ yǒng chǔ kuáng gē fàng hè duì guān é
+  - time: 10:02.60
+    text: 史才推永叔，刀笔仰萧何。
+    pinyin: shǐ cái tuī yǒng shū dāo bǐ yǎng xiāo hé
+  - time: 10:08.41
+    text: 种橘犹嫌千树少，寄梅谁信一枝多。
+    pinyin: zhòng jú yóu xián qiān shù shǎo jì méi shuí xìn yì zhī duō
+  - time: 10:14.96
+    text: 林下风生，黄发村童推牧笠；
+    pinyin: lín xià fēng shēng huáng fà cūn tóng tuī mù lì
+  - time: 10:20.59
+    text: 江头日出，皓眉溪叟晒渔蓑。
+    pinyin: jiāng tóu rì chū hào méi xī sǒu shài yú suō
+  - time: 10:27.63
+    text: 六 麻
+    pinyin: liù má
+  - time: 10:30.45
+    text: 松对柏，缕对麻，蚁阵对蜂衙。
+    pinyin: sōng duì bǎi lǚ duì má yǐ zhèn duì fēng yá
+  - time: 10:36.63
+    text: 頳鳞对白鹭，冻雀对昏鸦。
+    pinyin: chēng lín duì bái lù dòng què duì hūn yā
+  - time: 10:42.00
+    text: 白堕酒，碧沉茶，品笛对吹笳。
+    pinyin: bái duò jiǔ bì chén chá pǐn dí duì chuī jiā
+  - time: 10:48.09
+    text: 秋凉梧堕叶，春暖杏开花。
+    pinyin: qiū liáng wú duò yè chūn nuǎn xìng kāi huā
+  - time: 10:53.82
+    text: 雨长苔痕侵壁砌，月移梅影上窗纱。
+    pinyin: yǔ zhǎng tái hén qīn bì qì yuè yí méi yǐng shàng chuāng shā
+  - time: 11:00.56
+    text: 飒飒秋风，度城头之筚篥；
+    pinyin: sà sà qiū fēng dù chéng tóu zhī bì lì
+  - time: 11:05.68
+    text: 迟迟晚照，动江上之琵琶。
+    pinyin: chí chí wǎn zhào dòng jiāng shàng zhī pí pa
+  - time: 11:10.45
+    text: 优对劣，凸对凹，翠竹对黄花。
+    pinyin: yōu duì liè tū duì wā cuì zhú duì huáng huā
+  - time: 11:16.62
+    text: 松杉对杞梓，菽麦对桑麻。
+    pinyin: sōng shān duì qǐ zǐ shū mài duì sāng má
+  - time: 11:21.98
+    text: 山不断，水无涯，煮酒对烹茶。
+    pinyin: shān bù duàn shuǐ wú yá zhǔ jiǔ duì pēng chá
+  - time: 11:27.62
+    text: 鱼游池面水，鹭立岸头沙。
+    pinyin: yú yóu chí miàn shuǐ lù lì àn tóu shā
+  - time: 11:32.76
+    text: 百亩风翻陶令秫，一畦雨熟邵平瓜。
+    pinyin: bǎi mǔ fēng fān táo lìng shú yì qí yǔ shú shào píng guā
+  - time: 11:40.06
+    text: 闲捧竹根，饮李白一壶之酒；
+    pinyin: xián pěng zhú gēn yǐn lǐ bái yì hú zhī jiǔ
+  - time: 11:45.41
+    text: 偶擎桐叶，啜卢仝七碗之茶。
+    pinyin: ǒu qíng tóng yè chuò lú quán qī wǎn zhī chá
+    annotation:
+      8: 仝：《广韵》徒红切。又人名，与㒰异，㒰音全。
+  - time: 11:50.88
+    text: 吴对楚，蜀对巴，落日对流霞。
+    pinyin: wú duì chǔ shǔ duì bā luò rì duì liú xiá
+  - time: 11:57.41
+    text: 酒钱对诗债，柏叶对松花。
+    pinyin: jiǔ qián duì shī zhài bǎi yè duì sōng huā
+  - time: 12:02.58
+    text: 驰驿骑，泛仙槎，碧玉对丹砂。
+    pinyin: chí yì jì fàn xiān chá bì yù duì dān shā
+  - time: 12:08.42
+    text: 设桥偏送笋，开道竟还瓜。
+    pinyin: shè qiáo piān sòng sǔn kāi dào jìng huán guā
+  - time: 12:13.88
+    text: 楚国大夫沉汨水，洛阳才子谪长沙。
+    pinyin: chǔ guó dà fū chén mì shuǐ luò yáng cái zǐ zhé cháng shā
+  - time: 12:20.53
+    text: 书箧琴囊，乃士流活计；
+    pinyin: shū qiè qín náng nǎi shì liú huó jì
+  - time: 12:25.59
+    text: 药炉茶鼎，实闲客生涯。
+    pinyin: yào lú chá dǐng shí xián kè shēng yá
+  - time: 12:31.59
+    text: 七 阳
+    pinyin: qī yáng
+  - time: 12:34.17
+    text: 高对下，短对长，柳影对花香。
+    pinyin: gāo duì xià duǎn duì cháng liǔ yǐng duì huā xiāng
+  - time: 12:39.46
+    text: 词人对赋客，五帝对三王。
+    pinyin: cí rén duì fù kè wǔ dì duì sān wáng
+  - time: 12:44.74
+    text: 深院落，小池塘，晚眺对晨妆。
+    pinyin: shēn yuàn luò xiǎo chí táng wǎn tiào duì chén zhuāng
+  - time: 12:50.79
+    text: 绛霄唐帝殿，绿野晋公堂。
+    pinyin: jiàng xiāo táng dì diàn lǜ yě jìn gōng táng
+  - time: 12:56.19
+    text: 寒集谢庄衣上雪，秋添潘岳鬓边霜。
+    pinyin: hán jí xiè zhuāng yī shàng xuě qiū tiān pān yuè bìn biān shuāng
+  - time: 13:03.49
+    text: 人浴兰汤，事不忘于端午；
+    pinyin: rén yù lán tāng shì bù wàng yú duān wǔ
+  - time: 13:08.57
+    text: 客斟菊酒，兴常记乎重阳。
+    pinyin: kè zhēn jú jiǔ xìng cháng jì hū chóng yáng
+  - time: 13:13.78
+    text: 尧对舜，禹对汤，晋宋对隋唐。
+    pinyin: yáo duì shùn yǔ duì tāng jìn sòng duì suí táng
+  - time: 13:20.31
+    text: 奇花对异卉，夏日对秋霜。
+    pinyin: qí huā duì yì huì xià rì duì qiū shuāng
+  - time: 13:25.74
+    text: 八叉手，九回肠，地久对天长。
+    pinyin: bā chā shǒu jiǔ huí cháng dì jiǔ duì tiān zhǎng
+  - time: 13:31.59
+    text: 一堤杨柳绿，三径菊花黄。
+    pinyin: yì dī yáng liǔ lǜ sān jìng jú huā huáng
+  - time: 13:37.01
+    text: 闻鼓塞兵方战斗，听钟宫女正梳妆。
+    pinyin: wén gǔ sài bīng fāng zhàn dòu tīng zhōng gōng nǚ zhèng shū zhuāng
+  - time: 13:43.66
+    text: 春饮方归，纱帽半淹邻舍酒；
+    pinyin: chūn yǐn fāng guī shā mào bàn yān lín shè jiǔ
+  - time: 13:49.81
+    text: 早朝初退，衮衣微惹御炉香。
+    pinyin: zǎo cháo chū tuì gǔn yī wēi rě yù lú xiāng
+  - time: 13:55.27
+    text: 荀对孟，老对庄，亸柳对垂杨。
+    pinyin: xún duì mèng lǎo duì zhuāng duǒ liǔ duì chuí yáng
+  - time: 14:01.06
+    text: 仙宫对梵宇，小阁对长廊。
+    pinyin: xiān gōng duì fàn yǔ xiǎo gé duì cháng láng
+  - time: 14:06.28
+    text: 风月窟，水云乡，蟋蟀对螳螂。
+    pinyin: fēng yuè kū shuǐ yún xiāng xī shuài duì táng láng
+  - time: 14:12.42
+    text: 暖烟香霭霭，寒烛影煌煌。
+    pinyin: nuǎn yān xiāng ǎi ǎi hán zhú yǐng huáng huáng
+  - time: 14:17.98
+    text: 伍子欲酬渔父剑，韩生尝窃贾公香。
+    pinyin: wǔ zǐ yù chóu yú fǔ jiàn hán shēng cháng qiè jiǎ gōng xiāng
+  - time: 14:24.62
+    text: 三月韶光，常忆花明柳媚；
+    pinyin: sān yuè sháo guāng cháng yì huā míng liǔ mèi
+  - time: 14:30.41
+    text: 一年好景，难忘橘绿橙黄。
+    pinyin: yì nián hǎo jǐng nán wàng jú lǜ chéng huáng
+  - time: 14:36.49
+    text: 八 庚
+    pinyin: bā gēng
+  - time: 14:38.77
+    text: 深对浅，重对轻，有影对无声。
+    pinyin: shēn duì qiǎn zhòng duì qīng yǒu yǐng duì wú shēng
+  - time: 14:45.17
+    text: 蜂腰对蝶翅，宿醉对余酲。
+    pinyin: fēng yāo duì dié chì sù zuì duì yú chéng
+  - time: 14:50.69
+    text: 天北缺，日东生，独卧对同行。
+    pinyin: tiān běi quē rì dōng shēng dú wò duì tóng xíng
+  - time: 14:57.00
+    text: 寒冰三尺厚，秋月十分明。
+    pinyin: hán bīng sān chǐ hòu qiū yuè shí fēn míng
+  - time: 15:02.59
+    text: 万卷书容闲客览，一樽酒待故人倾。
+    pinyin: wàn juàn shū róng xián kè lǎn yī zūn jiǔ dài gù rén qīng
+  - time: 15:09.60
+    text: 心侈唐玄，厌看霓裳之曲；
+    pinyin: xīn chǐ táng xuán yàn kàn ní cháng zhī qǔ
+  - time: 15:14.61
+    text: 意骄陈主，饱闻玉树之赓。
+    pinyin: yì jiāo chén zhǔ bǎo wén yù shù zhī gēng
+  - time: 15:19.74
+    text: 虚对实，送对迎，后甲对先庚。
+    pinyin: xū duì shí sòng duì yíng hòu jiǎ duì xiān gēng
+  - time: 15:25.78
+    text: 鼓琴对舍瑟，搏虎对骑鲸。
+    pinyin: gǔ qín duì shě sè bó hǔ duì qí jīng
+  - time: 15:30.96
+    text: 金匼匝，玉瑽琤，玉宇对金茎。
+    pinyin: jīn ē zā yù cōng chēng yù yǔ duì jīn jīng
+  - time: 15:37.31
+    text: 花间双粉蝶，柳内几黄莺。
+    pinyin: huā jiān shuāng fěn dié liǔ nèi jǐ huáng yīng
+  - time: 15:42.97
+    text: 贫里每甘藜藿味，醉中厌听管弦声。
+    pinyin: pín lǐ měi gān lí huò wèi zuì zhōng yàn tīng guǎn xián shēng
+  - time: 15:49.65
+    text: 肠断秋闺，凉吹已侵重被冷；
+    pinyin: cháng duàn qiū guī liáng chuī yǐ qīn chóng bèi lěng
+  - time: 15:56.19
+    text: 梦惊晓枕，残蟾犹照半窗明。
+    pinyin: mèng jīng xiǎo zhěn cán chán yóu zhào bàn chuāng míng
+  - time: 16:02.31
+    text: 渔对猎，钓对耕，玉振对金声。
+    pinyin: yú duì liè diào duì gēng yù zhèn duì jīn shēng
+  - time: 16:08.57
+    text: 雉城对雁塞，柳袅对葵倾。
+    pinyin: zhì chéng duì yàn sài liǔ niǎo duì kuí qīng
+  - time: 16:13.91
+    text: 吹玉笛，弄银笙，阮杖对桓筝。
+    pinyin: chuī yù dí nòng yín shēng ruǎn zhàng duì huán zhēng
+  - time: 16:20.15
+    text: 墨呼松处士，纸号楮先生。
+    pinyin: mò hū sōng chǔ shì zhǐ hào chǔ xiān shēng
+  - time: 16:25.54
+    text: 露浥好花潘岳县，风搓细柳亚夫营。
+    pinyin: lù yì hǎo huā pān yuè xiàn fēng cuō xì liǔ yà fū yíng
+  - time: 16:32.14
+    text: 抚动琴弦，遽觉座中风雨至；
+    pinyin: fǔ dòng qín xián jù jué zuò zhōng fēng yǔ zhì
+  - time: 16:37.72
+    text: 哦成诗句，应知窗外鬼神惊。
+    pinyin: é chéng shī jù yīng zhī chuāng wài guǐ shén jīng
+  - time: 16:44.29
+    text: 九 青
+    pinyin: jiǔ qīng
+  - time: 16:47.33
+    text: 红对紫，白对青，渔火对禅灯。
+    pinyin: hóng duì zǐ bái duì qīng yú huǒ duì chán dēng
+  - time: 16:53.44
+    text: 唐诗对汉史，释典对仙经。
+    pinyin: táng shī duì hàn shǐ shì diǎn duì xiān jīng
+  - time: 16:59.03
+    text: 龟曳尾，鹤梳翎，月榭对风灯。
+    pinyin: guī yè wěi hè shū líng yuè xiè duì fēng dēng
+  - time: 17:05.45
+    text: 一轮秋夜月，几点晓天星。
+    pinyin: yì lún qiū yè yuè jǐ diǎn xiǎo tiān xīng
+  - time: 17:11.42
+    text: 晋士只知山简醉，楚人谁识屈原醒。
+    pinyin: jìn shì zhǐ zhī shān jiǎn zuì chǔ rén shuí shí qū yuán xǐng
+  - time: 17:18.78
+    text: 绣倦佳人，慵把鸳鸯文作枕；
+    pinyin: xiù juàn jiā rén yōng bǎ yuān yāng wén zuò zhěn
+  - time: 17:24.45
+    text: 吮毫画者，思将孔雀写为屏。
+    pinyin: shǔn háo huà zhě sī jiāng kǒng què xiě wéi píng
+  - time: 17:30.50
+    text: 行对坐，醉对醒，佩紫对纡青。
+    pinyin: xíng duì zuò zuì duì xǐng pèi zǐ duì yū qīng
+  - time: 17:37.36
+    text: 棋枰对笔架，雨雪对雷霆。
+    pinyin: qí píng duì bǐ jià yǔ xuě duì léi tíng
+  - time: 17:42.80
+    text: 狂蛱蝶，小蜻蜓，水岸对沙汀。
+    pinyin: kuáng jiá dié xiǎo qīng tíng shuǐ àn duì shā tīng
+  - time: 17:49.27
+    text: 天台孙绰赋，剑阁孟阳铭。
+    pinyin: tiān tái sūn chuò fù jiàn gé mèng yáng míng
+  - time: 17:54.68
+    text: 传信子卿千里雁，照书车胤一囊萤。
+    pinyin: chuán xìn zǐ qīng qiān lǐ yàn zhào shū chē yìn yì náng yíng
+  - time: 18:02.43
+    text: 冉冉白云，夜半高遮千里月；
+    pinyin: rǎn rǎn bái yún yè bàn gāo zhē qiān lǐ yuè
+  - time: 18:07.87
+    text: 澄澄碧水，宵中寒映一天星。
+    pinyin: chéng chéng bì shuǐ xiāo zhōng hán yìng yì tiān xīng
+  - time: 18:16.02
+    text: 书对史，传对经，鹦鹉对鹡鸰。
+    pinyin: shū duì shǐ zhuàn duì jīng yīng wǔ duì jí líng
+  - time: 18:22.92
+    text: 黄茅对白荻，绿草对青萍。
+    pinyin: huáng máo duì bái dí lǜ cǎo duì qīng píng
+  - time: 18:28.09
+    text: 风绕铎，雨淋铃，水阁对山亭。
+    pinyin: fēng rào duó yǔ lín líng shuǐ gé duì shān tíng
+  - time: 18:34.50
+    text: 渚莲千朵白，柳岸两行青。
+    pinyin: zhǔ lián qiān duǒ bái liǔ àn liǎng háng qīng
+  - time: 18:40.19
+    text: 汉代宫中生秀柞，尧时阶畔长祥蓂。
+    pinyin: hàn dài gōng zhōng shēng xiù zuò yáo shí jiē pàn zhǎng xiáng míng
+  - time: 18:47.33
+    text: 一枰决胜，棋子分黑白；
+    pinyin: yì píng jué shèng qí zǐ fēn hēi bái
+  - time: 18:52.17
+    text: 半幅通灵，画色间丹青。
+    pinyin: bàn fú tōng líng huà sè jiàn dān qīng
+  - time: 18:58.06
+    text: 十 蒸
+    pinyin: shí zhēng
+  - time: 19:00.81
+    text: 新对旧，降对升，白犬对苍鹰。
+    pinyin: xīn duì jiù jiàng duì shēng bái quǎn duì cāng yīng
+  - time: 19:06.86
+    text: 葛巾对藜杖，涧水对池冰。
+    pinyin: gé jīn duì lí zhàng jiàn shuǐ duì chí bīng
+  - time: 19:12.09
+    text: 张兔网，挂鱼罾，燕雀对鹏鹍。
+    pinyin: zhāng tù wǎng guà yú zēng yàn què duì péng kūn
+  - time: 19:18.53
+    text: 炉中煎药火，窗下读书灯。
+    pinyin: lú zhōng jiān yào huǒ chuāng xià dú shū dēng
+  - time: 19:24.03
+    text: 织锦逐梭成舞凤，画屏误笔作飞蝇。
+    pinyin: zhī jǐn zhú suō chéng wǔ fèng huà píng wù bǐ zuò fēi yíng
+  - time: 19:30.99
+    text: 宴客刘公，座上满斟三雅爵；
+    pinyin: yàn kè liú gōng zuò shàng mǎn zhēn sān yǎ jué
+  - time: 19:36.33
+    text: 迎仙汉帝，宫中高插九光灯。
+    pinyin: yíng xiān hàn dì gōng zhōng gāo chā jiǔ guāng dēng
+  - time: 19:42.21
+    text: 儒对士，佛对僧，面友对心朋。
+    pinyin: rú duì shì fó duì sēng miàn yǒu duì xīn péng
+  - time: 19:49.58
+    text: 春残对夏老，夜寝对晨兴。
+    pinyin: chūn cán duì xià lǎo yè qǐn duì chén xīng
+  - time: 19:55.15
+    text: 千里马，九霄鹏，霞蔚对云蒸。
+    pinyin: qiān lǐ mǎ jiǔ xiāo péng xiá wèi duì yún zhēng
+  - time: 20:01.66
+    text: 寒堆阴岭雪，春泮水池冰。
+    pinyin: hán duī yīn lǐng xuě chūn pàn shuǐ chí bīng
+  - time: 20:07.43
+    text: 亚父愤生撞玉斗，周公誓死作金縢。
+    pinyin: yà fù fèn shēng zhuàng yù dǒu zhōu gōng shì sǐ zuò jīn téng
+  - time: 20:14.46
+    text: 将军元晖，莫怪人讥为饿虎；
+    pinyin: jiāng jūn yuán huī mò guài rén jī wéi è hǔ
+  - time: 20:20.30
+    text: 侍中卢昶，难逃世号作饥鹰。
+    pinyin: shì zhōng lú chǎng nán táo shì hào zuò jī yīng
+  - time: 20:26.14
+    text: 规对矩，墨对绳，独步对同登。
+    pinyin: guī duì jǔ mò duì shéng dú bù duì tóng dēng
+  - time: 20:33.25
+    text: 吟哦对讽咏，访友对寻僧。
+    pinyin: yín é duì féng yǒng fǎng yǒu duì xún sēng
+  - time: 20:38.64
+    text: 风绕屋，水襄陵，紫鹄对苍鹰。
+    pinyin: fēng rào wū shuǐ xiāng líng zǐ hú duì cāng yīng
+  - time: 20:44.87
+    text: 鸟寒惊夜月，鱼暖上春冰。
+    pinyin: niǎo hán jīng yè yuè yú nuǎn shàng chūn bīng
+  - time: 20:50.71
+    text: 扬子口中飞白凤，何郎鼻上集青蝇。
+    pinyin: yáng zǐ kǒu zhōng fēi bái fèng hé láng bí shàng jí qīng yíng
+  - time: 20:57.54
+    text: 巨鲤跃池，翻几重之密藻；
+    pinyin: jù lǐ yuè chí fān jǐ chóng zhī mì zǎo
+  - time: 21:02.79
+    text: 颠猿饮涧，挂百尺之垂藤。
+    pinyin: diān yuán yǐn jiàn guà bǎi chǐ zhī chuí téng
+  - time: 21:09.03
+    text: 十一 尤
+    pinyin: shí yī yóu
+  - time: 21:13.51
+    text: 荣对辱，喜对忧，夜宴对春游。
+    pinyin: róng duì rǔ xǐ duì yōu yè yàn duì chūn yóu
+  - time: 21:19.75
+    text: 燕关对楚水，蜀犬对吴牛。
+    pinyin: yān guān duì chǔ shuǐ shǔ quǎn duì wú niú
+  - time: 21:25.19
+    text: 茶敌睡，酒消愁，青眼对白头。
+    pinyin: chá dí shuì jiǔ xiāo chóu qīng yǎn duì bái tóu
+  - time: 21:31.58
+    text: 马迁修史记，孔子作春秋。
+    pinyin: mǎ qiān xiū shǐ jì kǒng zǐ zuò chūn qiū
+  - time: 21:37.03
+    text: 适兴子猷常泛棹，思归王粲强登楼。
+    pinyin: shì xìng zǐ yóu cháng fàn zhào sī guī wáng càn qiǎng dēng lóu
+  - time: 21:44.41
+    text: 窗下佳人，妆罢重将金插鬓；
+    pinyin: chuāng xià jiā rén zhuāng bà chóng jiāng jīn chā bìn
+  - time: 21:50.11
+    text: 筵前舞妓，曲终还要锦缠头。
+    pinyin: yán qián wǔ jì qǔ zhōng hái yào jǐn chán tóu
+  - time: 21:56.44
+    text: 唇对齿，角对头，策马对骑牛。
+    pinyin: chún duì chǐ jiǎo duì tóu cè mǎ duì qí niú
+  - time: 22:03.11
+    text: 毫尖对笔底，绮阁对雕楼。
+    pinyin: háo jiān duì bǐ dǐ qǐ gé duì diāo lóu
+  - time: 22:08.95
+    text: 杨柳岸，荻芦洲，语燕对啼鸠。
+    pinyin: yáng liǔ àn dí lú zhōu yǔ yàn duì tí jiū
+  - time: 22:14.59
+    text: 客乘金络马，人泛木兰舟。
+    pinyin: kè chéng jīn luò mǎ rén fàn mù lán zhōu
+  - time: 22:19.85
+    text: 绿野耕夫春举耜，碧池渔父晚垂钩。
+    pinyin: lǜ yě gēng fū chūn jǔ sì bì chí yú fǔ wǎn chuí gōu
+  - time: 22:26.82
+    text: 波浪千层，喜见蛟龙得水；
+    pinyin: bō làng qiān céng xǐ jiàn jiāo lóng dé shuǐ
+  - time: 22:32.12
+    text: 云霄万里，惊看雕鹗横秋。
+    pinyin: yún xiāo wàn lǐ jīng kàn diāo è héng qiū
+  - time: 22:37.76
+    text: 庵对寺，殿对楼，酒艇对渔舟。
+    pinyin: ān duì sì diàn duì lóu jiǔ tǐng duì yú zhōu
+  - time: 22:44.97
+    text: 金龙对彩凤，豮豕对童牛。
+    pinyin: jīn lóng duì cǎi fèng fén shǐ duì tóng niú
+  - time: 22:50.22
+    text: 王郎帽，苏子裘，四季对三秋。
+    pinyin: wáng láng mào sū zǐ qiú sì jì duì sān qiū
+  - time: 22:56.37
+    text: 峰峦扶地秀，江汉接天流。
+    pinyin: fēng luán fú dì xiù jiāng hàn jiē tiān liú
+  - time: 23:02.07
+    text: 一湾绿水渔村小，万里青山佛寺幽。
+    pinyin: yī wān lǜ shuǐ yú cūn xiǎo wàn lǐ qīng shān fó sì yōu
+  - time: 23:09.23
+    text: 龙马呈河，羲皇阐微而画卦；
+    pinyin: lóng mǎ chéng hé xī huáng chǎn wēi ér huà guà
+  - time: 23:15.10
+    text: 神龟出洛，禹王取法以陈畴。
+    pinyin: shén guī chū luò yǔ wáng qǔ fǎ yǐ chén chóu
+  - time: 23:21.52
+    text: 十二 侵
+    pinyin: shí èr qīn
+  - time: 23:25.50
+    text: 眉对目，口对心，锦瑟对瑶琴。
+    pinyin: méi duì mù kǒu duì xīn jǐn sè duì yáo qín
+  - time: 23:31.49
+    text: 晓耕对寒钓，晚笛对秋砧。
+    pinyin: xiǎo gēng duì hán diào wǎn dí duì qiū zhēn
+  - time: 23:36.56
+    text: 松郁郁，竹森森，闵损对曾参。
+    pinyin: sōng yù yù zhú sēn sēn mǐn sǔn duì zēng shēn
+  - time: 23:42.52
+    text: 秦王亲击缶，虞帝自挥琴。
+    pinyin: qín wáng qīn jī fǒu yú dì zì huī qín
+  - time: 23:48.04
+    text: 三献卞和尝泣玉，四知杨震固辞金。
+    pinyin: sān xiàn biàn hé cháng qì yù sì zhī yáng zhèn gù cí jīn
+  - time: 23:55.02
+    text: 寂寂秋朝，庭叶因霜摧嫩色；
+    pinyin: jì jì qiū zhāo tíng yè yīn shuāng cuī nèn sè
+  - time: 24:00.72
+    text: 沉沉春夜，砌花随月转清阴。
+    pinyin: chén chén chūn yè qì huā suí yuè zhuǎn qīng yīn
+  - time: 24:06.50
+    text: 前对后，古对今，野兽对山禽。
+    pinyin: qián duì hòu gǔ duì jīn yě shòu duì shān qín
+  - time: 24:13.13
+    text: 犍牛对牝马，水浅对山深。
+    pinyin: jiān niú duì pìn mǎ shuǐ qiǎn duì shān shēn
+  - time: 24:18.17
+    text: 曾点瑟，戴逵琴，璞玉对浑金。
+    pinyin: zēng diǎn sè dài kuí qín pú yù duì hún jīn
+  - time: 24:24.17
+    text: 艳红花弄色，浓绿柳敷阴。
+    pinyin: yàn hóng huā nòng sè nóng lǜ liǔ fū yīn
+  - time: 24:30.26
+    text: 不雨汤王方剪爪，有风楚子正披襟。
+    pinyin: bù yǔ tāng wáng fāng jiǎn zhǎo yǒu fēng chǔ zǐ zhèng pī jīn
+  - time: 24:36.95
+    text: 书生惜壮岁韶华，寸阴尺璧；
+    pinyin: shū shēng xī zhuàng suì sháo huá cùn yīn chǐ bì
+  - time: 24:42.54
+    text: 游子爱良宵光景，一刻千金。
+    pinyin: yóu zǐ ài liáng xiāo guāng jǐng yí kè qiān jīn
+  - time: 24:48.25
+    text: 丝对竹，剑对琴，素志对丹心。
+    pinyin: sī duì zhú jiàn duì qín sù zhì duì dān xīn
+  - time: 24:54.80
+    text: 千愁对一醉，虎啸对龙吟。
+    pinyin: qiān chóu duì yí zuì hǔ xiào duì lóng yín
+  - time: 24:59.85
+    text: 子罕玉，不疑金，往古对来今。
+    pinyin: zǐ hǎn yù bù yí jīn wǎng gǔ duì lái jīn
+  - time: 25:05.70
+    text: 天寒邹吹律，岁旱傅为霖。
+    pinyin: tiān hán zōu chuī lǜ suì hàn fù wéi lín
+  - time: 25:11.13
+    text: 渠说子规为帝魄，侬知孔雀是家禽。
+    pinyin: qú shuō zǐ guī wéi dì pò nóng zhī kǒng què shì jiā qín
+  - time: 25:18.07
+    text: 屈子沉江，处处舟中争系粽；
+    pinyin: qū zǐ chén jiāng chù chù zhōu zhōng zhēng xì zòng
+  - time: 25:23.42
+    text: 牛郎渡渚，家家台上竞穿针。
+    pinyin: niú láng dù zhǔ jiā jiā tái shàng jìng chuān zhēn
+  - time: 25:30.08
+    text: 十三 覃
+    pinyin: shí sān tán
+  - time: 25:32.49
+    text: 千对百，两对三，地北对天南。
+    pinyin: qiān duì bǎi liǎng duì sān dì běi duì tiān nán
+  - time: 25:38.57
+    text: 佛堂对仙洞，道院对禅庵。
+    pinyin: fó táng duì xiān dòng dào yuàn duì chán ān
+  - time: 25:44.02
+    text: 山泼黛，水浮蓝，雪岭对云潭。
+    pinyin: shān pō dài shuǐ fú lán xuě lǐng duì yún tán
+  - time: 25:50.41
+    text: 凤飞方翙翙，虎视已眈眈。
+    pinyin: fèng fēi fāng huì huì hǔ shì yǐ dān dān
+  - time: 25:55.96
+    text: 窗下书生时讽咏，筵前酒客日耽酣。
+    pinyin: chuāng xià shū shēng shí féng yǒng yán qián jiǔ kè rì dān hān
+  - time: 26:03.24
+    text: 白草满郊，秋日牧征人之马；
+    pinyin: bái cǎo mǎn jiāo qiū rì mù zhēng rén zhī mǎ
+  - time: 26:09.14
+    text: 绿桑盈亩，春时供农妇之蚕。
+    pinyin: lǜ sāng yíng mǔ chūn shí gòng nóng fù zhī cán
+  - time: 26:14.34
+    text: 将对欲，可对堪，德被对恩覃。
+    pinyin: jiāng duì yù kě duì kān dé bèi duì ēn tán
+  - time: 26:21.36
+    text: 权衡对尺度，雪寺对云庵。
+    pinyin: quán héng duì chǐ dù xuě sì duì yún ān
+  - time: 26:27.77
+    text: 安邑枣，洞庭柑，不愧对无惭。
+    pinyin: ān yì zǎo dòng tíng gān bú kuì duì wú cán
+  - time: 26:33.31
+    text: 魏征能直谏，王衍善清谈。
+    pinyin: wèi zhēng néng zhí jiàn wáng yǎn shàn qīng tán
+  - time: 26:38.55
+    text: 紫梨摘去从山北，丹荔传来自海南。
+    pinyin: zǐ lí zhāi qù cóng shān běi dān lì chuán lái zì hǎi nán
+  - time: 26:45.20
+    text: 攘鸡非君子所为，但当月一；
+    pinyin: rǎng jī fēi jūn zǐ suǒ wéi dàn dāng yuè yī
+  - time: 26:50.45
+    text: 养狙是山公之智，止用朝三。
+    pinyin: yǎng jū shì shān gōng zhī zhì zhǐ yòng zhāo sān
+  - time: 26:56.04
+    text: 中对外，北对南，贝母对宜男。
+    pinyin: zhōng duì wài běi duì nán bèi mǔ duì yí nán
+  - time: 27:02.17
+    text: 移山对浚井，谏苦对言甘。
+    pinyin: yí shān duì jùn jǐng jiàn kǔ duì yán gān
+  - time: 27:07.80
+    text: 千取百，二为三，魏尚对周堪。
+    pinyin: qiān qǔ bǎi èr wéi sān wèi shàng duì zhōu kān
+  - time: 27:13.77
+    text: 海门翻夕浪，山市拥晴岚。
+    pinyin: hǎi mén fān xī làng shān shì yōng qíng lán
+  - time: 27:19.19
+    text: 新缔直投公子纻，旧交犹脱馆人骖。
+    pinyin: xīn dì zhí tóu gōng zǐ zhù jiù jiāo yóu tuō guǎn rén cān
+  - time: 27:26.65
+    text: 文达淹通，已叹冰兮寒过水；
+    pinyin: wén dá yān tōng yǐ tàn bīng xī hán guò shuǐ
+  - time: 27:32.28
+    text: 永和博雅，可知青者胜于蓝。
+    pinyin: yǒng hé bó yǎ kě zhī qīng zhě shèng yú lán
+  - time: 27:38.46
+    text: 十四 盐
+    pinyin: shí sì yán
+  - time: 27:42.18
+    text: 悲对乐，爱对嫌，玉兔对银蟾。
+    pinyin: bēi duì lè ài duì xián yù tù duì yín chán
+  - time: 27:48.32
+    text: 醉侯对诗史，眼底对眉尖。
+    pinyin: zuì hóu duì shī shǐ yǎn dǐ duì méi jiān
+  - time: 27:53.68
+    text: 风飁飁，雨绵绵，李苦对瓜甜。
+    pinyin: fēng xí xí yǔ mián mián lǐ kǔ duì guā tián
+  - time: 28:00.35
+    text: 画堂施锦帐，酒市舞青帘。
+    pinyin: huà táng shī jǐn zhàng jiǔ shì wǔ qīng lián
+  - time: 28:05.84
+    text: 横槊赋诗传孟德，引壶酌酒尚陶潜。
+    pinyin: héng shuò fù shī chuán mèng dé yǐn hú zhuó jiǔ shàng táo qián
+  - time: 28:12.95
+    text: 两曜迭明，日东生而月西出；
+    pinyin: liǎng yào dié míng rì dōng shēng ér yuè xī chū
+  - time: 28:18.88
+    text: 五行式序，水下润而火上炎。
+    pinyin: wǔ xíng shì xù shuǐ xià rùn ér huǒ shàng yán
+  - time: 28:25.06
+    text: 如对似，减对添，绣幕对朱帘。
+    pinyin: rú duì sì jiǎn duì tiān xiù mù duì zhū lián
+  - time: 28:32.00
+    text: 探珠对献玉，鹭立对鱼潜。
+    pinyin: tàn zhū duì xiàn yù lù lì duì yú qián
+  - time: 28:37.92
+    text: 玉屑饭，水晶盐，手剑对腰镰。
+    pinyin: yù xiè fàn shuǐ jīng yán shǒu jiàn duì yāo lián
+  - time: 28:44.16
+    text: 燕巢依邃阁，蛛网挂虚檐。
+    pinyin: yàn cháo yī suì gé zhū wǎng guà xū yán
+  - time: 28:50.01
+    text: 夺槊至三唐敬德，弈棋第一晋王恬。
+    pinyin: duó shuò zhì sān táng jìng dé yì qí dì yī jìn wáng tián
+  - time: 28:56.75
+    text: 南浦客归，湛湛春波千顷净；
+    pinyin: nán pǔ kè guī zhàn zhàn chūn bō qiān qǐng jìng
+  - time: 29:02.76
+    text: 西楼人悄，弯弯夜月一钩纤。
+    pinyin: xī lóu rén qiǎo wān wān yè yuè yī gōu xiān
+  - time: 29:08.41
+    text: 逢对遇，仰对瞻，市井对闾阎。
+    pinyin: féng duì yù yǎng duì zhān shì jǐng duì lǘ yán
+  - time: 29:14.98
+    text: 投簪对结绶，握发对掀髯。
+    pinyin: tóu zān duì jié shòu wò fā duì xiān rán
+  - time: 29:20.45
+    text: 张绣幕，卷珠帘，石碏对江淹。
+    pinyin: zhāng xiù mù juǎn zhū lián shí què duì jiāng yān
+  - time: 29:26.66
+    text: 宵征方肃肃，夜饮已厌厌。
+    pinyin: xiāo zhēng fāng sù sù yè yǐn yǐ yān yān
+  - time: 29:32.50
+    text: 心褊小人长戚戚，礼多君子屡谦谦。
+    pinyin: xīn biǎn xiǎo rén cháng qī qī lǐ duō jūn zǐ lǚ qiān qiān
+  - time: 29:39.52
+    text: 美刺殊文，备三百五篇诗咏；
+    pinyin: měi cì shū wén bèi sān bǎi wǔ piān shī yǒng
+  - time: 29:45.45
+    text: 吉凶异画，变六十四卦爻占。
+    pinyin: jí xiōng yì huà biàn liù shí sì guà yáo zhān
+  - time: 29:51.59
+    text: 十五 咸
+    pinyin: shí wǔ xián
+  - time: 29:53.97
+    text: 清对浊，苦对咸，一启对三缄。
+    pinyin: qīng duì zhuó kǔ duì xián yì qǐ duì sān jiān
+  - time: 30:00.15
+    text: 烟蓑对雨笠，月榜对风帆。
+    pinyin: yān suō duì yǔ lì yuè bàng duì fēng fān
+  - time: 30:05.31
+    text: 莺睍睆，燕呢喃，柳杞对松杉。
+    pinyin: yīng xiàn huǎn yàn ní nán liǔ qǐ duì sōng shān
+  - time: 30:11.69
+    text: 情深悲素扇，泪痛湿青衫。
+    pinyin: qíng shēn bēi sù shàn lèi tòng shī qīng shān
+  - time: 30:17.16
+    text: 汉室既能分四姓，周朝何用叛三监。
+    pinyin: hàn shì jì néng fēn sì xìng zhōu cháo hé yòng pàn sān jiān
+  - time: 30:24.31
+    text: 破的而探牛心，豪矜王济；
+    pinyin: pò dì ér tàn niú xīn háo jīn wáng jì
+  - time: 30:29.39
+    text: 竖竿以挂犊鼻，贫笑阮咸。
+    pinyin: shù gān yǐ guà dú bí pín xiào ruǎn xián
+  - time: 30:35.01
+    text: 能对否，圣对贤，卫瓘对浑瑊。
+    pinyin: néng duì fǒu shèng duì xián wèi guàn duì hún jiān
+  - time: 30:41.18
+    text: 雀罗对鱼网，翠巘对苍崖。
+    pinyin: què luó duì yú wǎng cuì yǎn duì cāng yá
+    annotation:
+      11: 一作 岩。
+  - time: 30:46.55
+    text: 红罗帐，白布衫，笔格对书函。
+    pinyin: hóng luó zhàng bái bù shān bǐ gé duì shū hán
+  - time: 30:52.44
+    text: 蕊香蜂竞采，泥软燕争衔。
+    pinyin: ruǐ xiāng fēng jìng cǎi ní ruǎn yàn zhēng xián
+  - time: 30:58.02
+    text: 凶孽誓清闻祖逖，王家能乂有巫咸。
+    pinyin: xiōng niè shì qīng wén zǔ tì wáng jiā néng yì yǒu wū xián
+  - time: 31:05.00
+    text: 溪叟新居，渔舍清幽临水岸；
+    pinyin: xī sǒu xīn jū yú shè qīng yōu lín shuǐ àn
+  - time: 31:10.42
+    text: 山僧久隐，梵宫寂寞倚云岩。
+    pinyin: shān sēng jiǔ yǐn fàn gōng jì mò yǐ yún yán
+  - time: 31:16.30
+    text: 冠对带，帽对衫，议鲠对言谗。
+    pinyin: guān duì dài mào duì shān yì gěng duì yán chán
+  - time: 31:22.88
+    text: 行舟对御马，俗弊对民碞。
+    pinyin: xíng zhōu duì yù mǎ sú bì duì mín yán
+  - time: 31:28.29
+    text: 鼠且硕，兔多毚，史册对书缄。
+    pinyin: shǔ qiě shuò tù duō chán shǐ cè duì shū jiān
+  - time: 31:34.71
+    text: 塞城闻奏角，江浦认归帆。
+    pinyin: sài chéng wén zòu jiǎo jiāng pǔ rèn guī fān
+  - time: 31:40.39
+    text: 河水一源形弥弥，泰山万仞势岩岩。
+    pinyin: hé shuǐ yì yuán xíng mí mí tài shān wàn rèn shì yán yán
+  - time: 31:47.30
+    text: 郑为武公，赋缁衣而美德；
+    pinyin: zhèng wèi wǔ gōng fù zī yī ér měi dé
+  - time: 31:52.35
+    text: 周因巷伯，歌贝锦以伤谗。
+    pinyin: zhōu yīn xiàng bó gē bèi jǐn yǐ shāng chán
+    annotation:
+      6: 歌：此处不知为何读 gě。

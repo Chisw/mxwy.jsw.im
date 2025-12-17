@@ -4,7 +4,7 @@ import { SvgIcon } from './SvgIcon'
 export function Reciter() {
   return (
     <Container className="mt-6 md:mt-12">
-      <div className="flex items-center px-4 py-3 md:px-8 md:py-6 bg-zinc-100 rounded-2xl">
+      <div className="flex items-center px-4 py-3 md:px-8 md:py-6 bg-white/70 rounded-2xl">
         <div className="shrink-0 w-20 md:w-24 h-20 md:h-24 rounded-full bg-zinc-100 overflow-hidden">
           <img src="/assets/avatar.jpg" />
         </div>

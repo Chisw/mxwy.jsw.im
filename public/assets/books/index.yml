@@ -73,8 +73,8 @@ books:
     group: 1
     title: 声律启蒙（下）
     author: （清）车万育
-    sentences: 0
-    seconds: 0 #1918.73
+    sentences: 330
+    seconds: 1918.73
     size: 15531604
     sha256sum: 92031480ba482f93c8df8a37fdd63c536c0b4c020327e49b491422e7fcc4a3a6
     background: '#a3004c'

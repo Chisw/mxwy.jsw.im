@@ -44,8 +44,9 @@ export function VolumeSlider(props: VolumeSliderProps) {
           reverse
           min={0}
           max={1}
-          barHeight={4}
           step={0.01}
+          barHeight={4}
+          buttonSize={20}
           value={playerConfig.volume}
           onChange={(volume: number) => {
             setPlayerConfig({ volume })

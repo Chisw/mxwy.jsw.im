@@ -5,13 +5,14 @@ import type { ISection, ISentence } from '../../type'
 import { useRecoilState } from 'recoil'
 import { activeBookEntryState } from '../../states'
 import { Notify } from 'react-vant'
+import { SvgIcon } from '../SvgIcon'
 
 const tabList = [
   { key: 'annotation', name: '注解' },
   { key: 'baidu', name: '百度汉语' },
   { key: 'mengdian', name: '萌典' },
+  { key: 'zitong', name: '字統' },
   { key: 'ziyuan', name: '字源' },
-  { key: 'more', name: '更多' },
 ]
 
 interface CaptionProps {
@@ -35,7 +36,7 @@ export default function Caption(props: CaptionProps) {
     activeSentenceIndex,
   } = props
 
-  const { playerConfig } = usePlayerConfig()
+  const { playerConfig, setPlayerConfig } = usePlayerConfig()
 
   const [activeBookEntry] = useRecoilState(activeBookEntryState)
 
@@ -45,11 +46,31 @@ export default function Caption(props: CaptionProps) {
     return sentenceList[activeSentenceIndex] as ISentence | undefined
   }, [sentenceList, activeSentenceIndex])
 
+  const {
+    annotationOrders,
+    annotationTextList,
+  } = useMemo(() => {
+    const annotationOrders: number[] = []
+    const annotationTextList: string[] = []
+
+    Object
+      .entries(activeSentence?.annotation || {})
+      .forEach(([order, text]) => {
+        annotationOrders.push(Number(order))
+        annotationTextList.push(text)
+      })
+
+    return {
+      annotationOrders,
+      annotationTextList,
+    }
+  }, [activeSentence])
+
   const scrollRef = useRef<HTMLDivElement | null>(null)
 
   useEffect(() => {
     if (!scrollRef.current || !playerConfig.autoScroll) return
-    document.querySelector(`[data-index="${activeSentenceIndex}"]`)?.scrollIntoView({ block: 'center' })
+    document.querySelector(`[data-sentence-index="${activeSentenceIndex}"]`)?.scrollIntoView({ block: 'center' })
   }, [activeSentenceIndex, playerConfig.autoScroll])
 
   return (
@@ -71,15 +92,12 @@ export default function Caption(props: CaptionProps) {
         `)}
       >
         {/* 句 */}
-        {sentenceList.map(({ time, text, pinyin, startTime, annotation }, sentenceIndex) => {
+        {sentenceList.map(({ time, text, pinyin, startTime }, sentenceIndex) => {
           const { fontSize } = playerConfig
           const textList = text.split('')
           const pinyinList = getInjectedPinyinList(pinyin, text)
           const isActive = sentenceIndex === activeSentenceIndex
           const section = sectionList.find(s => s.from === sentenceIndex + 1)
-          const tags = Object.keys(annotation || {}).map(Number)
-
-          let tagCount = 0
 
           return (
             <Fragment key={time}>
@@ -96,8 +114,8 @@ export default function Caption(props: CaptionProps) {
 
               {/* 行 */}
               <div
-                data-index={sentenceIndex}
-                data-tag={`${sentenceIndex + 1}@${time.slice(0, -3)}`}
+                data-sentence-index={sentenceIndex}
+                data-sentence-tag={`${sentenceIndex + 1}@${time.slice(0, -3)}`}
                 className={line(`
                   mxwy-sentence
                   relative z-0 text-center cursor-pointer
@@ -110,17 +128,11 @@ export default function Caption(props: CaptionProps) {
                 {textList.map((char, charIndex) => {
                   const pinyin = pinyinList[charIndex]
                   const isPunctuation = !pinyin
-                  const hasAnnotation = tags.includes(charIndex + 1)
-
-                  if (hasAnnotation) {
-                    tagCount++
-                  }
 
                   return (
                     <div
                       key={charIndex}
                       data-pinyin={pinyin}
-                      data-annotation={hasAnnotation ? `[${tagCount}]` : ''}
                       className={line(`
                         mxwy-character
                         relative z-0 inline-block overflow-hidden font-kai
@@ -144,28 +156,29 @@ export default function Caption(props: CaptionProps) {
         })}
       </div>
 
-      {/* 面板 */}
+      {/* 句子面板 */}
       {!!activeSentence && (
         <div
           data-customized-scrollbar
           className={line(`
             flex flex-col
             absolute z-10 bottom-2 left-1/2
-            w-[96vw] max-w-xl max-h-40 -translate-x-1/2 rounded-lg overflow-hidden
+            w-[96vw] max-w-xl max-h-40 md:max-h-48 -translate-x-1/2 rounded-lg overflow-hidden
             border-2 border-green-600
             bg-green-200 text-sm
             transition-all duration-300
-            ${audio.isPlaying ? 'translate-y-48' : ''}
+            ${(audio.isPlaying || !playerConfig.sentencePanel) ? 'translate-y-48' : ''}
           `)}
         >
-          <div className="shrink-0 flex justify-start items-center border-b border-green-600">
+          {/* tab */}
+          <div className="shrink-0 flex justify-start items-center relative z-0 border-b border-green-600 text-sm md:text-base">
             {tabList.map(({ key, name }) => {
               const isActive = key === activeTab
               return (
                 <div
                   key={key}
                   className={line(`
-                    px-3 py-1 border-r text-base border-green-600 cursor-pointer
+                    px-2 py-0.5 border-r border-green-600 cursor-pointer
                     ${isActive ? 'text-white bg-green-600' : ''}
                   `)}
                   onClick={() => setActiveTab(key)}
@@ -174,30 +187,74 @@ export default function Caption(props: CaptionProps) {
                 </div>
               )
             })}
+
+            <div
+              className="flex-center-center absolute z-10 top-0 right-0 bottom-0 aspect-square cursor-pointer"
+              onClick={() => setPlayerConfig({ sentencePanel: false })}
+            >
+              <SvgIcon.Close />
+            </div>
           </div>
+          {/* 注解 */}
           <div
             data-customized-scrollbar
-            className="grow px-3 py-2 w-full min-h-24 overflow-y-auto"
+            className="grow px-3 py-2 w-full min-h-24 md:min-h-28 overflow-y-auto"
           >
             {activeTab === 'annotation' && (
               <div className="leading-5">
-                {activeSentence.annotation ? (
-                  Object.entries(activeSentence.annotation).map(([, text ], index) => {
+                <div className="underline decoration-1 underline-offset-4 text-xs [&_a]:mr-3">
+                  <a target="_blank" href={`https://www.baidu.com/s?wd=${activeSentence.text}`}>
+                    百度一下
+                  </a>
+                  <a target="_blank" href={`https://www.google.com/search?q=${activeSentence.text}`}>
+                    Google
+                  </a>
+                  <a target="_blank" href={`https://chatgpt.com/?prompt=${activeSentence.text}`}>
+                    ChatGPT
+                  </a>
+                  <a target="_blank" href={`https://github.com/Chisw/mxwy.jsw.im/issues/new?title=${activeBookEntry?.title}_${activeSentence.text}`}>
+                    纠错
+                  </a>
+                  <a
+                    className="cursor-pointer"
+                    onClick={() => {
+                      copy(activeSentence.text)
+                      Notify.show({ type: 'success', message: '复制成功' })
+                    }}
+                  >
+                    复制
+                  </a>
+                </div>
+                <div className="py-4 text-xl font-kai">
+                  {activeSentence.text.split('').map((s, i) => {
+                    const order = i + 1
+                    const hasAnnotation = annotationOrders.includes(order)
                     return (
-                      <p
-                        key={index}
-                        className="mb-1"
-                      >
-                        <span className="font-kai">[{index + 1}]</span> {text}
-                      </p>
+                      <Fragment key={i}>
+                        <span>{s}</span>
+                        {hasAnnotation && (
+                          <span className="text-[10px] align-top">
+                            [{annotationOrders.indexOf(order) + 1}]
+                          </span>
+                        )}
+                      </Fragment>
                     )
-                  })
-                ) : (
-                  <p>暂无</p>
-                )}
+                  })}
+                </div>
+                {annotationTextList.map((text, index) => {
+                  return (
+                    <p
+                      key={index}
+                      className="mb-1"
+                    >
+                      <span className="font-kai">[{index + 1}]</span> {text}
+                    </p>
+                  )
+                })}
               </div>
             )}
-            {['baidu', 'mengdian', 'ziyuan'].includes(activeTab)  && (
+            {/* 字典 */}
+            {['baidu', 'mengdian', 'zitong', 'ziyuan'].includes(activeTab)  && (
               <div className="flex flex-wrap text-3xl font-kai underline decoration-1 underline-offset-4">
                 {[...new Set(getChineseChars(activeSentence.text))].map((c, i) => (
                   <div
@@ -207,6 +264,7 @@ export default function Caption(props: CaptionProps) {
                       const prefix = {
                           baidu: 'https://hanyu.baidu.com/hanyu-page/zici/s?wd=',
                           mengdian: 'https://www.moedict.tw/',
+                          zitong: 'https://zi.tools/zi/',
                           ziyuan: 'https://hanziyuan.net/#',
                         }[activeTab]
 
@@ -216,28 +274,6 @@ export default function Caption(props: CaptionProps) {
                     {c}
                   </div>
                 ))}
-              </div>
-            )}
-            {activeTab === 'more' && (
-              <div>
-                <div className="text-xl font-kai">
-                  {activeSentence.text}
-                </div>
-                <div className="mt-2 underline decoration-1 underline-offset-4">
-                  <a className="mr-3" target="_blank" href={`https://www.baidu.com/s?wd=${activeSentence.text}`}>百度一下</a>
-                  <a className="mr-3" target="_blank" href={`https://www.google.com/search?q=${activeSentence.text}`}>Google</a>
-                  <a className="mr-3" target="_blank" href={`https://chatgpt.com/?prompt=${activeSentence.text}`}>ChatGPT</a>
-                  <a className="mr-3" target="_blank" href={`https://github.com/Chisw/mxwy.jsw.im/issues/new?title=${activeBookEntry?.title}_${activeSentence.text}`}>纠错</a>
-                  <a
-                    className="cursor-pointer"
-                    onClick={() => {
-                      copy(activeSentence.text)
-                      Notify.show({ type: 'success', message: '复制成功' })
-                    }}
-                  >
-                    复制句子
-                  </a>
-                </div>
               </div>
             )}
           </div>

@@ -31,7 +31,7 @@ export function Header() {
   return (
     <>
       <Container
-        className="border-b border-zinc-200"
+        className="border-b border-white bg-white/90 backdrop-blur-sm"
         innerClassName="flex-between-center py-4"
       >
         <div className="flex items-center">
@@ -54,7 +54,7 @@ export function Header() {
         closeOnClickOverlay
         title="关于"
         width="88vw"
-        className="max-w-2xl"
+        className="max-w-xl"
         overlayClass="mxwy-action-sheet-overlay"
         visible={aboutVisible}
         showConfirmButton={false}
@@ -62,13 +62,13 @@ export function Header() {
       >
         <div
           data-customized-scrollbar
-          className="mt-4 px-6 pt-4 pb-8 max-h-96 overflow-y-auto [&_a]:text-blue-500 [&_a]:hover:text-blue-600"
+          className="mt-4 px-6 md:px-10 pt-4 pb-8 max-h-96 overflow-y-auto [&_a]:text-blue-500 [&_a]:hover:text-blue-600"
         >
           <div className="font-bold text-green-700">简介</div>
           <div className="mt-2 text-sm">
             <p className="mb-2">教自己小孩拼音识字用的，开源分享给同好的家长们 ❤️</p>
-            <p className="mb-2">使用 Netlify 自动部署，国内访问可能比较卡顿，本地部署会好点</p>
-            <p className="mb-2">现有 19 条音频（蒙学 7 部、选文 10 篇）已涵盖 2200+ 个汉字，完全满足幼儿的识字需求，因此不再增录，大佬们可自行 fork 处理</p>
+            <p className="mb-2">使用 Netlify 免费的自动部署服务，国内访问可能会卡顿，甚至音频无法加载，本地部署会好很多</p>
+            <p className="mb-2">现有 19 条音频（蒙学 7 部、选文 10 篇）已涵盖 2600+ 汉字，完全满足幼儿识字需求，因此不再增录，大佬们可自行 fork 处理</p>
             <p className="mb-2">字幕拼音均为本人逐字听取校排，难免有错讹之处，欢迎指正</p>
 
             <div className="text-sm">
@@ -143,7 +143,7 @@ export function Header() {
                       target="_blank"
                       href={url}
                     >
-                      {name}
+                      {j === 0 ? '' :'、'}{name}
                     </a>
                   ))}
                 </div>

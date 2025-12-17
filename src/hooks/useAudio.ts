@@ -19,7 +19,7 @@ audioEl.volume = vol
 bgAudioEl.volume = vol * BACKGROUND_MUSIC_VOL_RATIO
 bgAudioEl.loop = true
 bgAudioEl.preload = 'none'
-bgAudioEl.src = AudioApi.getAudioUrl('-guang-ling-san')
+bgAudioEl.src = AudioApi.getAudioUrl('-background')
 
 window.addEventListener(BACKGROUND_MUSIC_EVENT_TRIGGER, (event) => {
   if ((event as CustomEvent).detail) {

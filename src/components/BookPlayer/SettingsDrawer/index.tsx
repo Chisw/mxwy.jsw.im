@@ -69,11 +69,21 @@ export default function SettingsDrawer(props: SettingsDrawerProps) {
     return sectionForm.from !== from || sectionForm.to !== to
   }, [defaultSection, memoSection, sectionForm])
 
+  const handleAutoSizeClick = useCallback(() => {
+    const maxCount = sentenceList
+      .map(s => s.text.length)
+      .reduce((a, b) => a > b ? a : b, 0)
+
+    const size = window.innerWidth / maxCount / 2.2
+    const fontSize = size - size % 2
+    setPlayerConfig({ fontSize })
+  }, [sentenceList, setPlayerConfig])
+
   const handleApplyClick = useCallback(() => {
     setSectionRecord(bookEntry.key, sectionForm)
-    onClose()
+    // onClose()
     Notify.show({ type: 'success', message: '应用成功' })
-  }, [setSectionRecord, bookEntry, sectionForm, onClose])
+  }, [setSectionRecord, bookEntry, sectionForm])
 
   const handleDownloadClick = useCallback((type: string) => {
     const { title, author } = bookEntry
@@ -120,7 +130,7 @@ export default function SettingsDrawer(props: SettingsDrawerProps) {
             ${chars.map((c, i) => `
               <div class="w-1/10 border-r border-b border-green-300">
                 <div class="mxwy-print-pinyin flex-center-center h-10 border-b border-green-300">
-                  <span class="text-[1.8rem] font-pinyin text-[#bbb] -translate-y-[12%]">${pinyinList[i] || ''}</span>
+                  <span class="text-[1.8rem] font-pinyin text-[#bbb] -translate-y-[12%] align-middle">${pinyinList[i] || ''}</span>
                 </div>
                 <div class="mxwy-print-character flex-center-center w-full aspect-square">
                   <span class="text-[3.6rem] font-kai text-[#bbb] leading-0">${c}</span>
@@ -205,23 +215,41 @@ export default function SettingsDrawer(props: SettingsDrawerProps) {
               </SettingItem>
 
               <SettingItem label="字号">
-                <Stepper
-                  integer
-                  theme="round"
-                  min={10}
-                  max={200}
-                  step={2}
-                  buttonSize={28}
-                  value={playerConfig.fontSize}
-                  onChange={(v) => setPlayerConfig({ fontSize: v! })}
-                />
-              </SettingItem>
+                <div className="flex items-center">
+                  <Button
+                    round
+                    size="small"
+                    onClick={handleAutoSizeClick}
+                  >
+                    Auto
+                  </Button>
+                  <Stepper
+                    integer
+                    theme="round"
+                    className="ml-4"
+                    min={10}
+                    max={200}
+                    step={2}
+                    buttonSize={28}
+                    value={playerConfig.fontSize}
+                    onChange={(v) => setPlayerConfig({ fontSize: v! })}
+                  />
+                </div>
+                </SettingItem>
 
               <SettingItem label="字幕滚动">
                 <Switch
                   size={24}
                   checked={playerConfig.autoScroll}
                   onChange={(autoScroll) => setPlayerConfig({ autoScroll })}
+                />
+              </SettingItem>
+
+              <SettingItem label="句子面板">
+                <Switch
+                  size={24}
+                  checked={playerConfig.sentencePanel}
+                  onChange={(sentencePanel) => setPlayerConfig({ sentencePanel })}
                 />
               </SettingItem>
 

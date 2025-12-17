@@ -2,6 +2,19 @@
   --rv-primary-color: #00a63e;
 }
 
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-image: url("/assets/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 /* customized-scrollbar */
 [data-customized-scrollbar]::-webkit-scrollbar,
 [data-customized-scrollbar]::-webkit-scrollbar-button,
@@ -31,7 +44,7 @@
 
 /* 句 编号及时间 */
 .mxwy-caption .mxwy-sentence::before {
-  content: attr(data-tag);
+  content: attr(data-sentence-tag);
   font-size: 10px;
   @apply hidden absolute z-10 top-0 left-0 px-1 py-0.5 text-green-800 bg-green-400/80;
 }
@@ -51,24 +64,4 @@
   transform: translateX(-50%);
   font-size: 65%;
   font-family: 'mxwy-pinyin';
-}
-
-/* 字 注解 */
-.mxwy-caption .mxwy-character::after {
-  content: attr(data-annotation);
-  display: none;
-  position: absolute;
-  z-index: 0;
-  top: 50%;
-  right: 0;
-  font-size: 10px;
-  font-family: 'mxwy-kai';
-}
-
-.mxwy-caption .mxwy-sentence.active .mxwy-character::after {
-  display: inline-block;
-}
-
-.mxwy-caption.is-playing .mxwy-sentence.active .mxwy-character::after {
-  display: none;
 }

@@ -55,7 +55,7 @@ export function BookList() {
         {Object.entries(groupList).map(([group, bookList]) => {
           return (
             <div key={group}>
-              <div className="mt-4 mb-2 py-3 font-bold">
+              <div className="mt-4 mb-2 py-3 text-lg font-bold">
                 {{ 1: '辨音识字', 2: '百家选文', 3: '自定义' }[group]}
               </div>
               <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 md:gap-5">
@@ -67,7 +67,7 @@ export function BookList() {
                       key={key}
                       className={line(`
                         p-2 md:p-4 rounded-md
-                        ${seconds ? 'cursor-pointer hover:bg-zinc-100' : 'cursor-not-allowed opacity-30'}
+                        ${seconds ? 'cursor-pointer hover:bg-black/5' : 'cursor-not-allowed opacity-40'}
                       `)}
                       onClick={() => handleBookClick(entry)}
                     >
