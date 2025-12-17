@@ -28,6 +28,10 @@
     margin: 10mm 15mm;
   }
 
+  body {
+    background: none;
+  }
+
   #root,
   .rv-popup,
   .rv-overlay {

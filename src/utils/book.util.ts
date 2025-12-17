@@ -46,3 +46,7 @@ export const getInjectedPinyinList = (pinyin: string, text: string) => {
 export const getChineseChars = (text: string) => {
   return text.split('').filter(s => !REG_PUNCTUATION.test(s))
 }
+
+export const scrollToActiveSentence = () => {
+  document.querySelector('.mxwy-sentence.active')?.scrollIntoView({ block: 'center' })
+}

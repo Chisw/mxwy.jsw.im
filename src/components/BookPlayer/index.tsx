@@ -3,7 +3,7 @@ import { useRecoilState } from 'recoil'
 import { activeBookEntryState } from '../../states'
 import { useAudio, useHotKey, usePlayerConfig, useRequest } from '../../hooks'
 import { AudioApi, BookApi } from '../../api'
-import { getRound2, getSection, getSentenceList, line } from '../../utils'
+import { getRound2, getSection, getSentenceList, line, scrollToActiveSentence } from '../../utils'
 import { sortedIndex } from 'lodash-es'
 import { SvgIcon } from '../SvgIcon'
 import { Container } from '../layout/Container'
@@ -73,6 +73,7 @@ export function BookPlayer () {
   const handleToggleClick = useCallback(() => {
     if (!audio.isPlaying) {
       setCaptionVisible(true)
+      scrollToActiveSentence()
     }
     audio.toggle()
   }, [audio])
@@ -109,7 +110,7 @@ export function BookPlayer () {
         }
         setCaptionVisible(false)
       },
-      'Space, Space': audio.toggle,
+      'Space, Space': handleToggleClick,
     },
   })
 

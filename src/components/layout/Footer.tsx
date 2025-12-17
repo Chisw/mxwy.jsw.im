@@ -8,7 +8,7 @@ export function Footer() {
         innerClassName="flex-between-center py-4"
       >
         <div className="text-xs text-zinc-400">
-          <div>mxwy.jsw.im</div>
+          <div>https://mxwy.jsw.im</div>
           <div className="mt-1">更新于 {__BUILD_TIME__}</div>
         </div>
         <a

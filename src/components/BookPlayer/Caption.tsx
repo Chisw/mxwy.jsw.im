@@ -1,5 +1,5 @@
 import { Fragment, useEffect, useMemo, useRef, useState } from 'react'
-import { copy, getChineseChars, getInjectedPinyinList, line } from '../../utils'
+import { copy, getChineseChars, getInjectedPinyinList, line, scrollToActiveSentence } from '../../utils'
 import { usePlayerConfig } from '../../hooks'
 import type { ISection, ISentence } from '../../type'
 import { useRecoilState } from 'recoil'
@@ -70,7 +70,7 @@ export default function Caption(props: CaptionProps) {
 
   useEffect(() => {
     if (!scrollRef.current || !playerConfig.autoScroll) return
-    document.querySelector(`[data-sentence-index="${activeSentenceIndex}"]`)?.scrollIntoView({ block: 'center' })
+    scrollToActiveSentence()
   }, [activeSentenceIndex, playerConfig.autoScroll])
 
   return (
@@ -114,7 +114,6 @@ export default function Caption(props: CaptionProps) {
 
               {/* 行 */}
               <div
-                data-sentence-index={sentenceIndex}
                 data-sentence-tag={`${sentenceIndex + 1}@${time.slice(0, -3)}`}
                 className={line(`
                   mxwy-sentence
