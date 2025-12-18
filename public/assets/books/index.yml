@@ -83,10 +83,10 @@ books:
     group: 1
     title: 增广贤文
     author: （明）无名氏
-    sentences: 0
-    seconds: 0
+    sentences: 347
+    seconds: 1922.56
     size: 11703023
-    sha256sum: sha256sum
+    sha256sum: c619b05e471fc4f4821a691da2fc65737cc270381e8960c35b1d4b6e9d18d296
     background: '#8a0194'
     intro: intro
   - key: yu-you-shi
@@ -102,7 +102,7 @@ books:
   - key: qian-gua
     group: 2
     title: 乾卦
-    author: 往圣
+    author: 古圣先贤
     sentences: 0
     seconds: 0
     size: 0

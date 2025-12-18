@@ -4,7 +4,7 @@ export function Footer() {
   return (
     <>
       <Container
-        className="pb-16 border-t border-white bg-white/90 backdrop-blur-sm"
+        className="pb-16 border-t border-white bg-white/90"
         innerClassName="flex-between-center py-4"
       >
         <div className="text-xs text-zinc-400">

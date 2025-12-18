@@ -87,10 +87,20 @@ export default function Caption(props: CaptionProps) {
         data-customized-scrollbar
         className={line(`
           mxwy-caption
-          absolute z-0 inset-0 pt-10 pb-40 overflow-y-auto select-none
+          absolute z-0 inset-0 pt-10 pb-44 overflow-y-auto select-none
           ${audio.isPlaying ? 'is-playing' : ''}
         `)}
       >
+        {/* loading */}
+        {!sentenceList.length && (
+          <div className="flex-center-center absolute z-10 inset-0">
+            <div>
+              <img src="/assets/logo.png" className="mx-auto w-16 h-16" />
+              <div className="mt-4 text-center text-sm text-green-700">字幕加载中..</div>
+            </div>
+          </div>
+        )}
+
         {/* 句 */}
         {sentenceList.map(({ time, text, pinyin, startTime }, sentenceIndex) => {
           const { fontSize } = playerConfig
@@ -153,6 +163,12 @@ export default function Caption(props: CaptionProps) {
             </Fragment>
           )
         })}
+
+        {!!sentenceList.length && (
+          <div className="mt-4 text-center opacity-40">
+            ——&emsp;·&emsp;——
+          </div>
+        )}
       </div>
 
       {/* 句子面板 */}
@@ -166,7 +182,7 @@ export default function Caption(props: CaptionProps) {
             border-2 border-green-600
             bg-green-200 text-sm
             transition-all duration-300
-            ${(audio.isPlaying || !playerConfig.sentencePanel) ? 'translate-y-48' : ''}
+            ${(audio.isPlaying || !playerConfig.sentencePanel) ? 'translate-y-64' : ''}
           `)}
         >
           {/* tab */}

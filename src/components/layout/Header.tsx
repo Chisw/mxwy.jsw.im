@@ -45,7 +45,7 @@ export function Header() {
           className="text-zinc-300 cursor-pointer"
           onClick={() => setAboutVisible(true)}
         >
-          <SvgIcon.Info size={28} />
+          <SvgIcon.Info size={24} />
         </div>
       </Container>
 

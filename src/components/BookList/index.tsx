@@ -67,7 +67,7 @@ export function BookList() {
                       key={key}
                       className={line(`
                         p-2 md:p-4 rounded-md
-                        ${seconds ? 'cursor-pointer hover:bg-black/5' : 'cursor-not-allowed opacity-40'}
+                        ${seconds ? 'cursor-pointer hover:bg-black/5' : 'cursor-not-allowed opacity-30'}
                       `)}
                       onClick={() => handleBookClick(entry)}
                     >

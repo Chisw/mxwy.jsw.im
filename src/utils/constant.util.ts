@@ -5,4 +5,4 @@ export const MXWY_PLAYER_CONFIG_KEY = `MXWY_PLAYER_CONFIG_KEY_V_${VERSION}`
 export const BACKGROUND_MUSIC_VOL_RATIO = 0.22
 export const BACKGROUND_MUSIC_EVENT_TRIGGER = 'BACKGROUND_MUSIC_EVENT_TRIGGER'
 
-export const REG_PUNCTUATION = /(，|。|：|；|？| )/
+export const REG_PUNCTUATION = /(，|。|：|；|？|！| )/
