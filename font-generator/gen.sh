@@ -12,10 +12,10 @@ awk 'NR==26 {
 }
 { print }' template.html > temp.html
 
-font-spider temp.html --formats=woff2
+font-spider temp.html
 
 rm all-chars.txt
-rm font.ttf
+# rm font.ttf
 rm temp.html
 
 mv font.woff ../src/css

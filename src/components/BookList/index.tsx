@@ -66,14 +66,14 @@ export function BookList() {
                     <div
                       key={key}
                       className={line(`
-                        p-2 md:p-4 rounded-md
+                        p-2 md:p-4 rounded-sm
                         ${seconds ? 'cursor-pointer hover:bg-black/5' : 'cursor-not-allowed opacity-30'}
                       `)}
                       onClick={() => handleBookClick(entry)}
                     >
                       <div
                         className={line(`
-                          relative z-0 mx-auto w-24 h-32 md:w-32 md:h-44 rounded-sm
+                          relative z-0 mx-auto w-24 h-32 md:w-32 md:h-44 rounded-xs
                           shadow-lg bg-cover bg-center overflow-hidden  
                         `)}
                         style={{ backgroundImage: 'url("/assets/cover-bg.jpg")' }}

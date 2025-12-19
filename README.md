@@ -10,7 +10,7 @@ https://mxwy.jsw.im
 
 使用 [Netlify](https://www.netlify.com) 免费的自动部署服务，国内访问可能会卡顿，甚至音频无法加载，本地部署会好很多
 
-现有 19 条音频（蒙学 7 部、选文 10 篇）已涵盖 2600+ 汉字，完全满足幼儿识字需求，因此不再增录，大佬们可自行 fork 处理
+现有 19 条音频（蒙学 7 部、选文 10 篇）已涵盖 2800+ 汉字，完全满足幼儿识字需求，因此不再增录，大佬们可自行 fork 处理
 
 字幕拼音均为本人逐字听取校排，难免有错讹之处，欢迎指正
 
@@ -48,12 +48,13 @@ yarn build
 ```
 
 ```sh
-# 首次安装
+# 首次全局安装 font-spider
 npm i -g font-spider
+```
 
-# 执行
-cd font-generator
-./gen.sh
+```sh
+# 执行脚本
+yarn font
 ```
 
 ### 五、自行增录
@@ -109,7 +110,7 @@ sentences:
     sentences: 5000 # 句子数
     seconds: 500 # 音频秒数
     size: 50000 # 音频文件字节数
-    sha256sum: sha256sum # 音频哈希值
+    sha256sum: sha256sum # 音频文件哈希值
     background: '#000000' # 封面底色
     intro: 文本介绍
 ```

@@ -93,11 +93,11 @@ books:
     group: 2
     title: 余幼时
     author: （明）宋濂
-    sentences: 0
-    seconds: 0
-    size: 0
-    sha256sum: sha256sum
-    background: ''
+    sentences: 75
+    seconds: 225.04
+    size: 1370742
+    sha256sum: 51c375a5a350341662062c1e337e07047a2e4dfcdeb76ec47119923f1ef08288
+    background: '#51515d'
     intro: intro
   - key: qian-gua
     group: 2
@@ -107,7 +107,7 @@ books:
     seconds: 0
     size: 0
     sha256sum: sha256sum
-    background: ''
+    background: '#51515d'
     intro: 周易
   - key: ti-dao
     group: 2
@@ -117,7 +117,7 @@ books:
     seconds: 0
     size: 0
     sha256sum: sha256sum
-    background: ''
+    background: '#51515d'
     intro: 道德经
   - key: xiao-yao-you
     group: 2
@@ -127,7 +127,7 @@ books:
     seconds: 0
     size: 0
     sha256sum: sha256sum
-    background: ''
+    background: '#51515d'
     intro: 庄子
   - key: xue-er
     group: 2
@@ -137,7 +137,7 @@ books:
     seconds: 0
     size: 0
     sha256sum: sha256sum
-    background: ''
+    background: '#51515d'
     intro: 论语
   - key: guan-ju
     group: 2
@@ -147,7 +147,7 @@ books:
     seconds: 0
     size: 0
     sha256sum: sha256sum
-    background: ''
+    background: '#51515d'
     intro: 诗经
   - key: ji-pian
     group: 2
@@ -156,7 +156,7 @@ books:
     sentences: 0
     seconds: 0
     sha256sum: sha256sum
-    background: ''
+    background: '#51515d'
     intro: 孙子兵法
   - key: xin-jing
     group: 2
@@ -166,7 +166,7 @@ books:
     seconds: 0
     size: 0
     sha256sum: sha256sum
-    background: ''
+    background: '#51515d'
     intro: intro
   - key: teng-wang-ge-xu
     group: 2
@@ -176,7 +176,7 @@ books:
     seconds: 0
     size: 0
     sha256sum: sha256sum
-    background: ''
+    background: '#51515d'
     intro: intro
   - key: jie-zi-shu
     group: 2
@@ -186,5 +186,5 @@ books:
     seconds: 0
     size: 0
     sha256sum: sha256sum
-    background: ''
+    background: '#51515d'
     intro: intro

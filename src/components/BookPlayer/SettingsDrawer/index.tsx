@@ -77,6 +77,7 @@ export default function SettingsDrawer(props: SettingsDrawerProps) {
     const size = window.innerWidth / maxCount / 2.2
     const fontSize = size - size % 2
     setPlayerConfig({ fontSize })
+    Notify.show({ type: 'success', message: `字号 ${fontSize} 设置成功` })
   }, [sentenceList, setPlayerConfig])
 
   const handleApplyClick = useCallback(() => {

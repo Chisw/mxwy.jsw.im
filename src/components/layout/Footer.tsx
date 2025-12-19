@@ -4,10 +4,10 @@ export function Footer() {
   return (
     <>
       <Container
-        className="pb-16 border-t border-white bg-white/90"
+        className="pb-16"
         innerClassName="flex-between-center py-4"
       >
-        <div className="text-xs text-zinc-400">
+        <div className="text-xs text-[#7d886b]">
           <div>https://mxwy.jsw.im</div>
           <div className="mt-1">更新于 {__BUILD_TIME__}</div>
         </div>
