@@ -150,7 +150,7 @@ export default function Caption(props: CaptionProps) {
                       style={{
                         paddingTop: fontSize + fontSize * 0.4,
                         paddingBottom: fontSize * 0.1,
-                        width: isPunctuation ? fontSize / 2 : fontSize * 2.2,
+                        width: isPunctuation ?  fontSize : fontSize * 2.2,
                         fontSize,
                       }}
                     >

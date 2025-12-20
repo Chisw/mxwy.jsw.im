@@ -6,7 +6,7 @@ import { Dialog } from 'react-vant'
 const refList = [
   { label: 'LOGO', link: 'The Thiings Collection@https://www.thiings.co/things' },
   { label: '背景乐', link: '广陵散-管平湖@https://y.qq.com/n/ryqq_v2/songDetail/000ux1lc3IjIHq' },
-  { label: '文本参考', link: '古文岛@https://www.guwendao.net/;5000 言@https://5000yan.com/' },
+  { label: '文本参考', link: '古文岛@https://www.guwendao.net/;5000 言@https://5000yan.com/;中国哲学书电子化计划@https://ctext.org/zhs' },
   { label: '音频打点', link: 'lrc 歌词编辑器@https://lrc.moyutime.cn/' },
   { label: '文字转拼音', link: '中文轉拼音@https://www.ifreesite.com/pinyin/' },
   { label: '字幕拼音字体', link: '印氪先生汉语拼音@https://amazing.zhangzichuan.cn/resources/pinyin-fonts' },

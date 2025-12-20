@@ -1,0 +1,253 @@
+key: ji-pian
+sections:
+  - '段一@3,8'
+  - '段二@9,50'
+  - '段三@51,73'
+  - '段四@74,83'
+sentences:
+  - time: 00:00.98
+    text: 孙子兵法
+    pinyin: sūn zǐ bīng fǎ
+  - time: 00:04.04
+    text: 计篇
+    pinyin: jì piān
+  - time: 00:06.43
+    text: 孙子曰：
+    pinyin: sūn zǐ yuē
+  - time: 00:08.19
+    text: 兵者，
+    pinyin: bīng zhě
+  - time: 00:09.78
+    text: 国之大事，
+    pinyin: guó zhī dà shì
+  - time: 00:11.70
+    text: 死生之地，
+    pinyin: sǐ shēng zhī dì
+  - time: 00:13.60
+    text: 存亡之道，
+    pinyin: cún wáng zhī dào
+  - time: 00:15.38
+    text: 不可不察也。
+    pinyin: bù kě bù chá yě
+  - time: 00:18.18
+    text: 故经之以五事，
+    pinyin: gù jīng zhī yǐ wǔ shì
+  - time: 00:21.14
+    text: 校之以计，
+    pinyin: jiào zhī yǐ jì
+  - time: 00:23.08
+    text: 而索其情：
+    pinyin: ér suǒ qí qíng
+  - time: 00:25.71
+    text: 一曰道，
+    pinyin: yī yuē dào
+  - time: 00:27.63
+    text: 二曰天，
+    pinyin: èr yuē tiān
+  - time: 00:29.44
+    text: 三曰地，
+    pinyin: sān yuē dì
+  - time: 00:31.17
+    text: 四曰将，
+    pinyin: sì yuē jiàng
+  - time: 00:32.68
+    text: 五曰法。
+    pinyin: wǔ yuē fǎ
+  - time: 00:34.27
+    text: 道者，
+    pinyin: dào zhě
+  - time: 00:36.46
+    text: 令民与上同意也，
+    pinyin: lìng mín yǔ shàng tóng yì yě
+  - time: 00:39.73
+    text: 故可以与之死，
+    pinyin: gù kě yǐ yǔ zhī sǐ
+  - time: 00:42.83
+    text: 可以与之生，
+    pinyin: kě yǐ yǔ zhī shēng
+  - time: 00:45.10
+    text: 而不畏危。
+    pinyin: ér bú wèi wēi
+  - time: 00:47.22
+    text: 天者，
+    pinyin: tiān zhě
+  - time: 00:48.88
+    text: 阴阳、寒暑、时制也。
+    pinyin: yīn yáng hán shǔ shí zhì yě
+  - time: 00:52.81
+    text: 地者，
+    pinyin: dì zhě
+  - time: 00:54.48
+    text: 远近、险易、广狭、死生也。
+    pinyin: yuǎn jìn xiǎn yì guǎng xiá sǐ shēng yě
+  - time: 00:59.85
+    text: 将者，
+    pinyin: jiàng zhě
+  - time: 01:01.57
+    text: 智、信、仁、勇、严也。
+    pinyin: zhì xìn rén yǒng yán yě
+  - time: 01:06.27
+    text: 法者，
+    pinyin: fǎ zhě
+  - time: 01:07.98
+    text: 曲制、官道、主用也。
+    pinyin: qū zhì guān dào zhǔ yòng yě
+  - time: 01:11.71
+    text: 凡此五者，
+    pinyin: fán cǐ wǔ zhě
+  - time: 01:13.99
+    text: 将莫不闻，
+    pinyin: jiàng mò bù wén
+  - time: 01:15.95
+    text: 知之者胜，
+    pinyin: zhī zhī zhě shèng
+  - time: 01:17.68
+    text: 不知者不胜。
+    pinyin: bù zhī zhě bú shèng
+  - time: 01:20.38
+    text: 故校之以计，
+    pinyin: gù jiào zhī yǐ jì
+  - time: 01:22.70
+    text: 而索其情，
+    pinyin: ér suǒ qí qíng
+  - time: 01:24.72
+    text: 曰：
+    pinyin: yuē
+  - time: 01:26.18
+    text: 主孰有道？
+    pinyin: zhǔ shú yǒu dào
+  - time: 01:28.04
+    text: 将孰有能？
+    pinyin: jiāng shú yǒu néng
+  - time: 01:30.12
+    text: 天地孰得？
+    pinyin: tiān dì shú dé
+  - time: 01:32.22
+    text: 法令孰行？
+    pinyin: fǎ lìng shú xíng
+  - time: 01:34.40
+    text: 兵众孰强？
+    pinyin: bīng zhòng shú qiáng
+  - time: 01:36.64
+    text: 士卒孰练？
+    pinyin: shì zú shú liàn
+  - time: 01:38.46
+    text: 赏罚孰明？
+    pinyin: shǎng fá shú míng
+  - time: 01:40.62
+    text: 吾以此知胜负矣。
+    pinyin: wú yǐ cǐ zhī shèng fù yǐ
+  - time: 01:44.43
+    text: 将听吾计，
+    pinyin: jiàng tīng wú jì
+  - time: 01:46.79
+    text: 用之必胜，
+    pinyin: yòng zhī bì shèng
+  - time: 01:48.80
+    text: 留之；
+    pinyin: liú zhī
+  - time: 01:49.84
+    text: 将不听吾计，
+    pinyin: jiàng bù tīng wú jì
+  - time: 01:52.26
+    text: 用之必败，
+    pinyin: yòng zhī bì bài
+  - time: 01:54.27
+    text: 去之。
+    pinyin: qù zhī
+  - time: 01:55.92
+    text: 计利以听，
+    pinyin: jì lì yǐ tīng
+  - time: 01:57.75
+    text: 乃为之势，
+    pinyin: nǎi wéi zhī shì
+  - time: 01:59.68
+    text: 以佐其外。
+    pinyin: yǐ zuǒ qí wài
+  - time: 02:01.65
+    text: 势者，
+    pinyin: shì zhě
+  - time: 02:02.77
+    text: 因利而制权也。
+    pinyin: yīn lì ér zhì quán yě
+  - time: 02:05.97
+    text: 兵者，
+    pinyin: bīng zhě
+  - time: 02:07.63
+    text: 诡道也。
+    pinyin: guǐ dào yě
+  - time: 02:09.37
+    text: 故能而示之不能，
+    pinyin: gù néng ér shì zhī bù néng
+  - time: 02:12.45
+    text: 用而示之不用，
+    pinyin: yòng ér shì zhī bú yòng
+  - time: 02:15.12
+    text: 近而示之远，
+    pinyin: jìn ér shì zhī yuǎn
+  - time: 02:17.55
+    text: 远而示之近；
+    pinyin: yuǎn ér shì zhī jìn
+  - time: 02:19.63
+    text: 利而诱之，
+    pinyin: lì ér yòu zhī
+  - time: 02:21.55
+    text: 乱而取之，
+    pinyin: luàn ér qǔ zhī
+  - time: 02:23.61
+    text: 实而备之，
+    pinyin: shí ér bèi zhī
+  - time: 02:25.33
+    text: 强而避之，
+    pinyin: qiáng ér bì zhī
+  - time: 02:27.35
+    text: 怒而挠之，
+    pinyin: nù ér náo zhī
+  - time: 02:29.19
+    text: 卑而骄之，
+    pinyin: bēi ér jiāo zhī
+  - time: 02:31.18
+    text: 佚而劳之，
+    pinyin: yì ér láo zhī
+  - time: 02:33.10
+    text: 亲而离之。
+    pinyin: qīn ér lí zhī
+  - time: 02:35.00
+    text: 攻其无备，
+    pinyin: gōng qí wú bèi
+  - time: 02:36.81
+    text: 出其不意。
+    pinyin: chū qí bù yì
+  - time: 02:38.46
+    text: 此兵家之胜，
+    pinyin: cǐ bīng jiā zhī shèng
+  - time: 02:40.76
+    text: 不可先传也。
+    pinyin: bù kě xiān chuán yě
+  - time: 02:43.68
+    text: 夫未战而庙算胜者，
+    pinyin: fú wèi zhàn ér miào suàn shèng zhě
+  - time: 02:47.38
+    text: 得算多也；
+    pinyin: dé suàn duō yě
+  - time: 02:49.53
+    text: 未战而庙算不胜者，
+    pinyin: wèi zhàn ér miào suàn bù shèng zhě
+  - time: 02:53.24
+    text: 得算少也。
+    pinyin: dé suàn shǎo yě
+  - time: 02:55.29
+    text: 多算胜，
+    pinyin: duō suàn shèng
+  - time: 02:57.00
+    text: 少算不胜，
+    pinyin: shǎo suàn bú shèng
+  - time: 02:59.01
+    text: 而况于无算乎？
+    pinyin: ér kuàng yú wú suàn hū
+  - time: 03:01.76
+    text: 吾以此观之，
+    pinyin: wú yǐ cǐ guān zhī
+  - time: 03:04.65
+    text: 胜负见矣。
+    pinyin: shèng fù xiàn yǐ

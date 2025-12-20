@@ -24,7 +24,7 @@ export function BookList() {
   }, [response])
 
   const handleBookClick = useCallback((entry: IBookEntry) => {
-    if (!entry.seconds) return
+    if (!entry.sentences) return
     setActiveBookEntry({ ...entry, autoPlay: true })
     setPlayerConfig({ bookKey: entry.key })
   }, [setActiveBookEntry, setPlayerConfig])
@@ -60,14 +60,14 @@ export function BookList() {
               </div>
               <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 md:gap-5">
                 {bookList.map((entry) => {
-                  const { key, title, author, background, seconds } = entry
+                  const { key, title, author, background, seconds, sentences } = entry
                   const titleChars = title.replace(/(（上）|（下）)/, '').split('')
                   return (
                     <div
                       key={key}
                       className={line(`
                         p-2 md:p-4 rounded-sm
-                        ${seconds ? 'cursor-pointer hover:bg-black/5' : 'cursor-not-allowed opacity-30'}
+                        ${sentences ? 'cursor-pointer hover:bg-black/5' : 'cursor-not-allowed opacity-30'}
                       `)}
                       onClick={() => handleBookClick(entry)}
                     >
@@ -108,7 +108,7 @@ export function BookList() {
                           {author}
                         </div>
                         <div className="text-center text-zinc-400">
-                          {seconds ? getFormatTime(seconds) : '制作中'}
+                          {sentences ? getFormatTime(seconds) : '制作中'}
                         </div>
                       </div>
 

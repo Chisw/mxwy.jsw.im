@@ -44,9 +44,9 @@ books:
     title: 笠翁对韵（上）
     author: （明）李渔
     sentences: 0
-    seconds: 0
-    size: 0
-    sha256sum: sha256sum
+    seconds: 1889.85
+    size: 11519387
+    sha256sum: f9abbee25085dcebabb7e7eab4bec5160169827e2a475bbf58886b0edd452789
     background: '#973c00'
     intro: intro
   - key: li-weng-dui-yun-xia
@@ -54,9 +54,9 @@ books:
     title: 笠翁对韵（下）
     author: （明）李渔
     sentences: 0
-    seconds: 0
-    size: 0
-    sha256sum: sha256sum
+    seconds: 1874.84
+    size: 12840871
+    sha256sum: b7b97a6c180ac0585c574716081e1202fc073495a46e09361b05070859a083a6
     background: '#9f0712'
     intro: intro
   - key: sheng-lv-qi-meng-shang
@@ -98,93 +98,94 @@ books:
     size: 1370742
     sha256sum: 51c375a5a350341662062c1e337e07047a2e4dfcdeb76ec47119923f1ef08288
     background: '#51515d'
-    intro: intro
+    intro: 选自《送冬阳马生序》。
   - key: qian-gua
     group: 2
     title: 乾卦
     author: 古圣先贤
     sentences: 0
-    seconds: 0
-    size: 0
-    sha256sum: sha256sum
+    seconds: 557.5
+    size: 3395075
+    sha256sum: c510683cf332f3d5349d6e13eda8c0c0703be006d2f528276c0222b188020b1d
     background: '#51515d'
-    intro: 周易
+    intro: 选自《周易》。
   - key: ti-dao
     group: 2
     title: 体道
     author: （春秋）老子
-    sentences: 0
-    seconds: 0
-    size: 0
-    sha256sum: sha256sum
+    sentences: 11
+    seconds: 39
+    size: 4570011
+    sha256sum: ab96d73d6579d25ca535f3650a30d58c92c0019732f581723b706cdf7a0e0ac4
     background: '#51515d'
-    intro: 道德经
+    intro: 选自《道德经·河上公章句》。
   - key: xiao-yao-you
     group: 2
     title: 逍遥游
     author: （战国）庄子
     sentences: 0
-    seconds: 0
-    size: 0
-    sha256sum: sha256sum
+    seconds: 750.55
+    size: 238500
+    sha256sum: 0e632ddb98b38f93aec48769a6e0af0a9bcab9315802c0cb57c93327a20458b2
     background: '#51515d'
-    intro: 庄子
+    intro: 选自《庄子》。
   - key: xue-er
     group: 2
     title: 学而
     author: （春秋）孔子
-    sentences: 0
-    seconds: 0
-    size: 0
-    sha256sum: sha256sum
+    sentences: 103
+    seconds: 313.23
+    size: 1908359
+    sha256sum: 4baa5d46c53ff6ac118238c0c0adb0c58153e850f7204c1994e0c910d81a2a86
     background: '#51515d'
-    intro: 论语
+    intro: 选自《论语》。
   - key: guan-ju
     group: 2
     title: 关雎
     author: （西周）无名氏
-    sentences: 0
-    seconds: 0
-    size: 0
-    sha256sum: sha256sum
+    sentences: 11
+    seconds: 58.49
+    size: 474654
+    sha256sum: ad112327ff9791124fb08a236ee62d147a549d4b4371a564b9082f9709e11eac
     background: '#51515d'
-    intro: 诗经
+    intro: 选自《诗经》。
   - key: ji-pian
     group: 2
     title: 计篇
     author: （春秋）孙子
-    sentences: 0
-    seconds: 0
-    sha256sum: sha256sum
+    sentences: 82
+    seconds: 187.32
+    size: 1142124
+    sha256sum: a91627ea3614513865ca20db324001b0bd56e5238a2b59974e4d00c5ed2e540f
     background: '#51515d'
-    intro: 孙子兵法
+    intro: 选自《孙子兵法》。
   - key: xin-jing
     group: 2
     title: 心经
     author: （唐）玄奘
-    sentences: 0
-    seconds: 0
-    size: 0
-    sha256sum: sha256sum
+    sentences: 53
+    seconds: 156.32
+    size: 954656
+    sha256sum: e6de0de242ab77fbff3ed4029b8e8038ebf8a38f3debed4f26f576adbd049930
     background: '#51515d'
-    intro: intro
+    intro: 即《心经》。
   - key: teng-wang-ge-xu
     group: 2
     title: 滕王阁序
     author: （唐）王勃
     sentences: 0
-    seconds: 0
-    size: 0
-    sha256sum: sha256sum
+    seconds: 448.03
+    size: 2727943
+    sha256sum: 5909cb17de883b29a2ae61939d05724b53a923c4e785de6f14243f8edbde52bd
     background: '#51515d'
-    intro: intro
+    intro: 即《滕王阁序》。
   - key: jie-zi-shu
     group: 2
     title: 诫子书
     author: （三国）诸葛亮
-    sentences: 0
-    seconds: 0
-    size: 0
-    sha256sum: sha256sum
+    sentences: 18
+    seconds: 47.57
+    size: 291363
+    sha256sum: 632e8a32aabfe9a49f2dc2052223cee74914a00fbc8988f36615e91e790d8142
     background: '#51515d'
-    intro: intro
+    intro: 即《诫子书》。
