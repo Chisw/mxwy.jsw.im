@@ -8,7 +8,7 @@ import { sortedIndex } from 'lodash-es'
 import { SvgIcon } from '../SvgIcon'
 import { Container } from '../layout/Container'
 import SettingsDrawer from './SettingsDrawer'
-import type { ISection } from '../../type'
+import { ComputedSection, type ISection } from '../../type'
 import { VolumeIcon, VolumeSlider } from './VolumeControl'
 import Caption from './Caption'
 
@@ -21,6 +21,7 @@ export function BookPlayer () {
   const [captionVisible, setCaptionVisible] = useState(false)
   const [volumeSliderVisible, setVolumeSliderVisible] = useState(false)
   const [settingsVisible, setSettingsVisible] = useState(false)
+  const [sectionChangeCounter, setSectionChangeCounter] = useState(0)
 
   const { request: queryBookDetail, response, setResponse } = useRequest(BookApi.queryBookDetail)
 
@@ -46,13 +47,7 @@ export function BookPlayer () {
   }, [audio.currentTime, timeList])
 
   const computedSection = useMemo(() => {
-    const computedSection = {
-      enabled: false,
-      startTime: 0,
-      endTime: 0,
-      leftPercent: 0,
-      rightPercent: 0,
-    }
+    const computedSection = new ComputedSection()
     if (memoSection && activeBookEntry && sentenceList.length && audio.duration) {
       const { from, to } = memoSection
       const { sentences } = activeBookEntry
@@ -60,7 +55,10 @@ export function BookPlayer () {
       if (from > 1 || to < sentences) {
         const start = sentenceList[from - 1].startTime
         const end = sentenceList[to - 1].endTime
+
         computedSection.enabled = true
+        computedSection.from = from
+        computedSection.to = to
         computedSection.startTime = start
         computedSection.endTime = end
         computedSection.leftPercent = start / audio.duration * 100
@@ -169,9 +167,11 @@ export function BookPlayer () {
       <Caption
         audio={audio}
         visible={captionVisible}
+        computedSection={computedSection}
         sectionList={sectionList}
         sentenceList={sentenceList}
         activeSentenceIndex={activeSentenceIndex}
+        onSectionChange={setSectionChangeCounter}
       />
 
       {/* controls */}
@@ -286,7 +286,7 @@ export function BookPlayer () {
 
       {!!activeBookEntry && (
         <SettingsDrawer
-          key={activeBookEntry.key}
+          key={`${activeBookEntry.key}-${sectionChangeCounter}`}
           visible={settingsVisible}
           bookEntry={activeBookEntry}
           sectionList={sectionList}

@@ -21,11 +21,17 @@ export function usePlayerConfig() {
     PlayerConfigStorage.set(config)
   }, [playerConfig, setPlayerConfig])
 
-  const setSectionRecord = useCallback((bookKey: string, section: ISection) => {
+  const setSectionRecord = useCallback((bookKey: string, section: ISection | undefined) => {
     const sectionRecord: Record<string, ISection> = {
       ...playerConfig.sectionRecord,
-      [bookKey]: section,
     }
+
+    if (section) {
+      sectionRecord[bookKey] = section
+    } else {
+      delete sectionRecord[bookKey]
+    }
+
     handleConfigChange({ sectionRecord })
   }, [playerConfig, handleConfigChange])
 

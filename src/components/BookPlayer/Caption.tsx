@@ -1,7 +1,7 @@
-import { Fragment, useEffect, useMemo, useRef, useState } from 'react'
+import { Fragment, useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { copy, getChineseChars, getInjectedPinyinList, line, scrollToActiveSentence } from '../../utils'
 import { usePlayerConfig } from '../../hooks'
-import type { ISection, ISentence } from '../../type'
+import type { ComputedSection, ISection, ISentence } from '../../type'
 import { useRecoilState } from 'recoil'
 import { activeBookEntryState } from '../../states'
 import { Notify } from 'react-vant'
@@ -21,9 +21,11 @@ interface CaptionProps {
     changeCurrentTime: (t: number) => void
   }
   visible: boolean
+  computedSection: ComputedSection
   sectionList: ISection[]
   sentenceList: ISentence[]
   activeSentenceIndex: number
+  onSectionChange: (v: number) => void
 }
 
 export default function Caption(props: CaptionProps) {
@@ -31,19 +33,27 @@ export default function Caption(props: CaptionProps) {
   const {
     audio,
     visible,
+    computedSection,
     sectionList,
     sentenceList,
     activeSentenceIndex,
+    onSectionChange,
   } = props
 
-  const { playerConfig, setPlayerConfig } = usePlayerConfig()
+  const { playerConfig, setPlayerConfig, setSectionRecord } = usePlayerConfig()
 
   const [activeBookEntry] = useRecoilState(activeBookEntryState)
 
   const [activeTab, setActiveTab] = useState('annotation')
 
-  const activeSentence = useMemo(() => {
-    return sentenceList[activeSentenceIndex] as ISentence | undefined
+  const {
+    activeSentence,
+    activeSentenceOrder,
+  } = useMemo(() => {
+    return {
+      activeSentence: sentenceList[activeSentenceIndex] as ISentence | undefined,
+      activeSentenceOrder: activeSentenceIndex + 1,
+    }
   }, [sentenceList, activeSentenceIndex])
 
   const {
@@ -68,10 +78,45 @@ export default function Caption(props: CaptionProps) {
 
   const scrollRef = useRef<HTMLDivElement | null>(null)
 
+  const handleSectionChange = useCallback((pos?: 'from' | 'to') => {
+    if (!activeBookEntry) return
+
+    const section = {
+      ...computedSection,
+      name: '自定义',
+    }
+
+    if (pos === 'from') {
+      section.from = activeSentenceOrder
+
+      if (!section.to || section.to <= section.from) {
+        section.to = sentenceList.length
+      }
+    } else if (pos === 'to') {
+      section.to = activeSentenceOrder
+
+      if (!section.from || section.from >= section.to) {
+        section.from = 1
+      }
+    }
+
+    setSectionRecord(activeBookEntry.key, pos ? section : undefined)
+    onSectionChange(Date.now())
+    Notify.show({ type: 'success', message: '应用成功' })
+  }, [activeBookEntry, activeSentenceOrder, computedSection, onSectionChange, sentenceList.length, setSectionRecord])
+
   useEffect(() => {
     if (!scrollRef.current || !playerConfig.autoScroll) return
     scrollToActiveSentence()
   }, [activeSentenceIndex, playerConfig.autoScroll])
+
+  const sectionButtonList = useMemo(() => {
+    return [
+      { name: '设为起始', condition: activeSentenceOrder !== computedSection.from, onClick: () => handleSectionChange('from') },
+      { name: '设为终止', condition: activeSentenceOrder !== computedSection.to, onClick: () => handleSectionChange('to') },
+      { name: '重置起止', condition: computedSection.enabled, onClick: handleSectionChange },
+    ]
+  }, [activeSentenceOrder, computedSection, handleSectionChange])
 
   return (
     <div
@@ -107,7 +152,11 @@ export default function Caption(props: CaptionProps) {
           const textList = text.split('')
           const pinyinList = getInjectedPinyinList(pinyin, text)
           const isActive = sentenceIndex === activeSentenceIndex
-          const section = sectionList.find(s => s.from === sentenceIndex + 1)
+          const sentenceOrder = sentenceIndex + 1
+          const section = sectionList.find(s => s.from === sentenceOrder)
+          const isOutOfSection = computedSection.enabled
+            ? sentenceOrder < computedSection.from || sentenceOrder > computedSection.to
+            : false
 
           return (
             <Fragment key={time}>
@@ -124,12 +173,13 @@ export default function Caption(props: CaptionProps) {
 
               {/* 行 */}
               <div
-                data-sentence-tag={`${sentenceIndex + 1}@${time.slice(0, -3)}`}
+                data-sentence-tag={`${sentenceOrder}@${time.slice(0, -3)}`}
                 className={line(`
                   mxwy-sentence
                   relative z-0 text-center cursor-pointer
                   hover:outline-2 hover:outline-green-500 -outline-offset-2
-                  ${isActive ? 'active bg-green-200' : ''}  
+                  ${isActive ? 'active bg-green-200' : ''}
+                  ${isOutOfSection ? 'text-green-900/30' : ''}
                 `)}
                 onClick={() => audio.changeCurrentTime(startTime)}
               >
@@ -217,7 +267,7 @@ export default function Caption(props: CaptionProps) {
           >
             {activeTab === 'annotation' && (
               <div className="leading-5">
-                <div className="underline decoration-1 underline-offset-4 text-xs [&_a]:mr-3">
+                <div className="underline decoration-1 underline-offset-4 text-xs [&_a]:mr-2">
                   <a target="_blank" href={`https://www.baidu.com/s?wd=${activeSentence.text}`}>
                     百度一下
                   </a>
@@ -239,6 +289,18 @@ export default function Caption(props: CaptionProps) {
                   >
                     复制
                   </a>
+                  {sectionButtonList.map(({ name, condition, onClick }, i) => (
+                    <a
+                      key={i}
+                      className={condition ? 'cursor-pointer' : 'opacity-30 cursor-not-allowed'}
+                      onClick={() => {
+                        if (!condition) return
+                        onClick()
+                      }}
+                    >
+                      {name}
+                    </a>
+                  ))}
                 </div>
                 <div className="py-4 text-xl font-kai">
                   {activeSentence.text.split('').map((s, i) => {

@@ -16,6 +16,16 @@ export interface ISection {
   to: number
 }
 
+export class ComputedSection {
+  enabled = false
+  from = 0
+  to = 0
+  startTime = 0
+  endTime = 0
+  leftPercent = 0
+  rightPercent = 0
+}
+
 export interface IBookEntry {
   key: string
   group: number
