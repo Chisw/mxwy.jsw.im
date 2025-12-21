@@ -36,7 +36,7 @@ export function Header() {
       >
         <div className="flex items-center">
           <img src="/assets/logo.png" className="w-10 h-10" />
-          <div className="ml-2">
+          <div className="ml-3">
             <div className="text-xl font-bold">蒙学文吟</div>
             <div className="text-xs text-zinc-400">合抱之木，生于毫末；九层之台，起于累土</div>
           </div>
@@ -68,7 +68,7 @@ export function Header() {
           <div className="mt-2 text-sm">
             <p className="mb-2">教自己小孩拼音识字用的，开源分享给同好的家长们 ❤️</p>
             <p className="mb-2">使用 Netlify 免费的自动部署服务，国内访问可能会卡顿，甚至音频无法加载，本地部署会好很多</p>
-            <p className="mb-2">现有 19 条音频（蒙学 7 部、选文 10 篇）已涵盖 2800+ 汉字，完全满足幼儿识字需求，因此不再增录，大佬们可自行 fork 处理</p>
+            <p className="mb-2">现有 19 条音频（蒙学 7 部、选文 10 篇）已涵盖 3300+ 汉字，完全满足幼儿识字需求，因此不再增录，大佬们可自行 fork 处理</p>
             <p className="mb-2">字幕拼音均为本人逐字听取校排，难免有错讹之处，欢迎指正</p>
 
             <div className="text-sm">

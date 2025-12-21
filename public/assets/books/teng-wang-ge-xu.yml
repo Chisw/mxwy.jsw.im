@@ -1,0 +1,308 @@
+key: teng-wang-ge-xu
+sections:
+  - '段一@3,19'
+  - '段二@20,30'
+  - '段三@31,40'
+  - '段四@41,57'
+  - '段五@58,71'
+  - '段六@72,83'
+  - '段七@84,91'
+  - '段八@92,99'
+sentences:
+  - time: 00:00.55
+    text: 滕王阁序
+    pinyin: téng wáng gé xù
+  - time: 00:03.18
+    text: 王勃
+    pinyin: wáng bó
+  - time: 00:05.17
+    text: 豫章故郡，洪都新府。
+    pinyin: yù zhāng gù jùn hóng dū xīn fǔ
+  - time: 00:10.73
+    text: 星分翼轸，地接衡庐。
+    pinyin: xīng fēn yì zhěn dì jiē héng lú
+  - time: 00:15.86
+    text: 襟三江而带五湖，
+    pinyin: jīn sān jiāng ér dài wǔ hú
+  - time: 00:19.92
+    text: 控蛮荆而引瓯越。
+    pinyin: kòng mán jīng ér yǐn ōu yuè
+  - time: 00:24.20
+    text: 物华天宝，龙光射牛斗之墟；
+    pinyin: wù huá tiān bǎo lóng guāng shè niú dǒu zhī xū
+  - time: 00:30.16
+    text: 人杰地灵，徐孺下陈蕃之榻。
+    pinyin: rén jié dì líng xú rú xià chén fān zhī tà
+  - time: 00:35.98
+    text: 雄州雾列，俊采星驰。
+    pinyin: xióng zhōu wù liè jùn cǎi xīng chí
+  - time: 00:41.11
+    text: 台隍枕夷夏之交，
+    pinyin: tái huáng zhěn yí xià zhī jiāo
+  - time: 00:44.67
+    text: 宾主尽东南之美。
+    pinyin: bīn zhǔ jìn dōng nán zhī měi
+  - time: 00:48.02
+    text: 都督阎公之雅望，棨戟遥临；
+    pinyin: dū dū yán gōng zhī yǎ wàng qǐ jǐ yáo lín
+  - time: 00:54.03
+    text: 宇文新州之懿范，襜帷暂驻。
+    pinyin: yǔ wén xīn zhōu zhī yì fàn chān wéi zàn zhù
+  - time: 01:00.02
+    text: 十旬休假，胜友如云；
+    pinyin: shí xún xiū jià shèng yǒu rú yún
+  - time: 01:05.38
+    text: 千里逢迎，高朋满座。
+    pinyin: qiān lǐ féng yíng gāo péng mǎn zuò
+  - time: 01:10.03
+    text: 腾蛟起凤，孟学士之词宗；
+    pinyin: téng jiāo qǐ fèng mèng xué shì zhī cí zōng
+  - time: 01:15.69
+    text: 紫电青霜，王将军之武库。
+    pinyin: zǐ diàn qīng shuāng wáng jiāng jūn zhī wǔ kù
+  - time: 01:21.49
+    text: 家君作宰，路出名区；
+    pinyin: jiā jūn zuò zǎi lù chū míng qū
+  - time: 01:26.14
+    text: 童子何知，躬逢胜饯。
+    pinyin: tóng zǐ hé zhī gōng féng shèng jiàn
+  - time: 01:31.10
+    text: 时维九月，序属三秋。
+    pinyin: shí wéi jiǔ yuè xù shǔ sān qiū
+  - time: 01:36.47
+    text: 潦水尽而寒潭清，
+    pinyin: láo shuǐ jìn ér hán tán qīng
+  - time: 01:40.31
+    text: 烟光凝而暮山紫。
+    pinyin: yān guāng níng ér mù shān zǐ
+  - time: 01:44.32
+    text: 俨骖騑于上路，
+    pinyin: yán cān fēi yú shàng lù
+  - time: 01:47.61
+    text: 访风景于崇阿。
+    pinyin: fǎng fēng jǐng yú chóng ē
+  - time: 01:50.96
+    text: 临帝子之长洲，
+    pinyin: lín dì zǐ zhī cháng zhōu
+  - time: 01:53.93
+    text: 得天人之旧馆。
+    pinyin: dé tiān rén zhī jiù guǎn
+  - time: 01:57.35
+    text: 层峦耸翠，上出重霄；
+    pinyin: céng luán sǒng cuì shàng chū chóng xiāo
+  - time: 02:02.07
+    text: 飞阁流丹，下临无地。
+    pinyin: fēi gé liú dān xià lín wú dì
+  - time: 02:06.55
+    text: 鹤汀凫渚，穷岛屿之萦回；
+    pinyin: hè tīng fú zhǔ qióng dǎo yǔ zhī yíng huí
+  - time: 02:11.83
+    text: 桂殿兰宫，即冈峦之体势。
+    pinyin: guì diàn lán gōng jí gāng luán zhī tǐ shì
+  - time: 02:17.23
+    text: 披绣闼，俯雕甍，
+    pinyin: pī xiù tà fǔ diāo méng
+  - time: 02:21.59
+    text: 山原旷其盈视，
+    pinyin: shān yuán kuàng qí yíng shì
+  - time: 02:24.68
+    text: 川泽纡其骇瞩。
+    pinyin: chuān zé yū qí hài zhǔ
+  - time: 02:27.91
+    text: 闾阎扑地，钟鸣鼎食之家；
+    pinyin: lǘ yán pū dì zhōng míng dǐng shí zhī jiā
+  - time: 02:33.60
+    text: 舸舰迷津，青雀黄龙之舳。
+    pinyin: gě jiàn mí jīn qīng què huáng lóng zhī zhú
+  - time: 02:39.23
+    text: 云销雨霁，彩彻区明。
+    pinyin: yún xiāo yǔ jì cǎi chè qū míng
+  - time: 02:44.65
+    text: 落霞与孤鹜齐飞，
+    pinyin: luò xiá yǔ gū wù qí fēi
+  - time: 02:48.48
+    text: 秋水共长天一色。
+    pinyin: qiū shuǐ gòng cháng tiān yí sè
+  - time: 02:52.88
+    text: 渔舟唱晚，响穷彭蠡之滨，
+    pinyin: yú zhōu chàng wǎn xiǎng qióng péng lǐ zhī bīn
+  - time: 02:58.03
+    text: 雁阵惊寒，声断衡阳之浦。
+    pinyin: yàn zhèn jīng hán shēng duàn héng yáng zhī pǔ
+  - time: 03:03.81
+    text: 遥襟甫畅，逸兴遄飞。
+    pinyin: yáo jīn fǔ chàng yì xìng chuán fēi
+  - time: 03:09.13
+    text: 爽籁发而清风生，
+    pinyin: shuǎng lài fā ér qīng fēng shēng
+  - time: 03:13.15
+    text: 纤歌凝而白云遏。
+    pinyin: xiān gē níng ér bái yún è
+  - time: 03:16.64
+    text: 睢园绿竹，气凌彭泽之樽；
+    pinyin: suī yuán lǜ zhú qì líng péng zé zhī zūn
+  - time: 03:21.78
+    text: 邺水朱华，光照临川之笔。
+    pinyin: yè shuǐ zhū huá guāng zhào lín chuān zhī bǐ
+  - time: 03:26.62
+    text: 四美具，二难并。
+    pinyin: sì měi jù èr nán bìng
+  - time: 03:30.32
+    text: 穷睇眄于中天，
+    pinyin: qióng dì miǎn yú zhōng tiān
+  - time: 03:33.56
+    text: 极娱游于暇日。
+    pinyin: jí yú yóu yú xiá rì
+  - time: 03:36.93
+    text: 天高地迥，觉宇宙之无穷；
+    pinyin: tiān gāo dì jiǒng jué yǔ zhòu zhī wú qióng
+  - time: 03:42.84
+    text: 兴尽悲来，识盈虚之有数。
+    pinyin: xìng jìn bēi lái shí yíng xū zhī yǒu shù
+  - time: 03:50.00
+    text: 望长安于日下，
+    pinyin: wàng cháng ān yú rì xià
+  - time: 03:53.74
+    text: 目吴会于云间。
+    pinyin: mù wú kuài yú yún jiān
+  - time: 03:56.96
+    text: 地势极而南溟深，
+    pinyin: dì shì jí ér nán míng shēn
+  - time: 04:00.78
+    text: 天柱高而北辰远。
+    pinyin: tiān zhù gāo ér běi chén yuǎn
+  - time: 04:04.73
+    text: 关山难越，谁悲失路之人；
+    pinyin: guān shān nán yuè shuí bēi shī lù zhī rén
+  - time: 04:10.50
+    text: 萍水相逢，尽是他乡之客。
+    pinyin: píng shuǐ xiāng féng jìn shì tā xiāng zhī kè
+  - time: 04:16.51
+    text: 怀帝阍而不见，奉宣室以何年？
+    pinyin: huái dì hūn ér bú jiàn fèng xuān shì yǐ hé nián
+  - time: 04:23.92
+    text: 嗟乎！
+    pinyin: jiē hū
+  - time: 04:25.63
+    text: 时运不齐，命途多舛。
+    pinyin: shí yùn bú jì mìng tú duō chuǎn
+  - time: 04:30.22
+    text: 冯唐易老，李广难封。
+    pinyin: féng táng yì lǎo lǐ guǎng nán fēng
+  - time: 04:34.76
+    text: 屈贾谊于长沙，非无圣主；
+    pinyin: qū jiǎ yì yú cháng shā fēi wú shèng zhǔ
+  - time: 04:39.68
+    text: 窜梁鸿于海曲，岂乏明时？
+    pinyin: cuàn liáng hóng yú hǎi qū qǐ fá míng shí
+  - time: 04:44.39
+    text: 所赖君子见机，达人知命。
+    pinyin: suǒ lài jūn zǐ jiàn jī dá rén zhī mìng
+  - time: 04:50.08
+    text: 老当益壮，宁移白首之心？
+    pinyin: lǎo dāng yì zhuàng nìng yí bái shǒu zhī xīn
+  - time: 04:54.65
+    text: 穷且益坚，不坠青云之志。
+    pinyin: qióng qiě yì jiān bú zhuì qīng yún zhī zhì
+  - time: 05:00.11
+    text: 酌贪泉而觉爽，
+    pinyin: zhuó tān quán ér jué shuǎng
+  - time: 05:04.01
+    text: 处涸辙以犹欢。
+    pinyin: chǔ hé zhé yǐ yóu huān
+  - time: 05:07.22
+    text: 北海虽赊，扶摇可接；
+    pinyin: běi hǎi suī shē fú yáo kě jiē
+  - time: 05:11.82
+    text: 东隅已逝，桑榆非晚。
+    pinyin: dōng yú yǐ shì sāng yú fēi wǎn
+  - time: 05:16.92
+    text: 孟尝高洁，空余报国之情；
+    pinyin: mèng cháng gāo jié kōng yú bào guó zhī qíng
+  - time: 05:21.56
+    text: 阮籍猖狂，岂效穷途之哭！
+    pinyin: ruǎn jí chāng kuáng qǐ xiào qióng tú zhī kū
+  - time: 05:26.75
+    text: 勃，
+    pinyin: bó
+  - time: 05:28.47
+    text: 三尺微命，一介书生。
+    pinyin: sān chǐ wēi mìng yí jiè shū shēng
+  - time: 05:32.39
+    text: 无路请缨，等终军之弱冠；
+    pinyin: wú lù qǐng yīng děng zhōng jūn zhī ruò guàn
+  - time: 05:37.03
+    text: 有怀投笔，慕宗悫之长风。
+    pinyin: yǒu huái tóu bǐ mù zōng què zhī cháng fēng
+  - time: 05:41.83
+    text: 舍簪笏于百龄，
+    pinyin: shě zān hù yú bǎi líng
+  - time: 05:45.05
+    text: 奉晨昏于万里。
+    pinyin: fèng chén hūn yú wàn lǐ
+  - time: 05:47.94
+    text: 非谢家之宝树，
+    pinyin: fēi xiè jiā zhī bǎo shù
+  - time: 05:50.51
+    text: 接孟氏之芳邻。
+    pinyin: jiē mèng shì zhī fāng lín
+  - time: 05:53.96
+    text: 他日趋庭，叨陪鲤对；
+    pinyin: tā rì qū tíng tāo péi lǐ duì
+  - time: 05:58.41
+    text: 今兹捧袂，喜托龙门。
+    pinyin: jīn zī pěng mèi xǐ tuō lóng mén
+  - time: 06:02.59
+    text: 杨意不逢，抚凌云而自惜；
+    pinyin: yáng yì bù féng fǔ líng yún ér zì xī
+  - time: 06:08.43
+    text: 钟期既遇，奏流水以何惭？
+    pinyin: zhōng qī jì yù zòu liú shuǐ yǐ hé cán
+  - time: 06:14.98
+    text: 呜呼！
+    pinyin: wū hū
+  - time: 06:16.78
+    text: 胜地不常，盛筵难再；
+    pinyin: shèng dì bù cháng shèng yán nán zài
+  - time: 06:21.27
+    text: 兰亭已矣，梓泽丘墟。
+    pinyin: lán tíng yí yǐ zǐ zé qiū xū
+  - time: 06:25.86
+    text: 临别赠言，幸承恩于伟饯；
+    pinyin: lín bié zèng yán xìng chéng ēn yú wěi jiàn
+  - time: 06:31.22
+    text: 登高作赋，是所望于群公。
+    pinyin: dēng gāo zuò fù shì suǒ wàng yú qún gōng
+  - time: 06:36.57
+    text: 敢竭鄙怀，恭疏短引；
+    pinyin: gǎn jié bǐ huái gōng shū duǎn yǐn
+  - time: 06:41.16
+    text: 一言均赋，四韵俱成。
+    pinyin: yì yán jūn fù sì yùn jù chéng
+  - time: 06:45.97
+    text: 请洒潘江，各倾陆海云尔。
+    pinyin: qǐng sǎ pān jiāng gè qīng lù hǎi yún ěr
+  - time: 06:53.00
+    text: 滕王高阁临江渚，
+    pinyin: téng wáng gāo gé lín jiāng zhǔ
+  - time: 06:58.03
+    text: 佩玉鸣鸾罢歌舞。
+    pinyin: pèi yù míng luán bà gē wǔ
+  - time: 07:02.39
+    text: 画栋朝飞南浦云，
+    pinyin: huà dòng zhāo fēi nán pǔ yún
+  - time: 07:06.36
+    text: 珠帘暮卷西山雨。
+    pinyin: zhū lián mù juǎn xī shān yǔ
+  - time: 07:10.39
+    text: 闲云潭影日悠悠，
+    pinyin: xián yún tán yǐng rì yōu yōu
+  - time: 07:14.83
+    text: 物换星移几度秋。
+    pinyin: wù huàn xīng yí jǐ dù qiū
+  - time: 07:18.92
+    text: 阁中帝子今何在？
+    pinyin: gé zhōng dì zǐ jīn hé zài
+  - time: 07:23.00
+    text: 槛外长江空自流。
+    pinyin: jiàn wài cháng jiāng kōng zì liú

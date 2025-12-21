@@ -61,7 +61,7 @@ export function BookList() {
               <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 md:gap-5">
                 {bookList.map((entry) => {
                   const { key, title, author, background, seconds, sentences } = entry
-                  const titleChars = title.replace(/(（上）|（下）)/, '').split('')
+                  const titleChars = title.replace(/（\S*）/, '').split('')
                   return (
                     <div
                       key={key}
@@ -100,7 +100,7 @@ export function BookList() {
                         </div>
                       </div>
 
-                      <div className="mt-2 text-xs md:text-sm text-center">
+                      <div className="mt-3 text-xs md:text-sm text-center">
                         <div className="font-bold">
                           {title}
                         </div>
