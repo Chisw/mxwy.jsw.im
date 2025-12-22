@@ -8,6 +8,7 @@ import {
   getFormatTime,
   line,
   printSentenceList,
+  scrollToActiveSentence,
 } from '../../../utils'
 import { usePlayerConfig } from '../../../hooks'
 import { SettingItem } from './SettingItem'
@@ -77,6 +78,7 @@ export default function SettingsDrawer(props: SettingsDrawerProps) {
     const fontSize = size - size % 2
     setPlayerConfig({ fontSize })
     Notify.show({ type: 'success', message: `字号 ${fontSize} 设置成功` })
+    setTimeout(scrollToActiveSentence, 1)
   }, [sentenceList, setPlayerConfig])
 
   const handleApplyClick = useCallback(() => {
@@ -184,7 +186,10 @@ export default function SettingsDrawer(props: SettingsDrawerProps) {
                     step={2}
                     buttonSize={28}
                     value={playerConfig.fontSize}
-                    onChange={(v) => setPlayerConfig({ fontSize: v! })}
+                    onChange={(v) => {
+                      setPlayerConfig({ fontSize: v! })
+                      setTimeout(scrollToActiveSentence, 1)
+                    }}
                   />
                 </div>
                 </SettingItem>
