@@ -267,7 +267,7 @@ export default function Caption(props: CaptionProps) {
           >
             {activeTab === 'annotation' && (
               <div className="leading-5">
-                <div className="underline decoration-1 underline-offset-4 text-xs [&_a]:mr-2">
+                <div className="underline decoration-1 underline-offset-4 text-xs [&_a]:mr-2 leading-6">
                   <a target="_blank" href={`https://www.baidu.com/s?wd=${activeSentence.text}`}>
                     百度一下
                   </a>

@@ -57,6 +57,8 @@ npm i -g font-spider
 yarn font
 ```
 
+ttf 压缩：[https://convertio.co/zh/ttf-woff/](https://convertio.co/zh/ttf-woff/)
+
 ### 五、自行增录
 
 > 以《道德经》为例，注意 yml 文件的空格对齐
