@@ -1,0 +1,21 @@
+<html>
+<body style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px;"></body>
+<script>
+  const copy = (str) => {
+    const input = document.createElement('textarea')
+    document.body.appendChild(input)
+    input.value = str
+    input.select()
+    document.execCommand('Copy')
+    document.body.removeChild(input)
+  }
+
+  'āáǎàōóǒòēéěèīíǐìūúǔùǖǘǚǜ'.split('').forEach(s => {
+    const el = document.createElement('button')
+    el.style = 'font-size: 5vw'
+    el.innerHTML = s
+    el.onclick = () => copy(s)
+    document.body.appendChild(el)
+  })
+</script>
+</html>
