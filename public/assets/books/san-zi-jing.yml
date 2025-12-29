@@ -32,7 +32,7 @@ sentences:
     pinyin: dòu yān shān yǒu yì fāng
   - time: 00:27.66
     text: 教五子，名俱扬。
-    pinyin: jiào wǔ zǐ míng jù yáng
+    pinyin: jiào wú zǐ míng jù yáng
   - time: 00:31.19
     text: 养不教，父之过。
     pinyin: yǎng bú jiào fù zhī guò
@@ -161,7 +161,7 @@ sentences:
     pinyin: xiōng zé yǒu dì zé gōng
   - time: 02:58.83
     text: 长幼序，友与朋。
-    pinyin: zhǎng yòu xù yǒu yǔ péng
+    pinyin: zhǎng yòu xù yóu yǔ péng
   - time: 03:02.36
     text: 君则敬，臣则忠。
     pinyin: jūn zé jìng chén zé zhōng
@@ -188,7 +188,7 @@ sentences:
     pinyin: qún dì zǐ jì shàn yán
   - time: 03:30.29
     text: 孟子者，七篇止。
-    pinyin: mèng zǐ zhě qī piān zhǐ
+    pinyin: mèng zí zhě qī piān zhǐ
   - time: 03:34.12
     text: 讲道德，说仁义。
     pinyin: jiǎng dào dé shuō rén yì
@@ -197,7 +197,7 @@ sentences:
     pinyin: zuò zhōng yōng zǐ sī bǐ
   - time: 03:41.28
     text: 中不偏，庸不易。
-    pinyin: zhōng bù piān yōng bù yì
+    pinyin: zhōng bù piān yōng bú yì
   - time: 03:44.50
     text: 作大学，乃曾子。
     pinyin: zuò dà xué nǎi zēng zǐ
@@ -224,7 +224,7 @@ sentences:
     pinyin: yǒu zhōu yì sān yì xiáng
   - time: 04:13.55
     text: 有典谟，有训诰。
-    pinyin: yǒu diǎn mó yǒu xùn gào
+    pinyin: yóu diǎn mó yǒu xùn gào
   - time: 04:16.85
     text: 有誓命，书之奥。
     pinyin: yǒu shì mìng shū zhī ào
@@ -245,7 +245,7 @@ sentences:
     pinyin: yuē guó fēng yuē yǎ sòng
   - time: 04:37.93
     text: 号四诗，当讽咏。
-    pinyin: hào sì shī dāng fěng yǒng
+    pinyin: hào sì shī dāng féng yǒng
   - time: 04:42.06
     text: 诗既亡，春秋作。
     pinyin: shī jì wáng chūn qiū zuò
@@ -257,7 +257,7 @@ sentences:
     pinyin: sān zhuàn zhě yǒu gōng yáng
   - time: 04:52.28
     text: 有左氏，有谷梁。
-    pinyin: yǒu zuǒ shì yǒu gǔ liáng
+    pinyin: yóu zuǒ shì yóu gǔ liáng
   - time: 04:56.04
     text: 经既明，方读子。
     pinyin: jīng jì míng fāng dú zǐ
@@ -266,7 +266,7 @@ sentences:
     pinyin: cuō qí yào jì qí shì
   - time: 05:03.17
     text: 五子者，有荀扬。
-    pinyin: wǔ zǐ zhě yǒu xún yáng
+    pinyin: wú zǐ zhě yǒu xún yáng
   - time: 05:06.77
     text: 文中子，及老庄。
     pinyin: wén zhōng zǐ jí lǎo zhuāng
@@ -290,7 +290,7 @@ sentences:
     pinyin: xiāng yī xùn chēng shèng shì
   - time: 05:31.89
     text: 夏有禹，商有汤。
-    pinyin: xià yǒu yǔ shāng yǒu tāng
+    pinyin: xià yóu yǔ shāng yǒu tāng
   - time: 05:35.71
     text: 周文武，称三王。
     pinyin: zhōu wén wǔ chēng sān wáng
@@ -299,19 +299,19 @@ sentences:
     pinyin: xià chuán zǐ jiā tiān xià
   - time: 05:42.86
     text: 四百载，迁夏社。
-    pinyin: sì bǎi zǎi qiān xià shè
+    pinyin: sì bái zǎi qiān xià shè
   - time: 05:46.64
     text: 汤伐夏，国号商。
     pinyin: tāng fá xià guó hào shāng
   - time: 05:50.16
     text: 六百载，至纣亡。
-    pinyin: liù bǎi zǎi zhì zhòu wáng
+    pinyin: liù bái zǎi zhì zhòu wáng
   - time: 05:54.06
     text: 周武王，始诛纣。
     pinyin: zhōu wǔ wáng shǐ zhū zhòu
   - time: 05:57.06
     text: 八百载，最长久。
-    pinyin: bā bǎi zǎi zuì cháng jiǔ
+    pinyin: bā bái zǎi zuì cháng jiǔ
   - time: 06:00.70
     text: 周辙东，王纲坠。
     pinyin: zhōu zhé dōng wáng gāng zhuì
@@ -365,7 +365,7 @@ sentences:
     pinyin: dài zhì suí yī tǔ yǔ
   - time: 07:01.99
     text: 不再传，失统绪。
-    pinyin: bù zài chuán shī tǒng xù
+    pinyin: bú zài chuán shī tǒng xù
   - time: 07:05.46
     text: 唐高祖，起义师。
     pinyin: táng gāo zǔ qǐ yì shī
@@ -374,10 +374,10 @@ sentences:
     pinyin: chú suí luàn chuàng guó jī
   - time: 07:12.22
     text: 二十传，三百载。
-    pinyin: èr shí chuán sān bǎi zǎi
+    pinyin: èr shí chuán sān bái zǎi
   - time: 07:16.07
     text: 梁灭之，国乃改。
-    pinyin: liáng miè zhī guó nǎi gǎi
+    pinyin: liáng miè zhī guó nái gǎi
   - time: 07:19.82
     text: 梁唐晋，及汉周。
     pinyin: liáng táng jìn jí hàn zhōu
@@ -434,7 +434,7 @@ sentences:
     pinyin: shí èr shì qīng zuò zhōng
   - time: 08:26.28
     text: 读史者，考实录。
-    pinyin: dú shǐ zhě kǎo shí lù
+    pinyin: dú shí zhě kǎo shí lù
   - time: 08:29.66
     text: 通古今，若亲目。
     pinyin: tōng gǔ jīn ruò qīn mù
@@ -467,13 +467,13 @@ sentences:
     pinyin: tóu xuán liáng zhuī cì gǔ
   - time: 09:05.14
     text: 彼不教，自勤苦。
-    pinyin: bǐ bù jiào zì qín kǔ
+    pinyin: bǐ bú jiào zì qín kǔ
   - time: 09:08.43
     text: 如囊萤，如映雪。
     pinyin: rú náng yíng rú yìng xuě
   - time: 09:12.09
     text: 家虽贫，学不辍。
-    pinyin: jiā suī pín xué bù chuò
+    pinyin: jiā suī pín xué bú chuò
   - time: 09:15.44
     text: 如负薪，如挂角。
     pinyin: rú fù xīn rú guà jiǎo
@@ -491,7 +491,7 @@ sentences:
     pinyin: bǐ jì lǎo yóu huǐ chí
   - time: 09:33.95
     text: 尔小生，宜早思。
-    pinyin: ěr xiǎo shēng yí zǎo sī
+    pinyin: ér xiǎo shēng yí zǎo sī
   - time: 09:37.79
     text: 若梁灏，八十二。
     pinyin: ruò liáng hào bā shí èr
@@ -512,7 +512,7 @@ sentences:
     pinyin: mì qī suì néng fù qí
   - time: 09:58.66
     text: 彼颖悟，人称奇。
-    pinyin: bǐ yǐng wù rén chēng qí
+    pinyin: bí yǐng wù rén chēng qí
   - time: 10:02.40
     text: 尔幼学，当效之。
     pinyin: ěr yòu xué dāng xiào zhī
@@ -524,7 +524,7 @@ sentences:
     pinyin: xiè dào yùn néng yǒng yín
   - time: 10:12.88
     text: 彼女子，且聪敏。
-    pinyin: bǐ nǚ zǐ qiě cōng mǐn
+    pinyin: bǐ nǘ zǐ qiě cōng mǐn
   - time: 10:16.58
     text: 尔男子，当自警。
     pinyin: ěr nán zǐ dāng zì jǐng
@@ -545,7 +545,7 @@ sentences:
     pinyin: yǒu wéi zhě yì ruò shì
   - time: 10:37.68
     text: 犬守夜，鸡司晨。
-    pinyin: quǎn shǒu yè jī sī chén
+    pinyin: quán shǒu yè jī sī chén
   - time: 10:41.32
     text: 苟不学，曷为人。
     pinyin: gǒu bù xué hé wéi rén
@@ -572,7 +572,7 @@ sentences:
     pinyin: rén wèi zǐ jīn mǎn yíng
   - time: 11:09.27
     text: 我教子，惟一经。
-    pinyin: wǒ jiào zǐ wéi yī jīng
+    pinyin: wǒ jiào zǐ wéi yì jīng
   - time: 11:12.70
     text: 勤有功，戏无益。
     pinyin: qín yǒu gōng xì wú yì
