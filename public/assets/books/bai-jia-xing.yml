@@ -11,7 +11,7 @@ sentences:
     pinyin: zhào qián sūn lǐ zhōu wú zhèng wáng
   - time: 00:08.21
     text: 冯陈褚卫 蒋沈韩杨
-    pinyin: féng chén chǔ wèi jiǎng shěn hán yáng
+    pinyin: féng chén chǔ wèi jiáng* shěn hán yáng
   - time: 00:13.42
     text: 朱秦尤许 何吕施张
     pinyin: zhū qín yóu xǔ hé lǚ shī zhāng
@@ -29,7 +29,7 @@ sentences:
     pinyin: lǔ wéi chāng mǎ miáo fèng huā fāng
   - time: 00:40.11
     text: 俞任袁柳 酆鲍史唐
-    pinyin: yú rèn yuán liǔ fēng bào shǐ táng
+    pinyin: yú rén yuán liǔ fēng bào shǐ táng
   - time: 00:45.48
     text: 费廉岑薛 雷贺倪汤
     pinyin: fèi lián cén xuē léi hè ní tāng
@@ -53,7 +53,7 @@ sentences:
     pinyin: jì fú chéng dài tán sòng máo páng
   - time: 01:20.89
     text: 熊纪舒屈 项祝董梁
-    pinyin: xióng jì shū qū xiàng zhù dǒng liáng
+    pinyin: xióng jǐ shū qū xiàng zhù dǒng liáng
   - time: 01:26.40
     text: 杜阮蓝闵 席季麻强
     pinyin: dù ruǎn lán mǐn xí jì má qiáng
@@ -68,7 +68,7 @@ sentences:
     pinyin: gāo xià cài tián fán hú líng huò
   - time: 01:47.58
     text: 虞万支柯 昝管卢莫
-    pinyin: yú wàn zhī kē zǎn guǎn lú mò
+    pinyin: yú wàn zhī kē zán* guǎn lú mò
   - time: 01:52.69
     text: 经房裘缪 干解应宗
     pinyin: jīng fáng qiú miào gān xiè yīng zōng
@@ -101,7 +101,7 @@ sentences:
     pinyin: nìng qiú luán bào gān tǒu lì róng
   - time: 02:44.43
     text: 祖武符刘 景詹束龙
-    pinyin: zǔ wǔ fú liú jǐng zhān shù lóng
+    pinyin: zú* wǔ fú liú jǐng zhān shù lóng
   - time: 02:49.25
     text: 叶幸司韶 郜黎蓟薄
     pinyin: yè xìng sī sháo gào lí jì bó
@@ -110,7 +110,7 @@ sentences:
     pinyin: yìn sù bái huái pú tái cóng è
   - time: 02:59.86
     text: 索咸籍赖 卓蔺屠蒙
-    pinyin: suǒ xián jí lài zhuó lìn tú méng
+    pinyin: suǒ xián jí lài zhuō lìn tú méng
   - time: 03:04.84
     text: 池乔阴鬱 胥能苍双
     pinyin: chí qiáo yīn yù xū nài cāng shuāng
@@ -137,7 +137,7 @@ sentences:
     pinyin: xiàng gǔ yì shèn gē liào yǔ zhōng
   - time: 03:45.09
     text: 暨居衡步 都耿满弘
-    pinyin: jì jū héng bù dū gěng mǎn hóng
+    pinyin: jì jū héng bù dū géng* mǎn hóng
   - time: 03:50.03
     text: 匡国文寇 广禄阙东
     pinyin: kuāng guó wén kòu guǎng lù quē dōng
@@ -194,7 +194,7 @@ sentences:
     pinyin: qī diāo yuè zhèng rǎng sì gōng liáng
   - time: 05:18.73
     text: 拓跋夹谷 宰父榖梁
-    pinyin: tuò bá jiā gǔ zǎi fǔ gǔ liáng
+    pinyin: tuò bá jiā gǔ zái* fú* gǔ liáng
   - time: 05:23.77
     text: 晋楚闫法 汝鄢涂钦
     pinyin: jìn chǔ yán fǎ rǔ yān tú qīn
