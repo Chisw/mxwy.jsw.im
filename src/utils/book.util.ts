@@ -25,6 +25,12 @@ export const getSentenceList = (list: ISentenceBase[], duration: number) => {
   })
 }
 
+export const getFinalPinyin = (pinyin: string, sandhi: boolean) => {
+  return pinyin.includes('_')
+    ? pinyin.split('_')[sandhi ? 1 : 0]
+    : pinyin
+}
+
 export const getInjectedPinyinList = (pinyin: string, text: string) => {
   const pinyinList = pinyin.split(' ')
 

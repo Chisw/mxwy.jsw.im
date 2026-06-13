@@ -1,8 +1,8 @@
 import type { ISection, ISentence } from './../type/common.type'
-import { getInjectedPinyinList } from './book.util'
+import { getFinalPinyin, getInjectedPinyinList } from './book.util'
 import { getFormatDateTime } from './time.util'
 
-export const printSentenceList = (sentenceList: ISentence[], sectionForm: ISection) => {
+export const printSentenceList = (sentenceList: ISentence[], sectionForm: ISection, sandhi: boolean) => {
   const chars = sentenceList
     .map((s, index) => {
       const isInRange = index + 1 >= sectionForm.from && index + 1 <= sectionForm.to
@@ -20,13 +20,15 @@ export const printSentenceList = (sentenceList: ISentence[], sectionForm: ISecti
           class="flex flex-wrap -mb-px text-center border-t border-l border-r border-green-300"
           style="page-break-inside: avoid; break-inside: avoid;"
         >
-          ${chars.map((c, i) => `
+          ${chars.map((char, i) => `
             <div class="w-1/10 border-r border-b border-green-300">
               <div class="mxwy-print-pinyin flex-center-center h-10 border-b border-green-300">
-                <span class="text-[1.8rem] font-pinyin text-[#bbb] -translate-y-[12%] align-middle">${pinyinList[i] || ''}</span>
+                <span class="text-[1.8rem] font-pinyin text-[#bbb] translate-y-[-12%] align-middle">
+                  ${getFinalPinyin(pinyinList[i] || '', sandhi)}
+                </span>
               </div>
               <div class="mxwy-print-character flex-center-center w-full aspect-square">
-                <span class="text-[3.6rem] font-kai text-[#bbb] leading-0">${c}</span>
+                <span class="text-[3.6rem] font-kai text-[#bbb] leading-0">${char}</span>
               </div>
             </div>  
           `).join('')}

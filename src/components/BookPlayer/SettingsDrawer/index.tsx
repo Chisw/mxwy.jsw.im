@@ -202,6 +202,14 @@ export default function SettingsDrawer(props: SettingsDrawerProps) {
                 />
               </SettingItem>
 
+              <SettingItem label="显示变音">
+                <Switch
+                  size={24}
+                  checked={playerConfig.sandhi}
+                  onChange={(sandhi) => setPlayerConfig({ sandhi })}
+                />
+              </SettingItem>
+
               <SettingItem label="句子面板">
                 <Switch
                   size={24}
@@ -326,7 +334,7 @@ export default function SettingsDrawer(props: SettingsDrawerProps) {
                 <span>总计 {selectedSentenceCount} 句，时长 {selectedDuration}</span>
                 <span
                   className="ml-3 text-green-600 cursor-pointer"
-                  onClick={() => printSentenceList(sentenceList, sectionForm)}
+                  onClick={() => printSentenceList(sentenceList, sectionForm, playerConfig.sandhi)}
                 >
                   打印字帖
                 </span>

@@ -39,6 +39,7 @@ export function useAudio() {
   const [currentTime, setCurrentTime] = useState(0)
   const [isPlaying, setIsPlaying] = useState(false)
   const [isEnded, setIsEnded] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
 
   const playInfo = useMemo(() => {
     return {
@@ -73,6 +74,11 @@ export function useAudio() {
     setUrl(u)
     setDuration(0)
     setCurrentTime(0)
+    setIsLoading(true)
+
+    audioEl.onloadeddata = () => {
+      setIsLoading(false)
+    }
 
     audioEl.pause()
     audioEl.src = u
@@ -146,6 +152,7 @@ export function useAudio() {
     currentTime,
     isPlaying,
     isEnded,
+    isLoading,
     playInfo,
     play,
     pause,

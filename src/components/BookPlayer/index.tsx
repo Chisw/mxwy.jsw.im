@@ -3,7 +3,7 @@ import { useRecoilState } from 'recoil'
 import { activeBookEntryState } from '../../states'
 import { useAudio, useHotKey, usePlayerConfig, useRequest } from '../../hooks'
 import { AudioApi, BookApi } from '../../api'
-import { getRound2, getSection, getSentenceList, line, scrollToActiveSentence } from '../../utils'
+import { getRound2, getSection, getSentenceList, GLOBAL_EVENT_BOOK_ENTRY_CHANGED, line, scrollToActiveSentence } from '../../utils'
 import { sortedIndex } from 'lodash-es'
 import { SvgIcon } from '../SvgIcon'
 import { Container } from '../layout/Container'
@@ -23,7 +23,7 @@ export function BookPlayer () {
   const [settingsVisible, setSettingsVisible] = useState(false)
   const [sectionChangeCounter, setSectionChangeCounter] = useState(0)
 
-  const { request: queryBookDetail, response, setResponse } = useRequest(BookApi.queryBookDetail)
+  const { request: queryBookDetail, response, setResponse, loading } = useRequest(BookApi.queryBookDetail)
 
   const {
     sectionList,
@@ -69,12 +69,13 @@ export function BookPlayer () {
   }, [memoSection, activeBookEntry, sentenceList, audio.duration])
 
   const handleToggleClick = useCallback(() => {
+    if (loading || audio.isLoading) return
     if (!audio.isPlaying) {
       setCaptionVisible(true)
       scrollToActiveSentence()
     }
     audio.toggle()
-  }, [audio])
+  }, [audio, loading])
 
   const handleVolumeChange = useCallback((offset: number) => {
     const min = 0
@@ -113,10 +114,17 @@ export function BookPlayer () {
   })
 
   useEffect(() => {
+    const listener = () => setResponse(null)
+    window.addEventListener(GLOBAL_EVENT_BOOK_ENTRY_CHANGED, listener)
+    return () => window.removeEventListener(GLOBAL_EVENT_BOOK_ENTRY_CHANGED, listener)
+  }, [setResponse])
+
+  useEffect(() => {
     if (!activeBookEntry) return
     setResponse(null)
     queryBookDetail(activeBookEntry.key)
     if (activeBookEntry.autoPlay) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setCaptionVisible(true)
     }
   }, [queryBookDetail, activeBookEntry, setResponse])
@@ -189,7 +197,11 @@ export function BookPlayer () {
           className="shrink-0 flex-center-center w-10 h-10 text-white bg-green-500 rounded-full cursor-pointer"
           onClick={handleToggleClick}
         >
-          {audio.isPlaying ? <SvgIcon.Pause size={24} /> : <SvgIcon.Play size={24} />}
+          {loading || audio.isLoading ? (
+            <SvgIcon.Loader size={20} className="animate-spin" />
+          ) : (
+            audio.isPlaying ? <SvgIcon.Pause size={24} /> : <SvgIcon.Play size={24} />
+          )}
         </div>
 
         {/* progress */}

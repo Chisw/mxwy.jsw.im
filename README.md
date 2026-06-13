@@ -28,13 +28,13 @@ https://mxwy.jsw.im
 
 ```sh
 # 安装依赖
-yarn
+pnpm
 
 # 启动
-yarn dev
+pnpm dev
 
 # 构建
-yarn build
+pnpm build
 ```
 
 按需生成字体：
@@ -51,7 +51,7 @@ npm i -g font-spider
 
 ```sh
 # 执行脚本
-yarn font
+pnpm font
 ```
 
 ttf 压缩：[https://convertio.co/zh/ttf-woff/](https://convertio.co/zh/ttf-woff/)

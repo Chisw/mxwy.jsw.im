@@ -6,6 +6,7 @@ export class PlayerConfig {
   bookKey = ''
   fontSize = 20
   autoScroll = true
+  sandhi = true
   sentencePanel = true
   backgroundMusic = true
   loop = true
@@ -19,6 +20,7 @@ export class PlayerConfig {
         bookKey,
         fontSize,
         autoScroll,
+        sandhi,
         sentencePanel,
         backgroundMusic,
         loop,
@@ -30,6 +32,7 @@ export class PlayerConfig {
       this.bookKey = bookKey || ''
       this.fontSize = fontSize || 20
       this.autoScroll = autoScroll || true
+      this.sandhi = sandhi || true
       this.sentencePanel = sentencePanel || true
       this.backgroundMusic = backgroundMusic || true
       this.loop = loop || false

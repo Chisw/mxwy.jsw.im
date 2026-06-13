@@ -8,9 +8,9 @@ export function Footer() {
         innerClassName="flex-between-center py-4"
       >
         <div className="text-xs text-[#7d886b]">
-          <div>https://mxwy.jsw.im</div>
-          <div className="mt-1">更新于 {__BUILD_TIME__}</div>
-        </div>
+          <div>最近更新于 {__BUILD_TIME__}</div>
+          <div className="mt-1">https://mxwy.jsw.im</div>
+          </div>
         <a
           target="_blank"
           href="https://www.netlify.com"

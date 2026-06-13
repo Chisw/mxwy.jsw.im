@@ -1,5 +1,5 @@
 import { Fragment, useCallback, useEffect, useMemo, useRef, useState } from 'react'
-import { copy, getChineseChars, getInjectedPinyinList, line, scrollToActiveSentence } from '../../utils'
+import { copy, getChineseChars, getFinalPinyin, getInjectedPinyinList, line, scrollToActiveSentence } from '../../utils'
 import { usePlayerConfig } from '../../hooks'
 import type { ComputedSection, ISection, ISentence } from '../../type'
 import { useRecoilState } from 'recoil'
@@ -185,13 +185,14 @@ export default function Caption(props: CaptionProps) {
               >
                 {/* 字 */}
                 {textList.map((char, charIndex) => {
-                  const pinyin = pinyinList[charIndex]
+                  const pinyin = pinyinList[charIndex]               
                   const isPunctuation = !pinyin
+                  const py = getFinalPinyin(pinyin, playerConfig.sandhi)
 
                   return (
                     <div
                       key={charIndex}
-                      data-pinyin={pinyin}
+                      data-pinyin={py}
                       className={line(`
                         mxwy-character
                         relative z-0 inline-block overflow-hidden font-kai
@@ -257,7 +258,7 @@ export default function Caption(props: CaptionProps) {
               className="flex-center-center absolute z-10 top-0 right-0 bottom-0 aspect-square cursor-pointer"
               onClick={() => setPlayerConfig({ sentencePanel: false })}
             >
-              <SvgIcon.Close />
+              <SvgIcon.ChevronBottom />
             </div>
           </div>
           {/* 注解 */}
@@ -356,6 +357,21 @@ export default function Caption(props: CaptionProps) {
           </div>
         </div>
       )}
+
+      <div
+        className={line(`
+          flex justify-center items-center
+          absolute z-10 bottom-0 left-1/2
+          pt-1 w-8 h-4 -translate-x-1/2 rounded-t-full overflow-hidden
+          text-white bg-green-600
+          cursor-pointer
+          transition-all duration-300
+          ${(audio.isPlaying || playerConfig.sentencePanel) ? 'translate-y-64' : ''}
+        `)}
+        onClick={() => setPlayerConfig({ sentencePanel: true })}
+      >
+        <SvgIcon.ChevronTop size={12} />
+      </div>
     </div>
   )
 }

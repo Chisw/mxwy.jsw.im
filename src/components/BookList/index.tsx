@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo } from 'react'
 import { BookApi } from '../../api'
 import { usePlayerConfig, useRequest } from '../../hooks'
-import { getFormatTime, line } from '../../utils'
+import { getFormatTime, GLOBAL_EVENT_BOOK_ENTRY_CHANGED, line } from '../../utils'
 import { Container } from '../layout/Container'
 import { useRecoilState } from 'recoil'
 import { activeBookEntryState } from '../../states'
@@ -25,6 +25,7 @@ export function BookList() {
 
   const handleBookClick = useCallback((entry: IBookEntry) => {
     if (!entry.sentences) return
+    window.dispatchEvent(new CustomEvent(GLOBAL_EVENT_BOOK_ENTRY_CHANGED))
     setActiveBookEntry({ ...entry, autoPlay: true })
     setPlayerConfig({ bookKey: entry.key })
   }, [setActiveBookEntry, setPlayerConfig])
@@ -74,7 +75,7 @@ export function BookList() {
                       <div
                         className={line(`
                           relative z-0 mx-auto w-24 h-32 md:w-32 md:h-44 rounded-xs
-                          shadow-lg bg-cover bg-center overflow-hidden  
+                          shadow-lg bg-cover bg-center overflow-hidden
                         `)}
                         style={{ backgroundImage: 'url("/assets/cover-bg.jpg")' }}
                       >
@@ -89,12 +90,12 @@ export function BookList() {
                             outline-2 -outline-offset-4 outline-black text-base md:text-2xl font-kai bg-white
                           `)}
                         >
-                          {titleChars.map((c, i) => (
+                          {titleChars.map((char, i) => (
                             <div
                               key={i}
                               className="leading-5 md:leading-7"
                             >
-                              {c}
+                              {char}
                             </div>
                           ))}
                         </div>
@@ -107,7 +108,7 @@ export function BookList() {
                         <div className="mt-1 text-zinc-400">
                           {author}
                         </div>
-                        <div className="text-center text-zinc-400">
+                        <div className="text-center text-[12px] text-zinc-400">
                           {sentences ? getFormatTime(seconds) : '制作中'}
                         </div>
                       </div>
