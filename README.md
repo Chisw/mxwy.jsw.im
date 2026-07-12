@@ -18,7 +18,7 @@ https://mxwy.jsw.im
 
 <img src="./public/assets/avatar.jpg" style="height: 64px;" />
 
-在此由衷感谢 [白云出岫](https://www.ximalaya.com/zhubo/4228109) 老师，他在朗读经典上所浇筑的心血，普惠大众，功德无量 🙏🏻
+在此由衷感谢 [白云出岫](https://www.ximalaya.com/zhubo/4228109) 老师，感谢老师为经典朗读倾注无数心血，普惠大众，功德无量 🙏🏻
 
 ### 三、扫码访问
 
@@ -28,7 +28,7 @@ https://mxwy.jsw.im
 
 ```sh
 # 安装依赖
-pnpm
+pnpm i
 
 # 启动
 pnpm dev

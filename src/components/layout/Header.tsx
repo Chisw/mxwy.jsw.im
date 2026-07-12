@@ -98,7 +98,7 @@ export function Header() {
             >
               白云出岫
             </a>
-            老师，他在朗读经典上所浇筑的心血，普惠大众，功德无量 🙏🏻
+            老师，感谢老师为经典朗读倾注无数心血，普惠大众，功德无量 🙏🏻
           </div>
 
           <div className="mt-8 font-bold text-green-700">扫码访问</div>
