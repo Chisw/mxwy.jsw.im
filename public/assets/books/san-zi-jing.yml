@@ -17,7 +17,7 @@ sentences:
     pinyin: xìng xiāng jìn xí xiāng yuǎn
   - time: 00:10.57
     text: 苟不教，性乃迁。
-    pinyin: gǒu bú jiào xìng nǎi qiān
+    pinyin: gǒu bù_bú jiào xìng nǎi qiān
   - time: 00:13.94
     text: 教之道，贵以专。
     pinyin: jiào zhī dào guì yǐ zhuān
@@ -35,7 +35,7 @@ sentences:
     pinyin: jiào wǔ_wú zǐ míng jù yáng
   - time: 00:31.19
     text: 养不教，父之过。
-    pinyin: yǎng bú jiào fù zhī guò
+    pinyin: yǎng bù_bú jiào fù zhī guò
   - time: 00:34.55
     text: 教不严，师之惰。
     pinyin: jiào bù yán shī zhī duò
@@ -107,7 +107,7 @@ sentences:
     pinyin: cǐ sì fāng yìng hū zhōng
   - time: 01:54.91
     text: 曰水火，木金土。
-    pinyin: yuē shuǐ huǒ mù jīn tǔ
+    pinyin: yuē shuǐ_shuí huǒ mù jīn tǔ
   - time: 01:58.70
     text: 此五行，本乎数。
     pinyin: cǐ_cí wǔ xíng běn hū shù
@@ -125,7 +125,7 @@ sentences:
     pinyin: cǐ liù gǔ rén suǒ shí
   - time: 02:16.37
     text: 马牛羊，鸡犬豕。
-    pinyin: mǎ niú yáng jī quǎn shǐ
+    pinyin: mǎ niú yáng jī quǎn_quán shǐ
   - time: 02:19.93
     text: 此六畜，人所饲。
     pinyin: cǐ liù chù rén suǒ sì
@@ -182,7 +182,7 @@ sentences:
     pinyin: xiǎo xué zhōng zhì sì shū
   - time: 03:23.57
     text: 论语者，二十篇。
-    pinyin: lún yǔ zhě èr shí piān
+    pinyin: lún yǔ_yú zhě èr shí piān
   - time: 03:26.66
     text: 群弟子，记善言。
     pinyin: qún dì zǐ jì shàn yán
@@ -266,7 +266,7 @@ sentences:
     pinyin: cuō qí yào jì qí shì
   - time: 05:03.17
     text: 五子者，有荀扬。
-    pinyin: wǔ_wú zǐ zhě yǒu xún yáng
+    pinyin: wǔ_wú zǐ_zí zhě yǒu xún yáng
   - time: 05:06.77
     text: 文中子，及老庄。
     pinyin: wén zhōng zǐ jí lǎo zhuāng
@@ -362,7 +362,7 @@ sentences:
     pinyin: yǔ wén zhōu yǔ gāo qí
   - time: 06:58.52
     text: 迨至隋，一土宇。
-    pinyin: dài zhì suí yī tǔ yǔ
+    pinyin: dài zhì suí yī_yì tǔ_tú yǔ
   - time: 07:01.99
     text: 不再传，失统绪。
     pinyin: bù_bú zài chuán shī tǒng xù
@@ -503,7 +503,7 @@ sentences:
     pinyin: bǐ jì chéng zhòng chēng yì
   - time: 09:47.88
     text: 尔小生，宜立志。
-    pinyin: ěr xiǎo shēng yí lì zhì
+    pinyin: ěr_ér xiǎo shēng yí lì zhì
   - time: 09:51.44
     text: 莹八岁，能咏诗。
     pinyin: yíng bā suì néng yǒng shī

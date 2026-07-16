@@ -20,7 +20,7 @@ sentences:
     pinyin: kǒng cáo yán huà jīn wèi táo jiāng
   - time: 00:24.42
     text: 戚谢邹喻 柏水窦章
-    pinyin: qī xiè zōu yù bǎi shuǐ dòu zhāng
+    pinyin: qī xiè zōu yù bǎi_bái shuǐ dòu zhāng
   - time: 00:29.54
     text: 云苏潘葛 奚范彭郎
     pinyin: yún sū pān gě xī fàn péng láng
@@ -119,7 +119,7 @@ sentences:
     pinyin: wén shēn dǎng zhái tán gòng láo páng
   - time: 03:15.05
     text: 姬申扶堵 冉宰郦雍
-    pinyin: jī shēn fú dǔ rǎn zǎi lì yōng
+    pinyin: jī shēn fú dǔ rǎn_rán zǎi lì yōng
   - time: 03:20.18
     text: 郤璩桑桂 濮牛寿通
     pinyin: xì qú sāng guì pú niú shòu tōng
@@ -200,7 +200,7 @@ sentences:
     pinyin: jìn chǔ yán fǎ rǔ yān tú qīn
   - time: 05:28.98
     text: 段干百里 东郭南门
-    pinyin: duàn gān bǎi lǐ dōng guō nán mén
+    pinyin: duàn gān bǎi_bái lǐ dōng guō nán mén
   - time: 05:33.63
     text: 呼延归海 羊舌微生
     pinyin: hū yán guī hǎi yáng shé wēi shēng

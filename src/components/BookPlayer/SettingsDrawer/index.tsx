@@ -202,7 +202,7 @@ export default function SettingsDrawer(props: SettingsDrawerProps) {
                 />
               </SettingItem>
 
-              <SettingItem label="显示变音">
+              <SettingItem label="显示变调">
                 <Switch
                   size={24}
                   checked={playerConfig.sandhi}
